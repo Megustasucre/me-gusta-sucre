@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#1a0505"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c9252d;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#c9252d;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#c9252d;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- Left red accent bar -->
+  <rect x="0" y="0" width="6" height="630" fill="#c9252d"/>
+
+  <!-- Top accent line -->
+  <rect x="6" y="0" width="1194" height="3" fill="url(#accentGrad)"/>
+
+  <!-- Decorative circle — faint -->
+  <circle cx="980" cy="315" r="260" fill="none" stroke="rgba(201,37,45,0.08)" stroke-width="60"/>
+  <circle cx="980" cy="315" r="180" fill="none" stroke="rgba(201,37,45,0.06)" stroke-width="40"/>
+
+  <!-- Small dot pattern — top right -->
+  <circle cx="1100" cy="80" r="3" fill="rgba(201,37,45,0.3)"/>
+  <circle cx="1130" cy="80" r="3" fill="rgba(201,37,45,0.3)"/>
+  <circle cx="1160" cy="80" r="3" fill="rgba(201,37,45,0.3)"/>
+  <circle cx="1100" cy="110" r="3" fill="rgba(201,37,45,0.2)"/>
+  <circle cx="1130" cy="110" r="3" fill="rgba(201,37,45,0.2)"/>
+  <circle cx="1160" cy="110" r="3" fill="rgba(201,37,45,0.2)"/>
+  <circle cx="1100" cy="140" r="3" fill="rgba(201,37,45,0.1)"/>
+  <circle cx="1130" cy="140" r="3" fill="rgba(201,37,45,0.1)"/>
+  <circle cx="1160" cy="140" r="3" fill="rgba(201,37,45,0.1)"/>
+
+  <!-- Eyebrow label -->
+  <rect x="72" y="168" width="180" height="2" fill="#c9252d"/>
+  <text x="72" y="156" font-family="Georgia, serif" font-size="13" font-weight="700" letter-spacing="4" fill="#c9252d" text-transform="uppercase">SUCRE · BOLIVIA</text>
+
+  <!-- Main title: Me Gusta -->
+  <text x="72" y="290" font-family="Georgia, serif" font-size="96" font-weight="700" font-style="italic" fill="#ffffff">Me Gusta</text>
+
+  <!-- Main title: Sucre (red) -->
+  <text x="72" y="390" font-family="Georgia, serif" font-size="96" font-weight="700" font-style="italic" fill="#c9252d">Sucre</text>
+
+  <!-- Tagline -->
+  <text x="72" y="450" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="rgba(255,255,255,0.55)" letter-spacing="1">Discover Bolivia's White City · UNESCO World Heritage</text>
+
+  <!-- Bottom divider -->
+  <rect x="6" y="627" width="1194" height="3" fill="url(#accentGrad)"/>
+
+  <!-- Services row -->
+  <text x="72" y="530" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="rgba(255,255,255,0.35)" letter-spacing="3">SPANISH SCHOOL</text>
+  <text x="282" y="530" font-family="Arial, sans-serif" font-size="15" fill="rgba(201,37,45,0.6)">·</text>
+  <text x="298" y="530" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="rgba(255,255,255,0.35)" letter-spacing="3">BOUTIQUE INN</text>
+  <text x="480" y="530" font-family="Arial, sans-serif" font-size="15" fill="rgba(201,37,45,0.6)">·</text>
+  <text x="496" y="530" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="rgba(255,255,255,0.35)" letter-spacing="3">SPECIALTY CAFÉ</text>
+  <text x="694" y="530" font-family="Arial, sans-serif" font-size="15" fill="rgba(201,37,45,0.6)">·</text>
+  <text x="710" y="530" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="rgba(255,255,255,0.35)" letter-spacing="3">CITY GUIDE</text>
+
+  <!-- URL -->
+  <text x="72" y="578" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.25)" letter-spacing="1">megustasucre.com</text>
+</svg>

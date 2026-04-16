@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Dark background -->
+  <rect width="64" height="64" rx="10" fill="#0a0a0a"/>
+  <!-- Map pin — solid red fill -->
+  <path d="M32 8 C20 8 12 17 12 27 C12 42 32 58 32 58 C32 58 52 42 52 27 C52 17 44 8 32 8 Z" fill="#c9252d"/>
+  <!-- Inner circle — white -->
+  <circle cx="32" cy="27" r="9" fill="#ffffff"/>
+  <!-- Center dot — red -->
+  <circle cx="32" cy="27" r="4" fill="#c9252d"/>
+</svg>

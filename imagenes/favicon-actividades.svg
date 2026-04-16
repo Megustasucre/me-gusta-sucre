@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Deep forest green background -->
+  <rect width="64" height="64" rx="10" fill="#061a0e"/>
+  <!-- Mountain silhouette -->
+  <polygon points="32,10 54,48 10,48" fill="none" stroke="#2ECC71" stroke-width="2.5"/>
+  <polygon points="20,32 36,48 4,48" fill="#061a0e" stroke="#2ECC71" stroke-width="2"/>
+  <!-- Sun/compass dot at top -->
+  <circle cx="32" cy="20" r="3" fill="#2ECC71"/>
+  <text x="32" y="60" font-family="Georgia, serif" font-size="9" font-weight="700" letter-spacing="1" fill="#2ECC71" text-anchor="middle">SUCRE</text>
+</svg>

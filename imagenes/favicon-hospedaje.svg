@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Navy background -->
+  <rect width="64" height="64" rx="10" fill="#0c1e3b"/>
+  <!-- Solid house — filled, readable at any size -->
+  <polygon points="32,10 54,30 54,54 10,54 10,30" fill="#2563eb"/>
+  <!-- Roof darker peak -->
+  <polygon points="32,10 54,30 10,30" fill="#1d4ed8"/>
+  <!-- Door white -->
+  <rect x="24" y="38" width="16" height="16" rx="2" fill="#ffffff"/>
+  <!-- Door knob -->
+  <circle cx="37" cy="46" r="2" fill="#1d4ed8"/>
+</svg>

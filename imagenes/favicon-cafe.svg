@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Dark warm background -->
+  <rect width="64" height="64" rx="10" fill="#1a0c04"/>
+  <!-- Cup body — solid brown fill -->
+  <path d="M16 22 L20 50 Q20 52 22 52 L42 52 Q44 52 44 50 L48 22 Z" fill="#8b4513"/>
+  <!-- Cup top rim -->
+  <rect x="14" y="19" width="36" height="5" rx="2" fill="#a0522d"/>
+  <!-- Handle — solid -->
+  <path d="M44 28 Q56 28 56 36 Q56 44 44 44 L44 38 Q50 38 50 36 Q50 34 44 34 Z" fill="#8b4513"/>
+  <!-- Steam dot in green -->
+  <circle cx="26" cy="12" r="3" fill="#5aaa6a"/>
+  <circle cx="38" cy="10" r="3" fill="#5aaa6a"/>
+</svg>
