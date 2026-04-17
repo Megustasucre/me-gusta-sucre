@@ -566,6 +566,18 @@ footer a:hover { color: var(--gold); }
   .photo-stagger > div { margin-top: 0 !important; }
 }
 
+/* ─── NAV TABLET OPTIMIZATION (768px - 1100px) ─── */
+@media (min-width: 768px) and (max-width: 1100px) {
+  #navbar { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+  #navbar .logo-text { font-size: 1.15rem !important; letter-spacing: -0.5px !important; }
+  #navbar .nav-link { font-size: 10px !important; letter-spacing: -0.2px !important; white-space: nowrap !important; }
+  #navbar .gap-7 { gap: 10px !important; }
+  #navbar .gap-5 { gap: 6px !important; }
+  #navbar .lang-container { padding-left: 10px !important; margin-left: 4px !important; gap: 6px !important; }
+  /* Reserve space for absolute logo */
+  #navbar .flex[style*="flex:1"] { max-width: 38%; } 
+}
+
 /* ─── TABLET (768px – 1024px) ─── */
 @media (min-width: 641px) and (max-width: 1024px) {
   /* Reduce heavy gaps in 2-col text/image layouts */
