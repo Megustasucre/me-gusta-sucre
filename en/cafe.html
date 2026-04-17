@@ -17,7 +17,7 @@
   <meta name="twitter:description" content="Me Gusta Café in the heart of Sucre, Bolivia. Specialty single-origin Bolivian coffee, homemade pastries, fresh breakfasts and light lunches. Bolivar #603." />
   <meta name="twitter:image" content="https://megustasucre.com/imagenes/og-image.svg" />
   <link rel="canonical" href="https://megustasucre.com/cafe.html" />
-  <link rel="icon" type="image/png" href="images/logos/me-gusta-cafe.png" />
+  <link rel="icon" type="image/png" href="../images/logos/me-gusta-cafe.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,8 +41,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Satisfy&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/sucre-fonts.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/sucre-fonts.css" />
   <!-- Me Gusta Café — page-scoped brand overrides -->
   <style>
     .eyebrow                  { color: #5aaa6a !important; }
@@ -101,18 +101,27 @@
 
       <!-- Logo / Home — centrado desktop, izquierda mobile -->
       <a href="index.html" class="flex items-center gap-3 md:absolute md:left-1/2 md:-translate-x-1/2">
-        <img src="images/logos/me-gusta-cafe.png" alt="Me Gusta Café" style="height:36px;width:auto;flex-shrink:0" />
+        <img src="../images/logos/me-gusta-cafe.png" alt="Me Gusta Café" style="height:36px;width:auto;flex-shrink:0" />
         <span class="logo-text text-white font-bold" style="font-family:'Lora',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap">
           Me Gusta <span class="logo-accent" style="color:#5aaa6a;font-style:italic">Café</span>
         </span>
       </a>
 
       <!-- Right links — desktop -->
-      <div class="hidden md:flex items-center justify-end gap-7" style="flex:1">
+      <div class="hidden md:flex items-center justify-end gap-5" style="flex:1">
         <a href="hospedaje.html"     class="nav-link text-white">Stay</a>
         <a href="merchandising.html" class="nav-link text-white">Merch</a>
         <a href="contacto.html"      class="nav-link text-white">Contact</a>
-      </div>
+      
+        <!-- Language Selector -->
+        <div class="flex items-center gap-3 border-l border-white/20 pl-6 ml-2">
+          <a href="../en/cafe.html" class="text-xs font-bold text-white hover:text-white/70 transition-colors uppercase">EN</a>
+          <span class="text-white/30 text-xs">|</span>
+          <a href="../es/cafe.html" class="text-xs font-bold text-white/50 hover:text-white transition-colors uppercase">ES</a>
+          <span class="text-white/30 text-xs">|</span>
+          <a href="../fr/cafe.html" class="text-xs font-bold text-white/50 hover:text-white transition-colors uppercase">FR</a>
+        </div>
+        </div>
 
       <!-- Hamburger — mobile -->
       <button id="menu-btn" class="md:hidden text-white p-1">
@@ -130,6 +139,18 @@
       <a href="hospedaje.html"     class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Stay</a>
       <a href="merchandising.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Merch</a>
       <a href="contacto.html"      class="block py-2 text-sm font-semibold text-gray-800">Contact</a>
+      
+      <!-- Mobile Language Selector -->
+      <div class="py-4 mt-2 border-t border-b border-gray-100 relative mb-4">
+        <p class="text-[10px] font-bold text-gray-400 mb-3 uppercase tracking-wider">Language / Idioma</p>
+        <div class="flex items-center gap-5">
+          <a href="../en/cafe.html" class="text-sm font-bold text-gray-900 transition-colors">EN</a>
+          <span class="text-gray-300">|</span>
+          <a href="../es/cafe.html" class="text-sm font-bold text-gray-400 hover:text-gray-900 transition-colors">ES</a>
+          <span class="text-gray-300">|</span>
+          <a href="../fr/cafe.html" class="text-sm font-bold text-gray-400 hover:text-gray-900 transition-colors">FR</a>
+        </div>
+      </div>
       <a href="hospedaje.html" class="btn-red block text-center mt-4">Book a Stay</a>
     </div>
   </nav>
@@ -150,7 +171,7 @@
           <!-- Green left accent bar -->
           <div style="width:5px;align-self:stretch;background:#5aaa6a;flex-shrink:0"></div>
           <!-- Logo -->
-          <img src="images/logos/me-gusta-cafe.png" alt="Me Gusta Café" style="height:56px;width:auto;flex-shrink:0;padding:4px 8px" />
+          <img src="../images/logos/me-gusta-cafe.png" alt="Me Gusta Café" style="height:56px;width:auto;flex-shrink:0;padding:4px 8px" />
           <!-- Divider -->
           <div style="width:1px;height:40px;background:rgba(255,255,255,0.15);flex-shrink:0"></div>
           <!-- Text wordmark -->
@@ -237,7 +258,7 @@
         <!-- Lavazza -->
         <div class="card fade-up" style="padding:40px 36px;text-align:center">
           <div style="height:64px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
-            <img src="images/logos/lavazza-logo.svg" alt="Lavazza" style="height:80px;width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15))" />
+            <img src="../images/logos/lavazza-logo.svg" alt="Lavazza" style="height:80px;width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15))" />
           </div>
           <p style="font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;color:#8b4513;text-transform:uppercase;margin-bottom:8px">Café Italiano</p>
           <h3 style="font-family:'Lora',serif;font-size:1.8rem;font-weight:800;color:#2c1a0e;margin-bottom:12px">Lavazza</h3>
@@ -355,7 +376,7 @@
         <div style="position:absolute;top:-60px;right:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(90,170,106,0.18) 0%,transparent 70%);pointer-events:none"></div>
         <div style="position:absolute;bottom:-50px;left:-50px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(232,160,32,0.15) 0%,transparent 70%);pointer-events:none"></div>
         <div style="margin:0 auto 24px;display:inline-flex;align-items:center;gap:14px">
-          <img src="images/logos/me-gusta-cafe.png" alt="Me Gusta Café" style="height:90px;width:auto;flex-shrink:0" />
+          <img src="../images/logos/me-gusta-cafe.png" alt="Me Gusta Café" style="height:90px;width:auto;flex-shrink:0" />
           <div style="text-align:left">
             <p style="font-family:'Lora',serif;font-size:2.2rem;font-weight:800;font-style:italic;color:#8b4513;line-height:1;margin-bottom:5px">Me Gusta</p>
             <p style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:4px;color:#5aaa6a;text-transform:uppercase">Café</p>
@@ -528,6 +549,6 @@
     </div>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

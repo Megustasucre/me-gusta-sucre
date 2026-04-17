@@ -1,7 +1,7 @@
 import os
 import re
 
-target_files = ['index.html', 'hospedaje.html', 'actividades.html', 'merchandising.html', 'contacto.html']
+target_files = ['index.html', 'hospedaje.html', 'merchandising.html', 'contacto.html', 'guia.html', 'cafe.html', 'clases.html']
 
 fonts_css = """@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Satisfy&display=swap');
 
@@ -39,10 +39,11 @@ for filename in target_files:
         content = f.read()
         
     # Replace the google fonts URL
-    content = re.sub(old_font_url, new_font_url, content)
+    content = re.sub(r"https://fonts\.googleapis\.com/css2\?family=[^\"']*", new_font_url, content)
     
     # Replace inline font names
     content = content.replace("Fraunces", "Lora")
+    content = content.replace("Playfair Display", "Lora")
     content = content.replace("Plus Jakarta Sans", "DM Sans")
     content = content.replace("Sacramento", "Satisfy")
     

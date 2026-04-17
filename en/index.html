@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Me Gusta Sucre — Discover Bolivia's White City</title>
+  <meta name="description" content="Experience Sucre — Bolivia's UNESCO World Heritage city. Spanish classes, boutique inn, specialty coffee, and unforgettable activities in the heart of the White City." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Me Gusta Sucre — Discover Bolivia's White City" />
+  <meta property="og:description" content="Experience Sucre — the heart of Bolivia. Colonial architecture, UNESCO heritage, Spanish classes, local cuisine and warm hospitality." />
+  <meta property="og:image" content="https://megustasucre.com/imagenes/og-image.svg" />
+  <meta property="og:url" content="https://megustasucre.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Me Gusta Sucre" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Me Gusta Sucre — Discover Bolivia's White City" />
+  <meta name="twitter:description" content="Experience Sucre — Bolivia's UNESCO World Heritage city. Spanish classes, boutique inn, specialty coffee, and unforgettable activities in the heart of the White City." />
+  <meta name="twitter:image" content="https://megustasucre.com/imagenes/og-image.svg" />
+  <link rel="canonical" href="https://megustasucre.com/" />
+  <link rel="icon" type="image/svg+xml" href="../imagenes/favicon.svg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Me Gusta Sucre",
+    "url": "https://megustasucre.com",
+    "logo": "https://megustasucre.com/imagenes/og-image.svg",
+    "description": "Experience Sucre — Bolivia's UNESCO World Heritage city. Spanish classes, boutique inn, specialty coffee, and city guide.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sucre",
+      "addressCountry": "BO"
+    },
+    "sameAs": [
+      "https://www.facebook.com/MeGustaSucre",
+      "https://www.instagram.com/megustasucre"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Me Gusta Sucre Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Spanish Classes", "url": "https://megustasucre.com/clases.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Boutique Inn", "url": "https://megustasucre.com/hospedaje.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Specialty Café", "url": "https://megustasucre.com/cafe.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "City Guide", "url": "https://megustasucre.com/guia.html" } }
+      ]
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Satisfy&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/sucre-fonts.css" />
+</head>
+<body style="background:#ffffff">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="top-bar">
+    Complete your Sucre Experience: Stay at our Boutique Inn &amp; Learn Spanish with native teachers.
+    <a href="clases.html">See Spanish Classes</a>
+  </div>
+
+  <!-- ═══ NAVBAR ═══════════════════════════════════════ -->
+  <nav id="navbar" class="fixed left-0 right-0 z-50" style="background:transparent">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between relative">
+
+      <!-- Left links — desktop -->
+      <div class="hidden md:flex items-center gap-7" style="flex:1">
+        <a href="clases.html"      class="nav-link text-white">Spanish Classes</a>
+        <a href="cafe.html" class="nav-link text-white">Café</a>
+        <a href="guia.html" class="nav-link text-white">City Guide</a>
+      </div>
+
+      <!-- Logo / Home — centrado desktop, izquierda mobile -->
+      <a href="index.html" class="flex items-center md:absolute md:left-1/2 md:-translate-x-1/2">
+        <span class="logo-text text-white font-bold" style="font-family:'Lora',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap">
+          Me Gusta <span class="logo-accent" style="color:#c9252d;font-style:italic">Sucre</span>
+        </span>
+      </a>
+
+      <!-- Right links — desktop -->
+      <div class="hidden md:flex items-center justify-end gap-5" style="flex:1">
+        <a href="hospedaje.html"     class="nav-link text-white">Stay</a>
+        <a href="merchandising.html" class="nav-link text-white">Merch</a>
+        <a href="contacto.html"      class="nav-link text-white">Contact</a>
+      
+        <!-- Language Selector -->
+        <div class="flex items-center gap-3 border-l border-white/20 pl-6 ml-2">
+          <a href="../en/index.html" class="text-xs font-bold text-white hover:text-white/70 transition-colors uppercase">EN</a>
+          <span class="text-white/30 text-xs">|</span>
+          <a href="../es/index.html" class="text-xs font-bold text-white/50 hover:text-white transition-colors uppercase">ES</a>
+          <span class="text-white/30 text-xs">|</span>
+          <a href="../fr/index.html" class="text-xs font-bold text-white/50 hover:text-white transition-colors uppercase">FR</a>
+        </div>
+        </div>
+
+      <!-- Hamburger — mobile -->
+      <button id="menu-btn" class="md:hidden text-white p-1">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden bg-white shadow-xl px-6 pb-5">
+      <a href="clases.html"        class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Spanish Classes</a>
+      <a href="cafe.html"   class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Café</a>
+      <a href="guia.html"          class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">City Guide</a>
+      <a href="hospedaje.html"     class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Stay</a>
+      <a href="merchandising.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Merch</a>
+      <a href="contacto.html"      class="block py-2 text-sm font-semibold text-gray-800">Contact</a>
+      
+      <!-- Mobile Language Selector -->
+      <div class="py-4 mt-2 border-t border-b border-gray-100 relative mb-4">
+        <p class="text-[10px] font-bold text-gray-400 mb-3 uppercase tracking-wider">Language / Idioma</p>
+        <div class="flex items-center gap-5">
+          <a href="../en/index.html" class="text-sm font-bold text-gray-900 transition-colors">EN</a>
+          <span class="text-gray-300">|</span>
+          <a href="../es/index.html" class="text-sm font-bold text-gray-400 hover:text-gray-900 transition-colors">ES</a>
+          <span class="text-gray-300">|</span>
+          <a href="../fr/index.html" class="text-sm font-bold text-gray-400 hover:text-gray-900 transition-colors">FR</a>
+        </div>
+      </div>
+      <a href="hospedaje.html" class="btn-red block text-center mt-4">Book a Stay</a>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ════════════════════════════════════════ -->
+  <section class="hero-section min-h-screen flex flex-col justify-end relative" style="padding-top:140px;padding-bottom:80px">
+    <!-- Background -->
+    <div style="position:absolute;inset:0;overflow:hidden">
+      <div class="hero-kenburns" style="position:absolute;inset:-8%;background-image:url('https://images.unsplash.com/photo-1526400473556-aac12354f3db?w=2000&q=85');background-size:cover;background-position:center 40%"></div>
+    </div>
+    <!-- Overlays -->
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.92) 0%,rgba(10,6,2,0.55) 45%,rgba(10,6,2,0.15) 80%,rgba(10,6,2,0.05) 100%)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(10,6,2,0.5) 0%,transparent 60%)"></div>
+    <div style="position:absolute;inset:0;background:rgba(30,10,0,0.12);mix-blend-mode:multiply"></div>
+    <!-- Letterbox -->
+    <div style="position:absolute;top:0;left:0;right:0;height:5px;background:#000"></div>
+    <div style="position:absolute;bottom:0;left:0;right:0;height:5px;background:#000"></div>
+
+    <!-- Location tag -->
+    <div style="position:absolute;bottom:44px;right:32px;display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.1);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.2);border-radius:0;padding:9px 18px;z-index:10">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#c9252d"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      <div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#fff;margin:0;line-height:1.3">Sucre, Bolivia</p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.55);margin:0;line-height:1.3">UNESCO Heritage · 2,810m</p>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-7xl mx-auto px-6 w-full relative z-10 hero-content" style="padding-bottom:60px">
+      <span class="handwritten text-3xl" style="color:#c9252d">La Ciudad Blanca</span>
+
+      <h1 style="font-family:'Lora',serif;font-size:clamp(3.2rem,7vw,6.5rem);font-weight:800;color:#fff;line-height:1.0;margin:14px 0 20px;max-width:800px">
+        Discover<br/><span style="color:#c9252d;font-style:italic">Sucre</span>
+      </h1>
+
+      <p style="font-size:1.15rem;color:rgba(255,255,255,0.82);max-width:520px;line-height:1.7;margin-bottom:36px">
+        Bolivia's constitutional capital and UNESCO World Heritage city. A place of colonial beauty, vibrant culture, and warm people — waiting to be discovered.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mb-12">
+        <a href="guia.html" class="btn-gold">City Guide</a>
+        <a href="hospedaje.html"   class="btn-outline">Book Your Stay</a>
+      </div>
+
+      <!-- Stats -->
+      <div class="flex flex-wrap gap-8">
+        <div>
+          <p style="font-family:'Lora',serif;font-size:2.2rem;font-weight:700;color:#c9252d;line-height:1"><span class="counter" data-target="2810" data-suffix="m">2810m</span></p>
+          <p style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px">Altitude</p>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,0.15)"></div>
+        <div>
+          <p style="font-family:'Lora',serif;font-size:2.2rem;font-weight:700;color:#c9252d;line-height:1"><span class="counter" data-target="1809" data-suffix="">1809</span></p>
+          <p style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px">Independence</p>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,0.15)"></div>
+        <div>
+          <p style="font-family:'Lora',serif;font-size:2.2rem;font-weight:700;color:#c9252d;line-height:1">UNESCO</p>
+          <p style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px">World Heritage</p>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,0.15)"></div>
+        <div>
+          <p style="font-family:'Lora',serif;font-size:2.2rem;font-weight:700;color:#c9252d;line-height:1"><span class="counter" data-target="22" data-suffix="°C">22°C</span></p>
+          <p style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px">Avg. Climate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TICKER ═══════════════════════════════════════ -->
+  <div class="ticker-wrap" style="background:#c9252d">
+    <div class="ticker-track py-2.5 text-white" style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px">
+      <span class="mx-10">THE WHITE CITY OF BOLIVIA</span>
+      <span class="mx-10">UNESCO WORLD HERITAGE SINCE 1991</span>
+      <span class="mx-10">CONSTITUTIONAL CAPITAL OF BOLIVIA</span>
+      <span class="mx-10">DINOSAUR FOOTPRINTS · CAL ORCKO</span>
+      <span class="mx-10">SPANISH CLASSES · BOUTIQUE INN · CAFÉ</span>
+      <span class="mx-10">THE WHITE CITY OF BOLIVIA</span>
+      <span class="mx-10">UNESCO WORLD HERITAGE SINCE 1991</span>
+      <span class="mx-10">CONSTITUTIONAL CAPITAL OF BOLIVIA</span>
+      <span class="mx-10">DINOSAUR FOOTPRINTS · CAL ORCKO</span>
+      <span class="mx-10">SPANISH CLASSES · BOUTIQUE INN · CAFÉ</span>
+    </div>
+  </div>
+
+  <!-- ═══ WHY SUCRE ═════════════════════════════════════ -->
+  <section style="padding:100px 0;background:var(--white);position:relative;overflow:hidden">
+    <!-- Background Decor -->
+    <div class="bg-text-decor" style="top:15%;left:50%;transform:translateX(-50%) rotate(4deg)">COLONIAL</div>
+    <div class="max-w-7xl mx-auto px-6">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center" class="why-grid">
+
+        <!-- Left: Gallery -->
+        <div class="fade-up" style="display:grid;grid-template-columns:5fr 4fr;gap:20px;height:auto">
+          <!-- Col 1: Hero-style vertical image -->
+          <div class="photo-block group" style="height:100%;min-height:500px">
+            <img src="https://images.unsplash.com/photo-1549488344-1f9b00de37f2?w=1000&q=90" alt="Casa de la Libertad, Sucre" class="expandable" loading="lazy" data-caption="Casa de la Libertad — The birthplace of Bolivia where the Declaration of Independence was signed in 1825." />
+            <div style="position:absolute;bottom:20px;left:20px;pointer-events:none">
+              <span class="float-tag text-sm shadow-md">Casa de la Libertad</span>
+            </div>
+          </div>
+          <!-- Col 2: Stacked images -->
+          <div style="display:flex;flex-direction:column;gap:20px;padding-top:40px">
+            <div class="photo-block group" style="height:250px">
+              <img src="https://images.unsplash.com/photo-1543877087-ebf71fde2be1?w=800&q=85" alt="Metropolitan Cathedral Sucre" class="expandable" loading="lazy" data-caption="Catedral Metropolitana — A stunning mix of Renaissance and Baroque architecture overlooking Plaza 25 de Mayo." />
+            </div>
+            <div class="photo-block group" style="flex:1">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85" alt="Convento de San Felipe Neri" class="expandable" loading="lazy" data-caption="Convento de San Felipe Neri — A spectacular rooftop terrace offering breathtaking panoramic views of Sucre's white rooftops." />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Text -->
+        <div class="fade-up">
+          <p class="eyebrow mb-5">Why Sucre?</p>
+          <h2 class="section-title mb-6">
+            Bolivia's<br/><span class="accent">Most Beautiful</span><br/>City
+          </h2>
+          <p style="font-size:15px;color:#555555;line-height:1.85;margin-bottom:18px">
+            Sucre is a city frozen in time — in the best possible way. Its gleaming white colonial buildings, broad plazas, and baroque churches earned it a UNESCO World Heritage designation in 1991. But it's more than just beautiful architecture.
+          </p>
+          <p style="font-size:15px;color:#555555;line-height:1.85;margin-bottom:32px">
+            At 2,810 meters above sea level, Sucre enjoys a mild, spring-like climate year-round. The city blends indigenous traditions with Spanish colonial heritage, creating a cultural richness that's impossible to find anywhere else.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-8">
+            <span class="badge">UNESCO Heritage</span>
+            <span class="badge">Constitutional Capital</span>
+            <span class="badge">Spring Climate</span>
+            <span class="badge badge-gold">Founded 1538</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>@media(max-width:768px){.why-grid{grid-template-columns:1fr!important}}</style>
+
+  <!-- ═══ FEATURED ATTRACTIONS ════════════════════════ -->
+  <section style="padding:100px 0;background:#f4f4f4">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 fade-up">
+        <p class="eyebrow mb-4">Must See</p>
+        <h2 class="section-title">Top <span class="accent">Attractions</span></h2>
+        <p style="font-size:15px;color:#555555;max-width:500px;margin:12px auto 0">From ancient dinosaur footprints to breathtaking viewpoints — Sucre never disappoints.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-7">
+
+        <!-- Card 1 -->
+        <div class="card fade-up">
+          <div style="position:relative;height:240px;overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1524397057410-1e775ed476f3?w=700&q=80" alt="Plaza 25 de Mayo" class="card-img" style="width:100%;height:100%;object-fit:cover" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.7) 0%,transparent 60%)"></div>
+            <div style="position:absolute;top:16px;left:16px"><span class="badge" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.3);color:#fff">City Center</span></div>
+          </div>
+          <div style="padding:24px">
+            <h3 style="font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:#111111;margin-bottom:10px">Plaza 25 de Mayo</h3>
+            <p style="font-size:14px;color:#555555;line-height:1.7;margin-bottom:18px">The heart of Sucre. Colonial buildings surround this grand plaza where locals gather, history lives, and the Cathedral towers above.</p>
+            <a href="guia.html" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:#c9252d;text-decoration:none">Explore →</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card fade-up" style="transition-delay:0.1s">
+          <div style="position:relative;height:240px;overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=700&q=80" alt="Parque Cretácico dinosaurs" class="card-img" style="width:100%;height:100%;object-fit:cover" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.7) 0%,transparent 60%)"></div>
+            <div style="position:absolute;top:16px;left:16px"><span class="badge" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.3);color:#fff">Unique</span></div>
+          </div>
+          <div style="padding:24px">
+            <h3 style="font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:#111111;margin-bottom:10px">Cal Orcko Dinosaurs</h3>
+            <p style="font-size:14px;color:#555555;line-height:1.7;margin-bottom:18px">Home to the world's largest collection of dinosaur footprints — over 5,000 tracks from 294 species on a single limestone wall.</p>
+            <a href="guia.html" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:#c9252d;text-decoration:none">Explore →</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card fade-up" style="transition-delay:0.2s">
+          <div style="position:relative;height:240px;overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="La Recoleta viewpoint Sucre" class="card-img" style="width:100%;height:100%;object-fit:cover" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.7) 0%,transparent 60%)"></div>
+            <div style="position:absolute;top:16px;left:16px"><span class="badge" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.3);color:#fff">Viewpoint</span></div>
+          </div>
+          <div style="padding:24px">
+            <h3 style="font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:#111111;margin-bottom:10px">La Recoleta</h3>
+            <p style="font-size:14px;color:#555555;line-height:1.7;margin-bottom:18px">A 16th-century convent perched on a hill with panoramic views over Sucre's white rooftops. The best sunset spot in the city.</p>
+            <a href="guia.html" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:#c9252d;text-decoration:none">Explore →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12 fade-up">
+        <a href="guia.html" class="btn-outline-dark">Open City Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CAFÉ PREVIEW ════════════════════════════════ -->
+  <section style="padding:100px 0;background:#111111;position:relative;overflow:hidden">
+    <div style="position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:rgba(26,26,26,0.04);border-radius:50%"></div>
+    <div class="max-w-7xl mx-auto px-6">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center" class="gastro-grid">
+        <div class="fade-up">
+          <p class="eyebrow mb-5" style="color:#c9252d">Me Gusta Café</p>
+          <h2 style="font-family:'Lora',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:24px">
+            Coffee &amp; Good Food<br/><span style="color:#c9252d;font-style:italic">in the Heart of Sucre</span>
+          </h2>
+          <p style="font-size:15px;color:rgba(255,255,255,0.65);line-height:1.85;margin-bottom:18px">
+            Start your morning with a Bolivian espresso and homemade pastries on our colonial patio. Me Gusta Café is where locals and travelers meet — relaxed, warm, and genuinely good.
+          </p>
+          <p style="font-size:15px;color:rgba(255,255,255,0.65);line-height:1.85;margin-bottom:36px">
+            Open Mon–Sat 8am–8pm. Free WiFi, power outlets, vegetarian options, and a pet-friendly terrace at Bolivar #603 — steps from the main plaza.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-8">
+            <span class="badge badge-gold" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.3);color:#ffffff">Bolivian Coffee</span>
+            <span class="badge badge-gold" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.3);color:#ffffff">Pastries</span>
+            <span class="badge badge-gold" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.3);color:#ffffff">Free WiFi</span>
+            <span class="badge badge-gold" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.3);color:#ffffff">Colonial Patio</span>
+          </div>
+          <a href="cafe.html" class="btn-gold">See the Menu</a>
+        </div>
+        <div class="fade-up flex flex-wrap justify-center items-center gap-4 py-8 relative w-full h-[500px]">
+          <div class="polaroid shadow-xl hover:scale-110 border border-[#e1d6c8] z-[1] absolute top-[10%] left-[5%] w-[220px] h-[240px]" style="transform: rotate(-6deg);" data-caption="Café Caliente">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=500&q=80" alt="Me Gusta Café" />
+          </div>
+          <div class="polaroid shadow-xl hover:scale-110 border border-[#e1d6c8] z-[2] absolute top-[35%] right-[5%] w-[240px] h-[260px]" style="transform: rotate(5deg);" data-caption="Grano de Oro">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80" alt="Bolivian coffee" />
+          </div>
+          <div class="polaroid shadow-xl hover:scale-110 border border-[#e1d6c8] z-[3] absolute bottom-[5%] left-[25%] w-[200px] h-[220px]" style="transform: rotate(-8deg);" data-caption="Barista Local">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&q=80" alt="Café espresso" />
+          </div>
+          <div class="polaroid shadow-xl hover:scale-110 border border-[#e1d6c8] z-[4] absolute top-[-5%] right-[30%] w-[220px] h-[240px]" style="transform: rotate(7deg);" data-caption="Repostería">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&q=80" alt="Café pastries" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>@media(max-width:768px){.gastro-grid{grid-template-columns:1fr!important}}</style>
+
+  <!-- ═══ SPANISH SCHOOL PREVIEW ═══════════════════════ -->
+  <section style="padding:100px 0;background:var(--white);position:relative;overflow:hidden">
+    <!-- Background Decor -->
+    <div class="bg-text-decor" style="bottom:10%;left:50%;transform:translateX(-50%) rotate(-3deg)">LEARN</div>
+    <div style="position:absolute;top:-150px;left:-150px;width:500px;height:500px;background:rgba(201,37,45,0.03);border-radius:50%"></div>
+    <div class="max-w-7xl mx-auto px-6">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center" class="school-grid">
+
+        <!-- Left: images — polaroid wall -->
+        <div class="fade-up" style="position:relative;width:100%;height:580px">
+
+          <!-- Top-left: anchor -->
+          <div class="school-pol-wrap" style="position:absolute;top:0;left:4%;z-index:1;--pol-delay:0.05s;--pol-dur:4.8s">
+            <div class="polaroid" style="width:230px;height:254px;transform:rotate(-5deg)" data-caption="Las Clases">
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500&q=80" alt="Spanish class Sucre" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Top-right -->
+          <div class="school-pol-wrap" style="position:absolute;top:15px;right:2%;z-index:2;--pol-delay:0.2s;--pol-dur:5.6s">
+            <div class="polaroid" style="width:205px;height:226px;transform:rotate(8deg)" data-caption="Inmersión Total">
+              <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=500&q=80" alt="Learning Spanish Bolivia" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Center: hero polaroid, frontmost -->
+          <div class="school-pol-wrap" style="position:absolute;top:calc(50% - 140px);left:calc(50% - 127px);z-index:5;--pol-delay:0.35s;--pol-dur:5.2s">
+            <div class="polaroid" style="width:255px;height:280px;transform:rotate(-2deg)" data-caption="Profesores Nativos">
+              <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&q=80" alt="Spanish teacher Sucre" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Bottom-left -->
+          <div class="school-pol-wrap" style="position:absolute;bottom:20px;left:2%;z-index:3;--pol-delay:0.5s;--pol-dur:6.1s">
+            <div class="polaroid" style="width:215px;height:237px;transform:rotate(7deg)" data-caption="Toda la Familia">
+              <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80" alt="Spanish immersion Bolivia" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Bottom-right -->
+          <div class="school-pol-wrap" style="position:absolute;bottom:10px;right:3%;z-index:4;--pol-delay:0.65s;--pol-dur:4.4s">
+            <div class="polaroid" style="width:220px;height:242px;transform:rotate(-9deg)" data-caption="Descubrir Bolivia">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&q=80" alt="Spanish students Bolivia" loading="lazy" />
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: text -->
+        <div class="fade-up">
+          <p class="eyebrow mb-5">Me Gusta Spanish</p>
+          <h2 style="font-family:'Lora',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:800;color:#111111;line-height:1.1;margin-bottom:24px">
+            Learn Spanish<br/><span style="color:#c9252d;font-style:italic">While You Travel</span>
+          </h2>
+          <p style="font-size:15px;color:#555555;line-height:1.85;margin-bottom:18px">
+            Sucre is one of the best cities in South America to learn Spanish — the accent is neutral, the city is safe, and life here moves at the right pace for language learning.
+          </p>
+          <p style="font-size:15px;color:#555555;line-height:1.85;margin-bottom:32px">
+            Me Gusta Spanish offers private, duo, and group programs with native Bolivian teachers. One week or several months — every class is planned around you.
+          </p>
+
+          <!-- Mini stats -->
+          <div style="display:flex;gap:32px;margin-bottom:36px;flex-wrap:wrap">
+            <div>
+              <p style="font-family:'Lora',serif;font-size:2rem;font-weight:700;color:#c9252d;line-height:1;margin-bottom:4px">750+</p>
+              <p style="font-size:11px;font-weight:600;color:#9a8070;text-transform:uppercase;letter-spacing:1.5px">Students</p>
+            </div>
+            <div style="width:1px;background:#e8ddd0"></div>
+            <div>
+              <p style="font-family:'Lora',serif;font-size:2rem;font-weight:700;color:#c9252d;line-height:1;margin-bottom:4px">50+</p>
+              <p style="font-size:11px;font-weight:600;color:#9a8070;text-transform:uppercase;letter-spacing:1.5px">Countries</p>
+            </div>
+            <div style="width:1px;background:#e8ddd0"></div>
+            <div>
+              <p style="font-family:'Lora',serif;font-size:2rem;font-weight:700;color:#c9252d;line-height:1;margin-bottom:4px">3</p>
+              <p style="font-size:11px;font-weight:600;color:#9a8070;text-transform:uppercase;letter-spacing:1.5px">Programs</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="clases.html" class="btn-red">See All Courses</a>
+            <a href="https://megustaspanish.com" target="_blank" class="btn-outline-dark">School Website ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>@media(max-width:768px){.school-grid{grid-template-columns:1fr!important}}</style>
+
+  <!-- ═══ ME GUSTA BRANDS ══════════════════════════════ -->
+  <section style="padding:100px 0;background:#f4f4f4">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 fade-up">
+        <p class="eyebrow mb-4">Me Gusta Collection</p>
+        <h2 class="section-title">Stay, Eat, <span class="accent">Learn</span> &amp; Shop</h2>
+        <p style="font-size:15px;color:#555555;max-width:520px;margin:12px auto 0">Four experiences in the heart of Sucre, designed for travelers who want more than just a hotel.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Spanish School — PRIMERA, marca principal -->
+        <a href="clases.html" class="brand-card fade-up" style="transition-delay:0s">
+          <div class="brand-card-img">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=700&q=80" alt="Me Gusta Spanish" loading="lazy" />
+            <div class="brand-card-overlay" style="background:linear-gradient(to top,#0f2122 0%,rgba(46,206,196,0.2) 65%,transparent 100%)"></div>
+            <span class="brand-card-pill" style="color:#2ECEC4;border-color:rgba(46,206,196,0.45)">Spanish School</span>
+          </div>
+          <div class="brand-card-body" style="background:#0f2122">
+            <p class="brand-card-name" style="color:#FF3B6B">Me Gusta <em>Spanish</em></p>
+            <p class="brand-card-desc">Native Bolivian teachers, 750+ students from 50+ countries. Face-to-face &amp; online.</p>
+            <span class="brand-card-cta" style="background:#FF3B6B">See Courses →</span>
+          </div>
+        </a>
+
+        <!-- Inn — Navy Clásico -->
+        <a href="hospedaje.html" class="brand-card fade-up" style="transition-delay:0.1s">
+          <div class="brand-card-img">
+            <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=700&q=80" alt="Me Gusta Inn" loading="lazy" />
+            <div class="brand-card-overlay" style="background:linear-gradient(to top,#0a1628 0%,rgba(37,99,235,0.3) 65%,transparent 100%)"></div>
+            <span class="brand-card-pill" style="color:#93c5fd;border-color:rgba(37,99,235,0.45)">Boutique Inn</span>
+          </div>
+          <div class="brand-card-body" style="background:#0a1628">
+            <p class="brand-card-name" style="color:#2563eb">Me Gusta <em>Inn</em></p>
+            <p class="brand-card-desc">A cozy boutique inn in the historic district. Personal service, the best location in Sucre.</p>
+            <span class="brand-card-cta" style="background:#2563eb">Book a Room →</span>
+          </div>
+        </a>
+
+        <!-- Café — Verde Sage / Espresso -->
+        <a href="cafe.html" class="brand-card fade-up" style="transition-delay:0.2s">
+          <div class="brand-card-img">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80" alt="Me Gusta Café" loading="lazy" />
+            <div class="brand-card-overlay" style="background:linear-gradient(to top,#2c1a0e 0%,rgba(90,170,106,0.25) 65%,transparent 100%)"></div>
+            <span class="brand-card-pill" style="color:#7dd492;border-color:rgba(90,170,106,0.45)">Café</span>
+          </div>
+          <div class="brand-card-body" style="background:#2c1a0e">
+            <p class="brand-card-name" style="color:#5aaa6a">Me Gusta <em>Café</em></p>
+            <p class="brand-card-desc">Bolivian coffee, homemade pastries, and a colonial patio. Open Mon–Sat 8am–8pm.</p>
+            <span class="brand-card-cta" style="background:#5aaa6a;color:#1a0e06">See the Menu →</span>
+          </div>
+        </a>
+
+        <!-- Merch — Gold / Charcoal -->
+        <a href="merchandising.html" class="brand-card fade-up" style="transition-delay:0.3s">
+          <div class="brand-card-img">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=700&q=80" alt="Me Gusta Merch" loading="lazy" />
+            <div class="brand-card-overlay" style="background:linear-gradient(to top,#0a0a0a 0%,rgba(232,160,32,0.2) 65%,transparent 100%)"></div>
+            <span class="brand-card-pill" style="color:#e8a020;border-color:rgba(232,160,32,0.45)">Merch</span>
+          </div>
+          <div class="brand-card-body" style="background:#0a0a0a">
+            <p class="brand-card-name" style="color:#e8a020">Me Gusta <em>Merch</em></p>
+            <p class="brand-card-desc">T-shirts, tote bags, mugs, and more. Take a piece of Sucre home with you.</p>
+            <span class="brand-card-cta" style="background:#e8a020;color:#111">Shop Now →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA BANNER ════════════════════════════════════ -->
+  <section style="position:relative;overflow:hidden;padding:0">
+    <div style="position:relative;height:500px;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db?w=2000&q=80" alt="Sucre panoramic" style="width:100%;height:100%;object-fit:cover;object-position:center 60%" />
+      <div style="position:absolute;inset:0;background:rgba(10,6,2,0.65)"></div>
+      <div class="max-w-4xl mx-auto px-6 h-full flex flex-col items-center justify-center text-center relative z-10">
+        <span class="handwritten text-3xl mb-4" style="color:#c9252d">Come visit us</span>
+        <h2 style="font-family:'Lora',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:18px">Your Sucre Adventure<br/>Starts Here</h2>
+        <p style="color:rgba(255,255,255,0.75);font-size:1.1rem;max-width:480px;margin-bottom:40px;line-height:1.65">Book your stay, plan your visit, or sign up for Spanish classes — we're here to make your Sucre experience unforgettable.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="hospedaje.html" class="btn-gold">Book Your Stay</a>
+          <a href="contacto.html"  class="btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════ -->
+  <footer style="background:#111111;color:#aaa;padding:72px 0 28px">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <!-- Brand -->
+        <div>
+          <p style="font-family:'Lora',serif;font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:10px">
+            Me Gusta <span style="color:#c9252d;font-style:italic">Sucre</span>
+          </p>
+          <p style="font-size:14px;line-height:1.7;margin-bottom:20px">Your gateway to Bolivia's most beautiful city — Spanish classes, boutique inn, café, and city experiences.</p>
+          <div style="display:flex;gap:10px">
+            <a href="https://www.facebook.com" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700">f</a>
+            <a href="https://www.instagram.com" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">ig</a>
+            <a href="https://wa.me/59173425725" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">wa</a>
+          </div>
+        </div>
+        <!-- Explore -->
+        <div>
+          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px">Explore</p>
+          <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
+            <li><a href="guia.html">City Guide</a></li>
+            <li><a href="cafe.html">Café &amp; Menu</a></li>
+            <li><a href="hospedaje.html">Stay</a></li>
+            <li><a href="merchandising.html">Merch</a></li>
+            <li><a href="contacto.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Me Gusta -->
+        <div>
+          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px">Me Gusta</p>
+          <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
+            <li><a href="hospedaje.html">Inn — Boutique Hotel</a></li>
+            <li><a href="cafe.html">Café</a></li>
+            <li><a href="clases.html">Spanish Classes</a></li>
+            <li><a href="https://megustaspanish.com" target="_blank">School Website ↗</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px">Find Us</p>
+          <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
+            <li>La Paz #571, Sucre</li>
+            <li>Bolivia</li>
+            <li><a href="tel:+59173425725">+591 734 25725</a></li>
+            <li><a href="mailto:info@megustasucre.com">info@megustasucre.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top:1px solid #2d2010;padding-top:24px;text-align:center;font-size:13px;color:#555">
+        © 2026 Me Gusta Sucre. All rights reserved. · <a href="https://megustaspanish.com" target="_blank" style="color:#c9252d">Me Gusta Spanish School</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="fixed inset-0 z-[100] hidden flex-col items-center justify-center p-4" style="background:rgba(10,6,2,0.96)">
+    <button id="lightbox-close" class="absolute top-8 right-8 text-white p-3 rounded-full hover:bg-white/10 transition z-10" style="background:rgba(255,255,255,0.08)">
+      <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="Expanded View" class="relative z-0" style="max-width:90%;max-height:80vh;object-fit:contain;border-radius:0;box-shadow:0 24px 64px rgba(0,0,0,0.5);transform:scale(0.95);transition:transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)" />
+    <!-- Caption display -->
+    <div id="lightbox-caption" class="mt-6 px-6 text-center max-w-2xl opacity-0 transform translate-y-4 transition-all duration-500 ease-out" style="color:rgba(255,255,255,0.9);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;font-weight:400">
+      <!-- Caption text goes here dynamically -->
+    </div>
+  </div>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/59173425725?text=Hello!%20I'm%20interested%20in%20visiting%20Sucre." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
