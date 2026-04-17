@@ -152,7 +152,11 @@ body.scrolled-past .top-bar { transform: translateY(-100%); }
 #navbar.scrolled .nav-link { color: var(--text) !important; }
 #navbar.scrolled .logo-text { color: var(--dark) !important; }
 #navbar.scrolled .logo-accent { color: var(--red) !important; }
-#navbar.scrolled .lang-btn { color: var(--text) !important; }
+#navbar.scrolled .lang-btn { color: rgba(0,0,0,0.4) !important; }
+#navbar.scrolled .lang-btn:hover { color: var(--text) !important; }
+#navbar.scrolled .lang-btn.active { color: var(--text) !important; }
+#navbar.scrolled .lang-sep { color: rgba(0,0,0,0.1) !important; }
+#navbar.scrolled .lang-container { border-color: rgba(0,0,0,0.1) !important; }
 #navbar.scrolled #menu-btn { color: var(--text) !important; }
 #navbar.scrolled .btn-red-nav { background: var(--red) !important; }
 
