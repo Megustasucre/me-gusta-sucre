@@ -14,7 +14,7 @@ El sitio web es una plataforma **multi-idioma (Inglés, Español y Francés)** c
 | guia.html      | ok | pendiente | pendiente |
 | cafe.html      | ok | ok | ok |
 | clases.html    | ok | ok | ok |
-| hospedaje.html | ok | pendiente | pendiente |
+| hospedaje.html | ok | ok | pendiente |
 | merchandising.html | ok | pendiente | pendiente |
 | contacto.html  | ok | pendiente | pendiente |
 
@@ -27,11 +27,11 @@ El sitio web es una plataforma **multi-idioma (Inglés, Español y Francés)** c
 Las siguientes 6 páginas necesitan traduccion completa del cuerpo (head meta + body content) en ambos idiomas. La UI (nav/footer) ya está en el idioma correcto — solo falta el contenido editorial:
 
 - **es/guia.html** y **fr/guia.html**
-- **es/hospedaje.html** y **fr/hospedaje.html**
+- **fr/hospedaje.html**
 - **es/merchandising.html** y **fr/merchandising.html**
 - **es/contacto.html** y **fr/contacto.html**
 
-Nota sobre hospedaje.html: la sesión anterior fue interrumpida justo al leer el archivo de referencia (en/hospedaje.html). El archivo es/hospedaje.html tiene nav/footer en español pero todo el body en inglés. Se leyó hasta la línea ~530 del archivo de referencia; falta leer el resto (reviews, location, CTA final) antes de editar.
+Nota sobre hospedaje.html: es/hospedaje.html completado el 2026-04-17. fr/hospedaje.html pendiente.
 
 ### 2. Optimización SEO Multi-idioma (Prioridad Media)
 
