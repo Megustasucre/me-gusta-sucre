@@ -288,6 +288,95 @@
     </div>
   </main>
 
+  <!-- CHINCHILLA -->
+  <div class="chinchilla-wrap" aria-hidden="true">
+    <div class="chinchilla-walk">
+      <svg class="chinchilla-svg" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Cola -->
+        <path d="M100 58 Q118 48 115 30 Q112 18 102 22 Q96 25 100 38 Q103 50 95 60" fill="#c8bdb0" stroke="#a89888" stroke-width="1.5" stroke-linejoin="round"/>
+        <!-- Cuerpo -->
+        <ellipse cx="58" cy="58" rx="36" ry="26" fill="#d4c9bc"/>
+        <!-- Panza -->
+        <ellipse cx="54" cy="63" rx="22" ry="16" fill="#ede8e2"/>
+        <!-- Cabeza -->
+        <ellipse cx="24" cy="46" rx="22" ry="20" fill="#d4c9bc"/>
+        <!-- Oreja izquierda -->
+        <ellipse cx="14" cy="26" rx="8" ry="12" fill="#d4c9bc" stroke="#a89888" stroke-width="1"/>
+        <ellipse cx="14" cy="26" rx="5" ry="8" fill="#f2b8c0"/>
+        <!-- Oreja derecha -->
+        <ellipse cx="32" cy="24" rx="8" ry="12" fill="#d4c9bc" stroke="#a89888" stroke-width="1"/>
+        <ellipse cx="32" cy="24" rx="5" ry="8" fill="#f2b8c0"/>
+        <!-- Ojo -->
+        <circle cx="16" cy="44" r="5" fill="#1a1a1a"/>
+        <circle cx="14.5" cy="42.5" r="1.5" fill="#fff"/>
+        <!-- Nariz -->
+        <ellipse cx="6" cy="52" rx="3" ry="2" fill="#f2a0a8"/>
+        <!-- Bigotes -->
+        <line x1="6" y1="51" x2="-6" y2="48" stroke="#a89888" stroke-width="0.8"/>
+        <line x1="6" y1="53" x2="-6" y2="54" stroke="#a89888" stroke-width="0.8"/>
+        <line x1="6" y1="52" x2="-4" y2="56" stroke="#a89888" stroke-width="0.8"/>
+        <!-- Patas delanteras -->
+        <rect class="pata-df" x="30" y="78" width="9" height="14" rx="4" fill="#c8bdb0"/>
+        <rect class="pata-di" x="42" y="76" width="9" height="16" rx="4" fill="#bdb0a3"/>
+        <!-- Patas traseras -->
+        <rect class="pata-tf" x="65" y="78" width="11" height="14" rx="5" fill="#c8bdb0"/>
+        <rect class="pata-ti" x="79" y="76" width="11" height="16" rx="5" fill="#bdb0a3"/>
+      </svg>
+    </div>
+  </div>
+
+  <style>
+    .chinchilla-wrap {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 90px;
+      pointer-events: none;
+      z-index: 40;
+      overflow: hidden;
+    }
+    .chinchilla-walk {
+      position: absolute;
+      bottom: 0;
+      animation: chinchilla-cross 18s linear infinite;
+    }
+    .chinchilla-svg {
+      width: 120px;
+      height: 90px;
+      animation: chinchilla-bob 0.4s ease-in-out infinite alternate;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+    }
+    /* Camina de derecha a izquierda, vuelta por la derecha */
+    @keyframes chinchilla-cross {
+      0%   { left: 105vw; transform: scaleX(1); }
+      48%  { left: -160px; transform: scaleX(1); }
+      49%  { left: -160px; transform: scaleX(-1); }
+      50%  { left: -160px; transform: scaleX(-1); }
+      98%  { left: 105vw; transform: scaleX(-1); }
+      99%  { left: 105vw; transform: scaleX(1); }
+      100% { left: 105vw; transform: scaleX(1); }
+    }
+    /* Rebote suave al caminar */
+    @keyframes chinchilla-bob {
+      from { transform: translateY(0); }
+      to   { transform: translateY(-6px); }
+    }
+    /* Patas animadas */
+    .pata-df { animation: pata-a 0.4s ease-in-out infinite alternate; transform-origin: top center; }
+    .pata-di { animation: pata-b 0.4s ease-in-out infinite alternate; transform-origin: top center; }
+    .pata-tf { animation: pata-b 0.4s ease-in-out infinite alternate; transform-origin: top center; }
+    .pata-ti { animation: pata-a 0.4s ease-in-out infinite alternate; transform-origin: top center; }
+    @keyframes pata-a {
+      from { transform: rotate(-12deg); }
+      to   { transform: rotate(12deg); }
+    }
+    @keyframes pata-b {
+      from { transform: rotate(12deg); }
+      to   { transform: rotate(-12deg); }
+    }
+  </style>
+
   <a href="https://wa.me/59173425725" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
