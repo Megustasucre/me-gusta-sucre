@@ -288,93 +288,127 @@
     </div>
   </main>
 
-  <!-- CHINCHILLA -->
-  <div class="chinchilla-wrap" aria-hidden="true">
-    <div class="chinchilla-walk">
-      <svg class="chinchilla-svg" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Cola -->
-        <path d="M100 58 Q118 48 115 30 Q112 18 102 22 Q96 25 100 38 Q103 50 95 60" fill="#c8bdb0" stroke="#a89888" stroke-width="1.5" stroke-linejoin="round"/>
-        <!-- Cuerpo -->
-        <ellipse cx="58" cy="58" rx="36" ry="26" fill="#d4c9bc"/>
-        <!-- Panza -->
-        <ellipse cx="54" cy="63" rx="22" ry="16" fill="#ede8e2"/>
-        <!-- Cabeza -->
-        <ellipse cx="24" cy="46" rx="22" ry="20" fill="#d4c9bc"/>
-        <!-- Oreja izquierda -->
-        <ellipse cx="14" cy="26" rx="8" ry="12" fill="#d4c9bc" stroke="#a89888" stroke-width="1"/>
-        <ellipse cx="14" cy="26" rx="5" ry="8" fill="#f2b8c0"/>
-        <!-- Oreja derecha -->
-        <ellipse cx="32" cy="24" rx="8" ry="12" fill="#d4c9bc" stroke="#a89888" stroke-width="1"/>
-        <ellipse cx="32" cy="24" rx="5" ry="8" fill="#f2b8c0"/>
-        <!-- Ojo -->
-        <circle cx="16" cy="44" r="5" fill="#1a1a1a"/>
-        <circle cx="14.5" cy="42.5" r="1.5" fill="#fff"/>
-        <!-- Nariz -->
-        <ellipse cx="6" cy="52" rx="3" ry="2" fill="#f2a0a8"/>
-        <!-- Bigotes -->
-        <line x1="6" y1="51" x2="-6" y2="48" stroke="#a89888" stroke-width="0.8"/>
-        <line x1="6" y1="53" x2="-6" y2="54" stroke="#a89888" stroke-width="0.8"/>
-        <line x1="6" y1="52" x2="-4" y2="56" stroke="#a89888" stroke-width="0.8"/>
-        <!-- Patas delanteras -->
-        <rect class="pata-df" x="30" y="78" width="9" height="14" rx="4" fill="#c8bdb0"/>
-        <rect class="pata-di" x="42" y="76" width="9" height="16" rx="4" fill="#bdb0a3"/>
-        <!-- Patas traseras -->
-        <rect class="pata-tf" x="65" y="78" width="11" height="14" rx="5" fill="#c8bdb0"/>
-        <rect class="pata-ti" x="79" y="76" width="11" height="16" rx="5" fill="#bdb0a3"/>
+  <!-- CHINCHILLA (pixel art) -->
+  <div class="chin-wrap" aria-hidden="true">
+    <div class="chin-walk">
+      <svg class="chin-svg" viewBox="0 0 72 80" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+        <!-- tail -->
+        <rect x="48" y="0"  width="8" height="8" fill="#c4bcb4"/>
+        <rect x="56" y="0"  width="8" height="8" fill="#c4bcb4"/>
+        <rect x="48" y="8"  width="8" height="8" fill="#c4bcb4"/>
+        <rect x="56" y="8"  width="8" height="8" fill="#c4bcb4"/>
+        <rect x="64" y="8"  width="8" height="8" fill="#c4bcb4"/>
+        <rect x="48" y="16" width="8" height="8" fill="#c4bcb4"/>
+        <rect x="56" y="16" width="8" height="8" fill="#c4bcb4"/>
+        <!-- ear outer -->
+        <rect x="16" y="0"  width="8" height="8" fill="#888078"/>
+        <rect x="8"  y="8"  width="8" height="8" fill="#888078"/>
+        <rect x="24" y="8"  width="8" height="8" fill="#888078"/>
+        <rect x="8"  y="16" width="8" height="8" fill="#888078"/>
+        <rect x="24" y="16" width="8" height="8" fill="#888078"/>
+        <rect x="16" y="24" width="8" height="8" fill="#888078"/>
+        <!-- ear inner -->
+        <rect x="16" y="8"  width="8" height="8" fill="#f4b8c8"/>
+        <rect x="16" y="16" width="8" height="8" fill="#f4b8c8"/>
+        <!-- body -->
+        <rect x="32" y="16" width="8" height="8" fill="#a8a098"/>
+        <rect x="40" y="16" width="8" height="8" fill="#a8a098"/>
+        <rect x="24" y="24" width="8" height="8" fill="#a8a098"/>
+        <rect x="32" y="24" width="8" height="8" fill="#a8a098"/>
+        <rect x="40" y="24" width="8" height="8" fill="#a8a098"/>
+        <rect x="48" y="24" width="8" height="8" fill="#a8a098"/>
+        <rect x="56" y="24" width="8" height="8" fill="#a8a098"/>
+        <rect x="16" y="32" width="8" height="8" fill="#a8a098"/>
+        <rect x="24" y="32" width="8" height="8" fill="#a8a098"/>
+        <rect x="56" y="32" width="8" height="8" fill="#a8a098"/>
+        <rect x="8"  y="40" width="8" height="8" fill="#a8a098"/>
+        <rect x="16" y="40" width="8" height="8" fill="#a8a098"/>
+        <rect x="56" y="40" width="8" height="8" fill="#a8a098"/>
+        <rect x="8"  y="48" width="8" height="8" fill="#a8a098"/>
+        <rect x="16" y="48" width="8" height="8" fill="#a8a098"/>
+        <rect x="48" y="48" width="8" height="8" fill="#a8a098"/>
+        <rect x="8"  y="56" width="8" height="8" fill="#a8a098"/>
+        <rect x="16" y="56" width="8" height="8" fill="#a8a098"/>
+        <rect x="24" y="56" width="8" height="8" fill="#a8a098"/>
+        <rect x="32" y="56" width="8" height="8" fill="#a8a098"/>
+        <rect x="40" y="56" width="8" height="8" fill="#a8a098"/>
+        <!-- belly -->
+        <rect x="32" y="32" width="8" height="8" fill="#d0c8c0"/>
+        <rect x="40" y="32" width="8" height="8" fill="#d0c8c0"/>
+        <rect x="48" y="32" width="8" height="8" fill="#d0c8c0"/>
+        <rect x="24" y="40" width="8" height="8" fill="#d0c8c0"/>
+        <rect x="32" y="40" width="8" height="8" fill="#d0c8c0"/>
+        <rect x="40" y="40" width="8" height="8" fill="#d0c8c0"/>
+        <rect x="48" y="40" width="8" height="8" fill="#d0c8c0"/>
+        <rect x="24" y="48" width="8" height="8" fill="#d0c8c0"/>
+        <rect x="32" y="48" width="8" height="8" fill="#d0c8c0"/>
+        <rect x="40" y="48" width="8" height="8" fill="#d0c8c0"/>
+        <!-- nose -->
+        <rect x="0"  y="32" width="8" height="8" fill="#f08898"/>
+        <!-- eye -->
+        <rect x="8"  y="32" width="8" height="8" fill="#181420"/>
+        <!-- eye shine -->
+        <rect x="8"  y="32" width="4" height="4" fill="#d0c8c0"/>
+        <!-- legs frame A -->
+        <g class="chin-legs-a">
+          <rect x="8"  y="64" width="8" height="16" fill="#888070"/>
+          <rect x="24" y="64" width="8" height="16" fill="#888070"/>
+        </g>
+        <!-- legs frame B -->
+        <g class="chin-legs-b">
+          <rect x="16" y="64" width="8" height="16" fill="#888070"/>
+          <rect x="32" y="64" width="8" height="16" fill="#888070"/>
+        </g>
       </svg>
     </div>
   </div>
 
   <style>
-    .chinchilla-wrap {
+    .chin-wrap {
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      height: 90px;
+      height: 80px;
       pointer-events: none;
       z-index: 40;
       overflow: hidden;
     }
-    .chinchilla-walk {
+    .chin-walk {
       position: absolute;
       bottom: 0;
-      animation: chinchilla-cross 18s linear infinite;
+      animation: chin-cross 18s linear infinite;
     }
-    .chinchilla-svg {
-      width: 120px;
-      height: 90px;
-      animation: chinchilla-bob 0.4s ease-in-out infinite alternate;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+    .chin-svg {
+      display: block;
+      width: 72px;
+      height: 80px;
+      image-rendering: pixelated;
+      filter: drop-shadow(2px 2px 0 rgba(0,0,0,0.3));
     }
-    /* Camina de derecha a izquierda, vuelta por la derecha */
-    @keyframes chinchilla-cross {
+    @keyframes chin-cross {
       0%   { left: 105vw; transform: scaleX(1); }
-      48%  { left: -160px; transform: scaleX(1); }
-      49%  { left: -160px; transform: scaleX(-1); }
-      50%  { left: -160px; transform: scaleX(-1); }
+      48%  { left: -90px; transform: scaleX(1); }
+      49%  { left: -90px; transform: scaleX(-1); }
+      50%  { left: -90px; transform: scaleX(-1); }
       98%  { left: 105vw; transform: scaleX(-1); }
       99%  { left: 105vw; transform: scaleX(1); }
       100% { left: 105vw; transform: scaleX(1); }
     }
-    /* Rebote suave al caminar */
-    @keyframes chinchilla-bob {
-      from { transform: translateY(0); }
-      to   { transform: translateY(-6px); }
+    @keyframes chin-legA {
+      0%    { opacity: 1; }
+      49.9% { opacity: 1; }
+      50%   { opacity: 0; }
+      100%  { opacity: 0; }
     }
-    /* Patas animadas */
-    .pata-df { animation: pata-a 0.4s ease-in-out infinite alternate; transform-origin: top center; }
-    .pata-di { animation: pata-b 0.4s ease-in-out infinite alternate; transform-origin: top center; }
-    .pata-tf { animation: pata-b 0.4s ease-in-out infinite alternate; transform-origin: top center; }
-    .pata-ti { animation: pata-a 0.4s ease-in-out infinite alternate; transform-origin: top center; }
-    @keyframes pata-a {
-      from { transform: rotate(-12deg); }
-      to   { transform: rotate(12deg); }
+    @keyframes chin-legB {
+      0%    { opacity: 0; }
+      49.9% { opacity: 0; }
+      50%   { opacity: 1; }
+      100%  { opacity: 1; }
     }
-    @keyframes pata-b {
-      from { transform: rotate(12deg); }
-      to   { transform: rotate(-12deg); }
-    }
+    .chin-legs-a { animation: chin-legA 0.4s linear infinite; }
+    .chin-legs-b { animation: chin-legB 0.4s linear infinite; }
   </style>
 
   <a href="https://wa.me/59173425725" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
