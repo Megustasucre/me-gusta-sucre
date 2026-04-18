@@ -36,7 +36,7 @@
         lnkCafe:      "Café",
         lnkGuia:      "City Guide",
         lnkMerch:     "Merch",
-        prefix:       "/en/"
+        prefix:       "en/"
       },
       es: {
         lang: "es",
@@ -60,7 +60,7 @@
         lnkCafe:      "Café",
         lnkGuia:      "Guía de la Ciudad",
         lnkMerch:     "Merch",
-        prefix:       "/es/"
+        prefix:       "es/"
       },
       fr: {
         lang: "fr",
@@ -84,9 +84,13 @@
         lnkCafe:      "Café",
         lnkGuia:      "Guide de la Ville",
         lnkMerch:     "Merch",
-        prefix:       "/fr/"
+        prefix:       "fr/"
       }
     };
+
+    var basePath = window.location.hostname === 'megustasucre.github.io'
+      ? '/me-gusta-sucre/'
+      : '/';
 
     function detectLang() {
       var l = navigator.language || navigator.userLanguage || "en";
@@ -131,7 +135,7 @@
       document.getElementById("lnk-merch").textContent     = t.lnkMerch;
 
       // Update all href prefixes
-      var p = t.prefix;
+      var p = basePath + t.prefix;
       document.getElementById("logo-link").href          = p + "index.html";
       document.getElementById("nav-clases").href         = p + "clases.html";
       document.getElementById("nav-cafe").href           = p + "cafe.html";
@@ -182,21 +186,21 @@
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between relative">
 
       <div class="hidden md:flex items-center gap-7" style="flex:1">
-        <a id="nav-clases" href="/en/clases.html"      class="nav-link text-white">Spanish Classes</a>
-        <a id="nav-cafe"   href="/en/cafe.html"        class="nav-link text-white">Café</a>
-        <a id="nav-guia"   href="/en/guia.html"        class="nav-link text-white">City Guide</a>
+        <a id="nav-clases" href="en/clases.html"      class="nav-link text-white">Spanish Classes</a>
+        <a id="nav-cafe"   href="en/cafe.html"        class="nav-link text-white">Café</a>
+        <a id="nav-guia"   href="en/guia.html"        class="nav-link text-white">City Guide</a>
       </div>
 
-      <a id="logo-link" href="/en/index.html" class="flex items-center md:absolute md:left-1/2 md:-translate-x-1/2">
+      <a id="logo-link" href="en/index.html" class="flex items-center md:absolute md:left-1/2 md:-translate-x-1/2">
         <span class="logo-text text-white font-bold" style="font-family:'Lora',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap">
           Me Gusta <span style="color:#c9252d;font-style:italic">Sucre</span>
         </span>
       </a>
 
       <div class="hidden md:flex items-center justify-end gap-5" style="flex:1">
-        <a id="nav-stay"    href="/en/hospedaje.html"     class="nav-link text-white">Stay</a>
-        <a id="nav-merch"   href="/en/merchandising.html" class="nav-link text-white">Merch</a>
-        <a id="nav-contact" href="/en/contacto.html"      class="nav-link text-white">Contact</a>
+        <a id="nav-stay"    href="en/hospedaje.html"     class="nav-link text-white">Stay</a>
+        <a id="nav-merch"   href="en/merchandising.html" class="nav-link text-white">Merch</a>
+        <a id="nav-contact" href="en/contacto.html"      class="nav-link text-white">Contact</a>
         <div class="flex items-center gap-3 border-l lang-container border-white/20 pl-6 ml-2">
           <span id="lang-label" class="sr-only">Language</span>
           <button class="lang-switcher-btn text-xs font-bold text-white transition-colors uppercase" data-lang="en" style="background:none;border:none;cursor:pointer">EN</button>
@@ -215,12 +219,12 @@
     </div>
 
     <div id="mobile-menu" class="hidden bg-white shadow-xl px-6 pb-5">
-      <a id="m-clases"  href="/en/clases.html"        class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Spanish Classes</a>
-      <a id="m-cafe"    href="/en/cafe.html"           class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Café</a>
-      <a id="m-guia"    href="/en/guia.html"           class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">City Guide</a>
-      <a id="m-stay"    href="/en/hospedaje.html"      class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Stay</a>
-      <a id="m-merch"   href="/en/merchandising.html"  class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Merch</a>
-      <a id="m-contact" href="/en/contacto.html"       class="block py-2 text-sm font-semibold text-gray-800">Contact</a>
+      <a id="m-clases"  href="en/clases.html"        class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Spanish Classes</a>
+      <a id="m-cafe"    href="en/cafe.html"           class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Café</a>
+      <a id="m-guia"    href="en/guia.html"           class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">City Guide</a>
+      <a id="m-stay"    href="en/hospedaje.html"      class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Stay</a>
+      <a id="m-merch"   href="en/merchandising.html"  class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Merch</a>
+      <a id="m-contact" href="en/contacto.html"       class="block py-2 text-sm font-semibold text-gray-800">Contact</a>
       <div class="py-4 mt-2 border-t border-b border-gray-100 mb-4">
         <p id="m-lang-label" class="text-[10px] font-bold text-gray-400 mb-3 uppercase tracking-wider">Language / Idioma</p>
         <div class="flex items-center gap-5">
@@ -231,7 +235,7 @@
           <button class="m-lang-btn text-sm font-bold text-gray-400 transition-colors" data-lang="fr" style="background:none;border:none;cursor:pointer">FR</button>
         </div>
       </div>
-      <a id="m-book" href="/en/hospedaje.html" class="btn-red block text-center mt-4">Book a Stay</a>
+      <a id="m-book" href="en/hospedaje.html" class="btn-red block text-center mt-4">Book a Stay</a>
     </div>
   </nav>
 
@@ -261,11 +265,11 @@
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
-        <a id="btn-home" href="/en/index.html" class="btn-red px-8 py-3 text-sm flex items-center gap-2" style="font-family:'DM Sans',sans-serif">
+        <a id="btn-home" href="en/index.html" class="btn-red px-8 py-3 text-sm flex items-center gap-2" style="font-family:'DM Sans',sans-serif">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
           <span id="btn-home-text">Back to Home</span>
         </a>
-        <a id="btn-contact" href="/en/contacto.html" class="btn-outline-white px-8 py-3 text-sm" style="font-family:'DM Sans',sans-serif">
+        <a id="btn-contact" href="en/contacto.html" class="btn-outline-white px-8 py-3 text-sm" style="font-family:'DM Sans',sans-serif">
           Contact Us
         </a>
       </div>
@@ -273,11 +277,11 @@
       <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:36px">
         <p id="quick-label" style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px">Or go directly to</p>
         <div class="flex flex-wrap justify-center gap-x-8 gap-y-3">
-          <a id="lnk-clases" href="/en/clases.html"        style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">Spanish Classes</a>
-          <a id="lnk-stay"   href="/en/hospedaje.html"     style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">Stay</a>
-          <a id="lnk-cafe"   href="/en/cafe.html"          style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">Café</a>
-          <a id="lnk-guia"   href="/en/guia.html"          style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">City Guide</a>
-          <a id="lnk-merch"  href="/en/merchandising.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">Merch</a>
+          <a id="lnk-clases" href="en/clases.html"        style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">Spanish Classes</a>
+          <a id="lnk-stay"   href="en/hospedaje.html"     style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">Stay</a>
+          <a id="lnk-cafe"   href="en/cafe.html"          style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">Café</a>
+          <a id="lnk-guia"   href="en/guia.html"          style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">City Guide</a>
+          <a id="lnk-merch"  href="en/merchandising.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">Merch</a>
         </div>
       </div>
 
