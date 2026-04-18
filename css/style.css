@@ -566,16 +566,14 @@ footer a:hover { color: var(--gold); }
   .photo-stagger > div { margin-top: 0 !important; }
 }
 
-/* ─── NAV TABLET OPTIMIZATION (768px - 1100px) ─── */
-@media (min-width: 768px) and (max-width: 1100px) {
-  #navbar { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
-  #navbar .logo-text { font-size: 1.15rem !important; letter-spacing: -0.5px !important; }
-  #navbar .nav-link { font-size: 10px !important; letter-spacing: -0.2px !important; white-space: nowrap !important; }
-  #navbar .gap-7 { gap: 10px !important; }
-  #navbar .gap-5 { gap: 6px !important; }
-  #navbar .lang-container { padding-left: 10px !important; margin-left: 4px !important; gap: 6px !important; }
-  /* Reserve space for absolute logo */
-  #navbar .flex[style*="flex:1"] { max-width: 38%; } 
+/* ─── NAV TABLET: hamburger menu below 1024px ─── */
+@media (max-width: 1023px) {
+  /* Hide desktop nav groups */
+  #navbar .md\:flex { display: none !important; }
+  /* Show hamburger */
+  #navbar .md\:hidden { display: block !important; }
+  /* Logo left-aligned (no absolute centering) */
+  #navbar .md\:absolute { position: static !important; transform: none !important; }
 }
 
 /* ─── TABLET (768px – 1024px) ─── */
