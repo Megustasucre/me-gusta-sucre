@@ -62,29 +62,34 @@
 </head>
 <body style="background:#fafafa">
 
-  <!-- TOP ANNOUNCEMENT BAR -->
-  <div class="top-bar">
-    Stay in the heart of Sucre — boutique inn + Spanish classes + café, all in one place.
-    <a href="hospedaje.html">Explore Me Gusta</a>
+    <div class="top-bar">
+    <span data-i18n="contacto.topbar">Questions? We reply fast on WhatsApp · Inn: +591 734 25725 · School: +591 734 00447</span>
+    <a href="https://wa.me/59173425725" target="_blank" data-i18n="contacto.topbarLink">Message Us</a>
   </div>
 
+<!-- TOP ANNOUNCEMENT BAR -->
   <!-- NAVBAR -->
   <nav id="navbar" class="fixed left-0 right-0 z-50" style="background:transparent">
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between relative">
       <div class="hidden md:flex items-center gap-7" style="flex:1">
-        <a href="clases.html" class="nav-link text-white">Spanish Classes</a>
-        <a href="cafe.html" class="nav-link text-white">Café</a>
-        <a href="guia.html" class="nav-link nav-active text-white">City Guide</a>
+        <a href="clases.html" class="nav-link text-white" data-i18n="nav.classes">Spanish Classes</a>
+        <a href="cafe.html" class="nav-link text-white" data-i18n="nav.cafe">Café</a>
+        <a href="guia.html" class="nav-link nav-active text-white" data-i18n="nav.guide">City Guide</a>
       </div>
       <a href="index.html" class="flex items-center md:absolute md:left-1/2 md:-translate-x-1/2">
-        <span class="logo-text text-white font-bold" style="font-family:'Lora',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap">
-          Me Gusta <span class="logo-accent" style="color:#c9252d;font-style:italic">Sucre</span>
-        </span>
+        <img src="imagenes/logos/logo-me-gusta-sucre-oficial.png" alt="Me Gusta Sucre" class="logo-img">
       </a>
       <div class="hidden md:flex items-center justify-end gap-7" style="flex:1">
-        <a href="hospedaje.html"     class="nav-link text-white">Stay</a>
-        <a href="merchandising.html" class="nav-link text-white">Merch</a>
-        <a href="contacto.html"      class="nav-link text-white">Contact</a>
+        <a href="hospedaje.html"     class="nav-link text-white" data-i18n="nav.stay">Stay</a>
+        <a href="merchandising.html" class="nav-link text-white" data-i18n="nav.merch">Merch</a>
+        <a href="contacto.html"      class="nav-link text-white" data-i18n="nav.contact">Contact</a>
+        <div class="flex items-center gap-3 border-l lang-container border-white/20 pl-6 ml-2">
+          <button class="lang-btn text-xs font-bold text-white uppercase active" data-lang="en">EN</button>
+          <span class="text-white/30 text-xs">|</span>
+          <button class="lang-btn text-xs font-bold text-white/50 uppercase" data-lang="es">ES</button>
+          <span class="text-white/30 text-xs">|</span>
+          <button class="lang-btn text-xs font-bold text-white/50 uppercase" data-lang="fr">FR</button>
+        </div>
       </div>
       <button id="menu-btn" class="md:hidden text-white p-1">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -93,13 +98,26 @@
       </button>
     </div>
     <div id="mobile-menu" class="hidden bg-white shadow-xl px-6 pb-5">
-      <a href="clases.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Spanish Classes</a>
-      <a href="cafe.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Café</a>
-      <a href="guia.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">City Guide</a>
-      <a href="hospedaje.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Stay</a>
-      <a href="merchandising.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Merch</a>
-      <a href="contacto.html" class="block py-2 text-sm font-semibold text-gray-800">Contact</a>
-      <a href="hospedaje.html" class="btn-red block text-center mt-4">Book a Stay</a>
+      <div class="flex justify-center py-4 border-b border-gray-100 mb-2">
+        <img src="imagenes/logos/logo-me-gusta-sucre-oficial.png" alt="Me Gusta Sucre" style="height:56px">
+      </div>
+      <a href="clases.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.classes">Spanish Classes</a>
+      <a href="cafe.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.cafe">Café</a>
+      <a href="guia.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.guide">City Guide</a>
+      <a href="hospedaje.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.stay">Stay</a>
+      <a href="merchandising.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.merch">Merch</a>
+      <a href="contacto.html" class="block py-2 text-sm font-semibold text-gray-800" data-i18n="nav.contact">Contact</a>
+      <div class="py-4 mt-2 border-t border-b border-gray-100 mb-4">
+        <p class="text-[10px] font-bold text-gray-400 mb-3 uppercase tracking-wider" data-i18n="nav.langLabel">Language</p>
+        <div class="flex items-center gap-5">
+          <button class="lang-btn text-sm font-bold text-gray-900" data-lang="en">EN</button>
+          <span class="text-gray-300">|</span>
+          <button class="lang-btn text-sm font-bold text-gray-400" data-lang="es">ES</button>
+          <span class="text-gray-300">|</span>
+          <button class="lang-btn text-sm font-bold text-gray-400" data-lang="fr">FR</button>
+        </div>
+      </div>
+      <a href="hospedaje.html" class="btn-red block text-center mt-4" data-i18n="nav.book">Book a Stay</a>
     </div>
   </nav>
 
@@ -116,29 +134,29 @@
     <!-- UNESCO badge -->
     <div style="position:absolute;top:100px;right:32px;display:inline-flex;align-items:center;gap:10px;background:rgba(201,37,45,0.85);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.2);border-radius:0;padding:9px 18px;z-index:10">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12 1l3.09 6.26L22 8.27l-5 4.87 1.18 6.88L12 16.77l-6.18 3.25L7 13.14 2 8.27l6.91-1.01L12 1z"/></svg>
-      <p style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#fff;margin:0">UNESCO World Heritage</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#fff;margin:0" data-i18n="guia.heroUNESCO">UNESCO World Heritage</p>
     </div>
 
     <!-- Location tag -->
     <div style="position:absolute;bottom:44px;right:32px;display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.1);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.2);border-radius:0;padding:9px 18px;z-index:10">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="#c9252d"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
       <div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#fff;margin:0;line-height:1.3">Sucre, Bolivia</p>
-        <p style="font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.55);margin:0;line-height:1.3">La Ciudad Blanca</p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#fff;margin:0;line-height:1.3" data-i18n="guia.heroLocTitle">Sucre, Bolivia</p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.55);margin:0;line-height:1.3" data-i18n="guia.heroLocSub">La Ciudad Blanca</p>
       </div>
     </div>
 
     <div class="max-w-7xl mx-auto px-6 w-full relative z-10 hero-content" style="padding-bottom:60px">
-      <p class="eyebrow mb-4" style="color:#c9252d">City Guide</p>
+      <p class="eyebrow mb-4" style="color:#c9252d" data-i18n="guia.heroEyebrow">Essential Guide</p>
       <h1 style="font-family:'Lora',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:800;color:#fff;line-height:1.0;margin-bottom:16px">
-        Sucre,<br/><span style="color:#c9252d;font-style:italic">Bolivia</span>
+        <span data-i18n="guia.heroTitle">Discover</span><br/><span style="color:#c9252d;font-style:italic" data-i18n="guia.heroAccent">Sucre like a Local</span>
       </h1>
-      <p style="font-size:1.1rem;color:rgba(255,255,255,0.75);max-width:520px;line-height:1.7;margin-bottom:36px">
-        The White City. Bolivia's most livable destination — colonial history, Andean landscapes, and a warmth that makes you want to stay longer than planned.
+      <p style="font-size:1.1rem;color:rgba(255,255,255,0.75);max-width:520px;line-height:1.7;margin-bottom:36px" data-i18n="guia.heroSub">
+        The 'White City' is more than just colonial architecture. It's a place of hidden markets, prehistoric footprints, and some of the best food in the Andes.
       </p>
       <div class="flex flex-wrap gap-5 items-center">
-        <a href="#spots" style="background:#c9252d;color:#fff;padding:16px 36px;border-radius:0;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.5px">Explore the City</a>
-        <a href="#tips" class="btn-outline flex items-center gap-2 group" style="padding:16px 32px">Practical Tips <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="transition-transform group-hover:translate-x-1" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#must-see" style="background:#c9252d;color:#fff;padding:16px 36px;border-radius:0;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.5px" data-i18n="guia.heroCta1">Read the Guide</a>
+        <a href="contacto.html" class="btn-outline flex items-center gap-2 group" style="padding:16px 32px" data-i18n="guia.heroCta2">Find Us</a>
       </div>
     </div>
   </section>
@@ -154,19 +172,19 @@
       <div class="flex flex-wrap justify-center gap-10 md:gap-20 text-center">
         <div class="fade-up">
           <span style="font-family:'Lora',serif;font-size:1.8rem;color:#c9252d;font-weight:700;display:block"><span class="counter" data-target="2810" data-suffix="m">0m</span></span>
-          <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5)">Altitude</span>
+          <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5)" data-i18n="guia.qf1Label">Altitude</span>
         </div>
         <div class="fade-up" style="transition-delay:0.1s">
           <span style="font-family:'Lora',serif;font-size:1.8rem;color:#c9252d;font-weight:700;display:block">1538</span>
-          <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5)">Founded</span>
+          <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5)" data-i18n="guia.qf2Label">Founded</span>
         </div>
         <div class="fade-up" style="transition-delay:0.2s">
           <span style="font-family:'Lora',serif;font-size:1.8rem;color:#fff;font-weight:700;display:block">1991</span>
-          <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5)">UNESCO Listed</span>
+          <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5)" data-i18n="guia.qf3Label">UNESCO Listed</span>
         </div>
         <div class="fade-up" style="transition-delay:0.3s">
           <span style="font-family:'Lora',serif;font-size:1.8rem;color:#fff;font-weight:700;display:block"><span class="counter" data-target="300" data-suffix="+">0+</span></span>
-          <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5)">Sunny days / year</span>
+          <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5)" data-i18n="guia.qf4Label">Sunny days / year</span>
         </div>
       </div>
     </div>
@@ -177,24 +195,24 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-16 items-center">
         <div class="fade-up">
-          <p class="eyebrow mb-4" style="color:#c9252d">About Sucre</p>
+          <p class="eyebrow mb-4" style="color:#c9252d" data-i18n="guia.aboutEyebrow">About Sucre</p>
           <h2 style="font-family:'Lora',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:800;color:#111;line-height:1.1;margin-bottom:24px">
-            Bolivia's most <span style="color:#c9252d;font-style:italic">livable</span> city
+            <span data-i18n-html="guia.aboutTitle">Bolivia's most <span style="color:#c9252d;font-style:italic">livable</span> city</span>
           </h2>
           <p style="font-size:15px;color:#555;line-height:1.9;margin-bottom:18px">
-            Sucre is Bolivia's constitutional capital and one of South America's best-preserved colonial cities. Its whitewashed baroque architecture earned it the nickname La Ciudad Blanca — and UNESCO recognition in 1991.
+            <span data-i18n="guia.aboutP1">Sucre is Bolivia's constitutional capital and one of South America's best-preserved colonial cities. Its whitewashed baroque architecture earned it the nickname La Ciudad Blanca — and UNESCO recognition in 1991.</span>
           </p>
           <p style="font-size:15px;color:#555;line-height:1.9;margin-bottom:18px">
-            At 2,810 meters, it sits low enough for easy acclimatization, yet high enough to guarantee cool evenings and the brilliant Andean light that makes every street corner worth photographing.
+            <span data-i18n="guia.aboutP2">At 2,810 meters, it sits low enough for easy acclimatization, yet high enough to guarantee cool evenings and the brilliant Andean light that makes every street corner worth photographing.</span>
           </p>
           <p style="font-size:15px;color:#555;line-height:1.9;margin-bottom:32px">
-            The city is compact, walkable, and deeply student-oriented — it's home to one of the oldest universities in the Americas (USFX, founded 1624), making it South America's top destination for Spanish immersion.
+            <span data-i18n="guia.aboutP3">The city is compact, walkable, and deeply student-oriented — it's home to one of the oldest universities in the Americas (USFX, founded 1624), making it South America's top destination for Spanish immersion.</span>
           </p>
           <div style="display:flex;flex-wrap:wrap;gap:12px">
-            <span style="background:#f4f4f4;padding:8px 18px;border-radius:0;font-size:12px;font-weight:700;color:#111;letter-spacing:1px;text-transform:uppercase">Colonial Architecture</span>
-            <span style="background:#f4f4f4;padding:8px 18px;border-radius:0;font-size:12px;font-weight:700;color:#111;letter-spacing:1px;text-transform:uppercase">Safe City</span>
-            <span style="background:#f4f4f4;padding:8px 18px;border-radius:0;font-size:12px;font-weight:700;color:#111;letter-spacing:1px;text-transform:uppercase">Student Culture</span>
-            <span style="background:#f4f4f4;padding:8px 18px;border-radius:0;font-size:12px;font-weight:700;color:#111;letter-spacing:1px;text-transform:uppercase">Mild Climate</span>
+            <span style="background:#f4f4f4;padding:8px 18px;border-radius:0;font-size:12px;font-weight:700;color:#111;letter-spacing:1px;text-transform:uppercase" data-i18n="guia.aboutPill1">Colonial Architecture</span>
+            <span style="background:#f4f4f4;padding:8px 18px;border-radius:0;font-size:12px;font-weight:700;color:#111;letter-spacing:1px;text-transform:uppercase" data-i18n="guia.aboutPill2">Safe City</span>
+            <span style="background:#f4f4f4;padding:8px 18px;border-radius:0;font-size:12px;font-weight:700;color:#111;letter-spacing:1px;text-transform:uppercase" data-i18n="guia.aboutPill3">Student Culture</span>
+            <span style="background:#f4f4f4;padding:8px 18px;border-radius:0;font-size:12px;font-weight:700;color:#111;letter-spacing:1px;text-transform:uppercase" data-i18n="guia.aboutPill4">Mild Climate</span>
           </div>
         </div>
         <div class="fade-up relative" style="transition-delay:0.15s">
@@ -203,8 +221,8 @@
           </div>
           <!-- Floating badge -->
           <div style="position:absolute;bottom:-20px;left:-20px;background:#c9252d;color:#fff;padding:20px 24px;border-radius:20px;box-shadow:0 12px 30px rgba(201,37,45,0.35)">
-            <p style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:0.8;margin-bottom:4px">Why travelers love it</p>
-            <p style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;margin:0">Year-round sunshine,<br/>no crowds.</p>
+            <p style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:0.8;margin-bottom:4px"><span data-i18n="guia.aboutBadgeTop">Why travelers love it</span></p>
+            <p style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;margin:0"><span data-i18n-html="guia.aboutBadgeMsg">Year-round sunshine,<br/>no crowds.</span></p>
           </div>
         </div>
       </div>
@@ -216,13 +234,13 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex flex-col md:flex-row justify-between items-end mb-14 fade-up">
         <div>
-          <p class="eyebrow mb-2" style="color:#c9252d;letter-spacing:2px">In the City</p>
+          <p class="eyebrow mb-2" style="color:#c9252d;letter-spacing:2px" data-i18n="guia.mustEyebrow">Must-See Spots</p>
           <h2 style="font-family:'Lora',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:800;color:#111;line-height:1.1">
-            Must-See <span style="color:#c9252d;font-style:italic">Spots</span>
+            <span data-i18n="guia.mustTitle">Essential</span> <span style="color:#c9252d;font-style:italic" data-i18n="guia.mustAccent">Sucre</span>
           </h2>
         </div>
         <p style="font-size:15px;color:#666;max-width:360px;line-height:1.7;margin-top:16px">
-          Most of the historic center is walkable in an hour. Here are the places worth slowing down for.
+          <span data-i18n="guia.mustSub">Most of the historic center is walkable in an hour. Here are the places worth slowing down for.</span>
         </p>
       </div>
 
@@ -234,13 +252,13 @@
           <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1000&q=80" alt="Plaza 25 de Mayo Sucre" style="width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease" class="group-hover:scale-105" />
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.15) 50%,transparent 100%)"></div>
           <div style="position:absolute;top:24px;left:24px;display:flex;gap:8px">
-            <span style="background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:6px 16px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px">Start Here</span>
-            <span style="background:#c9252d;color:#fff;padding:6px 16px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px">Free</span>
+            <span style="background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:6px 16px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px" data-i18n="guia.must1Pill1">Start Here</span>
+            <span style="background:#c9252d;color:#fff;padding:6px 16px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px" data-i18n="guia.must1Pill2">Free</span>
           </div>
           <div style="position:absolute;bottom:32px;left:32px;right:32px">
-            <p style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px">Central Square</p>
-            <h3 style="font-family:'Lora',serif;font-size:2rem;font-weight:700;color:#fff;margin-bottom:10px">Plaza 25 de Mayo</h3>
-            <p style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.7;max-width:460px">The heart of Sucre. Lined with colonial facades, the Cathedral, and shaded benches where locals and travelers mix. The best place to start — and to end — any day.</p>
+            <p style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px" data-i18n="guia.must1Tag">Central Square</p>
+            <h3 style="font-family:'Lora',serif;font-size:2rem;font-weight:700;color:#fff;margin-bottom:10px" data-i18n="guia.must1Title">Casa de la Libertad</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.7;max-width:460px" data-i18n="guia.must1Desc">Where Bolivia was born. The original independence documents are kept here in a stunning colonial building.</p>
           </div>
         </div>
 
@@ -249,11 +267,11 @@
           <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=700&q=80" alt="Casa de la Libertad" style="width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease" class="group-hover:scale-105" />
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.72) 0%,transparent 60%)"></div>
           <div style="position:absolute;top:18px;left:18px">
-            <span style="background:rgba(0,0,0,0.4);backdrop-filter:blur(12px);color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px">Museum · Bs 25</span>
+            <span style="background:rgba(0,0,0,0.4);backdrop-filter:blur(12px);color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px"><span data-i18n="guia.must2Pill">Museum · Bs 25</span></span>
           </div>
           <div style="position:absolute;bottom:22px;left:22px;right:22px">
-            <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:4px">Casa de la Libertad</h3>
-            <p style="font-size:12px;color:rgba(255,255,255,0.7)">Where Bolivia's independence was declared in 1825. A museum today — don't skip it.</p>
+            <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:4px" data-i18n="guia.spot2Title">Casa de la Libertad</h3>
+            <p style="font-size:12px;color:rgba(255,255,255,0.7)"><span data-i18n="guia.must2Desc">Where Bolivia's independence was declared in 1825. A museum today — don't skip it.</span></p>
           </div>
         </div>
 
@@ -262,11 +280,11 @@
           <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=700&q=80" alt="La Recoleta viewpoint Sucre" style="width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease" class="group-hover:scale-105" />
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.72) 0%,transparent 60%)"></div>
           <div style="position:absolute;top:18px;left:18px">
-            <span style="background:rgba(0,0,0,0.4);backdrop-filter:blur(12px);color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px">Viewpoint · Free</span>
+            <span style="background:rgba(0,0,0,0.4);backdrop-filter:blur(12px);color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px"><span data-i18n="guia.must3Pill">Viewpoint · Free</span></span>
           </div>
           <div style="position:absolute;bottom:22px;left:22px;right:22px">
-            <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:4px">La Recoleta</h3>
-            <p style="font-size:12px;color:rgba(255,255,255,0.7)">Colonial convent on the hill. Best panoramic view of the entire white city.</p>
+            <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:4px" data-i18n="guia.must2Title">Recoleta Viewpoint</h3>
+            <p style="font-size:12px;color:rgba(255,255,255,0.7)" data-i18n="guia.must2Desc">The best sunset in the city. A steep walk up, but the orange glow over the white roofs is worth every step.</p>
           </div>
         </div>
 
@@ -281,9 +299,9 @@
             <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=600&q=80" alt="Catedral Sucre" style="width:100%;height:100%;object-fit:cover" />
           </div>
           <div style="padding:24px">
-            <p style="font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px">Architecture · Free to enter</p>
-            <h3 style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#111;margin-bottom:8px">Metropolitan Cathedral</h3>
-            <p style="font-size:13px;color:#666;line-height:1.7">Baroque masterpiece on the main plaza. The bell tower at sunset is unmissable. Small religious museum inside.</p>
+            <p style="font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px" data-i18n="guia.must4Pill">Architecture · Free to enter</p>
+            <h3 style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#111;margin-bottom:8px" data-i18n="guia.must4Title">Metropolitan Cathedral</h3>
+            <p style="font-size:13px;color:#666;line-height:1.7"><span data-i18n="guia.must4Desc">Baroque masterpiece on the main plaza. The bell tower at sunset is unmissable. Small religious museum inside.</span></p>
           </div>
         </div>
 
@@ -293,9 +311,9 @@
             <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="ASUR indigenous textiles museum" style="width:100%;height:100%;object-fit:cover" />
           </div>
           <div style="padding:24px">
-            <p style="font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px">Museum · Bs 30</p>
-            <h3 style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#111;margin-bottom:8px">ASUR Textile Museum</h3>
-            <p style="font-size:13px;color:#666;line-height:1.7">Stunning collection of Jalq'a and Tarabuco indigenous weavings. One of Bolivia's finest ethnographic museums.</p>
+            <p style="font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px" data-i18n="guia.must5Pill">Museum · Bs 30</p>
+            <h3 style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#111;margin-bottom:8px" data-i18n="guia.must5Title">ASUR Textile Museum</h3>
+            <p style="font-size:13px;color:#666;line-height:1.7"><span data-i18n="guia.must5Desc">Stunning collection of Jalq'a and Tarabuco indigenous weavings. One of Bolivia's finest ethnographic museums.</span></p>
           </div>
         </div>
 
@@ -306,9 +324,9 @@
             <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(17,17,17,0.6) 100%)"></div>
           </div>
           <div style="padding:24px">
-            <p style="font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px">Day Half · 6km from center</p>
-            <h3 style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:8px">Cal Orcko Dinosaurs</h3>
-            <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7">The world's largest collection of dinosaur footprints — 5,000+ tracks on a vertical limestone cliff, 68 million years old.</p>
+            <p style="font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px" data-i18n="guia.must6Pill">Day Half · 6km from center</p>
+            <h3 style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:8px" data-i18n="guia.must4Title">Cal Orck'o</h3>
+            <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7" data-i18n="guia.must4Desc">The largest collection of dinosaur footprints in the world. A vertical wall with over 5,000 tracks.</p>
           </div>
         </div>
 
@@ -320,9 +338,9 @@
   <section style="padding:100px 0;background:#fff">
     <div class="max-w-7xl mx-auto px-6">
       <div class="mb-14 fade-up">
-        <p class="eyebrow mb-2" style="color:#c9252d;letter-spacing:2px">Beyond the City</p>
+        <p class="eyebrow mb-2" style="color:#c9252d;letter-spacing:2px" data-i18n="guia.dayEyebrow">Day Trips from Sucre</p>
         <h2 style="font-family:'Lora',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:800;color:#111;line-height:1.1">
-          Day Trips from <span style="color:#c9252d;font-style:italic">Sucre</span>
+          <span data-i18n="guia.dayTitle">Beyond the City</span> <span style="color:#c9252d;font-style:italic" data-i18n="guia.dayAccent">Walls</span>
         </h2>
       </div>
 
@@ -333,17 +351,17 @@
           <div style="height:260px;overflow:hidden;position:relative">
             <img src="https://images.unsplash.com/photo-1504903271097-d7e7c7f5f7ad?w=800&q=80" alt="Tarabuco market Bolivia" style="width:100%;height:100%;object-fit:cover" />
             <div style="position:absolute;top:20px;left:20px;display:flex;gap:8px">
-              <span style="background:rgba(0,0,0,0.5);backdrop-filter:blur(10px);color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px">65km · 1h</span>
-              <span style="background:#c9252d;color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px">Sundays Only</span>
+              <span style="background:rgba(0,0,0,0.5);backdrop-filter:blur(10px);color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px"><span data-i18n="guia.day1Pill1">65km · 1h</span>
+              <span style="background:#c9252d;color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px"><span data-i18n="guia.day1Pill2">Sundays Only</span>
             </div>
           </div>
           <div style="padding:28px 32px 32px">
             <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
               <div style="width:28px;height:28px;border-radius:50%;background:#fee2e2;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#c9252d">01</div>
-              <span style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:2px">Culture</span>
+              <span style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:2px" data-i18n="guia.day1Type">Culture</span>
             </div>
-            <h3 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:800;color:#111;margin-bottom:12px">Tarabuco Market</h3>
-            <p style="font-size:14px;color:#666;line-height:1.8;margin-bottom:20px">The most authentic indigenous market in Bolivia. Yampara and Jalq'a communities gather every Sunday to trade textiles, food, and crafts. More living culture than tourist market.</p>
+            <h3 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:800;color:#111;margin-bottom:12px" data-i18n="guia.day1Title">Tarabuco Market</h3>
+            <p style="font-size:14px;color:#666;line-height:1.8;margin-bottom:20px"><span data-i18n="guia.day1Desc">The most authentic indigenous market in Bolivia. Yampara and Jalq'a communities gather every Sunday to trade textiles, food, and crafts. More living culture than tourist market.</span></p>
           </div>
         </div>
 
@@ -352,17 +370,17 @@
           <div style="height:260px;overflow:hidden;position:relative">
             <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80" alt="Maragua crater hiking" style="width:100%;height:100%;object-fit:cover" />
             <div style="position:absolute;top:20px;left:20px;display:flex;gap:8px">
-              <span style="background:rgba(0,0,0,0.5);backdrop-filter:blur(10px);color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px">90km · 1.5h</span>
-              <span style="background:#111;color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px">Moderate</span>
+              <span style="background:rgba(0,0,0,0.5);backdrop-filter:blur(10px);color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px"><span data-i18n="guia.day2Pill1">90km · 1.5h</span>
+              <span style="background:#111;color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px"><span data-i18n="guia.day2Pill2">Moderate</span>
             </div>
           </div>
           <div style="padding:28px 32px 32px">
             <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
               <div style="width:28px;height:28px;border-radius:50%;background:#fee2e2;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#c9252d">02</div>
-              <span style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:2px">Trekking</span>
+              <span style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:2px" data-i18n="guia.day2Type">Trekking</span>
             </div>
-            <h3 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:800;color:#111;margin-bottom:12px">Maragua Crater</h3>
-            <p style="font-size:14px;color:#666;line-height:1.8;margin-bottom:20px">A collapsed volcanic crater turned lush valley, with ancient Inca trails, local communities, and landscapes that look like another planet. A full day, worth every step.</p>
+            <h3 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:800;color:#111;margin-bottom:12px" data-i18n="guia.day2Title">Maragua Crater</h3>
+            <p style="font-size:14px;color:#666;line-height:1.8;margin-bottom:20px"><span data-i18n="guia.day2Desc">A collapsed volcanic crater turned lush valley, with ancient Inca trails, local communities, and landscapes that look like another planet. A full day, worth every step.</span></p>
           </div>
         </div>
 
@@ -371,17 +389,17 @@
           <div style="height:260px;overflow:hidden;position:relative">
             <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Potosi Bolivia silver mining" style="width:100%;height:100%;object-fit:cover;opacity:0.75" />
             <div style="position:absolute;top:20px;left:20px;display:flex;gap:8px">
-              <span style="background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px">130km · 3h</span>
+              <span style="background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px"><span data-i18n="guia.day3Pill">130km · 3h</span>
             </div>
           </div>
           <div style="padding:28px 32px 32px">
             <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
               <div style="width:28px;height:28px;border-radius:50%;background:rgba(201,37,45,0.2);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#c9252d">03</div>
-              <span style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:2px">History</span>
+              <span style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:2px" data-i18n="guia.day3Type">History</span>
             </div>
-            <h3 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:12px">Potosí</h3>
-            <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:20px">The city that once funded the Spanish Empire. Visit the Cerro Rico silver mine, the colonial Casa de la Moneda mint, and one of the highest cities on earth at 4,090m.</p>
-            <a href="contacto.html" style="font-size:13px;font-weight:700;color:#c9252d;text-decoration:none;letter-spacing:0.5px">Ask us about transport →</a>
+            <h3 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:12px" data-i18n="guia.day3Title">Potosí</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:20px"><span data-i18n="guia.day3Desc">The city that once funded the Spanish Empire. Visit the Cerro Rico silver mine, the colonial Casa de la Moneda mint, and one of the highest cities on earth at 4,090m.</span></p>
+            <a href="contacto.html" style="font-size:13px;font-weight:700;color:#c9252d;text-decoration:none;letter-spacing:0.5px"><span data-i18n="guia.askTransport">Ask us about transport →</span></a>
           </div>
         </div>
 
@@ -390,17 +408,17 @@
           <div style="height:260px;overflow:hidden;position:relative">
             <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80" alt="Chataquila Inca ruins Sucre" style="width:100%;height:100%;object-fit:cover" />
             <div style="position:absolute;top:20px;left:20px;display:flex;gap:8px">
-              <span style="background:rgba(0,0,0,0.5);backdrop-filter:blur(10px);color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px">40km · 45min</span>
-              <span style="background:#f4f4f4;color:#111;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px">Easy</span>
+              <span style="background:rgba(0,0,0,0.5);backdrop-filter:blur(10px);color:#fff;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px"><span data-i18n="guia.day4Pill1">40km · 45min</span>
+              <span style="background:#f4f4f4;color:#111;padding:5px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px"><span data-i18n="guia.day4Pill2">Easy</span>
             </div>
           </div>
           <div style="padding:28px 32px 32px">
             <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
               <div style="width:28px;height:28px;border-radius:50%;background:#fee2e2;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#c9252d">04</div>
-              <span style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:2px">Ruins</span>
+              <span style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:2px" data-i18n="guia.day4Type">Ruins</span>
             </div>
-            <h3 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:800;color:#111;margin-bottom:12px">Chataquila</h3>
-            <p style="font-size:14px;color:#666;line-height:1.8;margin-bottom:20px">Pre-Incan ceremonial site perched on a ridge with sweeping valley views. Combines an Inca road section with local shrine traditions still actively used by communities today.</p>
+            <h3 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:800;color:#111;margin-bottom:12px" data-i18n="guia.day4Title">Chataquila</h3>
+            <p style="font-size:14px;color:#666;line-height:1.8;margin-bottom:20px"><span data-i18n="guia.day4Desc">Pre-Incan ceremonial site perched on a ridge with sweeping valley views. Combines an Inca road section with local shrine traditions still actively used by communities today.</span></p>
             <a href="contacto.html" style="font-size:13px;font-weight:700;color:#c9252d;text-decoration:none;letter-spacing:0.5px">Ask us about transport →</a>
           </div>
         </div>
@@ -413,10 +431,11 @@
   <section id="tips" style="padding:100px 0;background:#111">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16 fade-up">
-        <p class="eyebrow mb-3" style="color:#c9252d">Before You Arrive</p>
+        <p class="eyebrow mb-3" style="color:#c9252d" data-i18n="guia.planEyebrow">Practical Info</p>
         <h2 style="font-family:'Lora',serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.1">
-          Practical <span style="color:#c9252d;font-style:italic">Tips</span>
+          <span data-i18n="guia.planTitle">Plan your</span> <span style="color:#c9252d;font-style:italic" data-i18n="guia.planAccent">Visit</span>
         </h2>
+        <p style="font-size:15px;color:rgba(255,255,255,0.5);max-width:500px;margin:16px auto 0;line-height:1.8" data-i18n="guia.planSub">Everything you need to know to navigate the city safely and comfortably.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 fade-up">
@@ -426,9 +445,9 @@
           <div style="width:48px;height:48px;border-radius:14px;background:rgba(201,37,45,0.2);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#c9252d"><path d="M14 6l-1-2H5v17h2v-7h5l1 2h7V6h-6zm4 8h-4l-1-2H7V6h5l1 2h5v6z"/></svg>
           </div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px">Altitude</p>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px" data-i18n="guia.plan1Title">When to Visit</p>
           <h4 style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:12px">2,810m — Gentle</h4>
-          <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.75">Far lower than La Paz (3,650m) or Potosí (4,090m). Most travelers feel fine within a day. Drink water, rest your first afternoon, and try coca tea.</p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.75" data-i18n="guia.plan1P">Sucre has 'eternal spring' weather. The best time is the dry season (May to October), with clear blue skies every day.</p>
         </div>
 
         <!-- Currency -->
@@ -436,9 +455,9 @@
           <div style="width:48px;height:48px;border-radius:14px;background:rgba(201,37,45,0.2);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#c9252d"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
           </div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px">Currency</p>
-          <h4 style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:12px">Boliviano (Bs)</h4>
-          <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.75">1 USD ≈ 6.91 Bs. ATMs are available in the historic center. USD and euros can be exchanged at casa de cambio. Cards accepted at most restaurants.</p>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px" data-i18n="guia.plan2Title">Currency</p>
+          <h4 style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:12px" data-i18n="guia.plan2H">Boliviano (Bs)</h4>
+          <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.75"><span data-i18n="guia.plan2P">1 USD ≈ 6.91 Bs. ATMs are available in the historic center. USD and euros can be exchanged at casa de cambio. Cards accepted at most restaurants.</span></p>
         </div>
 
         <!-- Getting around -->
@@ -446,9 +465,9 @@
           <div style="width:48px;height:48px;border-radius:14px;background:rgba(201,37,45,0.2);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#c9252d"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           </div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px">Getting Around</p>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px" data-i18n="guia.plan3Title">Transport</p>
           <h4 style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:12px">Walk Everything</h4>
-          <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.75">The historic center is fully walkable. Taxis anywhere in the center cost 5–15 Bs (flat rate, no meter). Micros (local buses) run to all neighborhoods for 1.50 Bs.</p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.75" data-i18n="guia.plan3P">The historic center is perfectly walkable. For further spots, 'micros' (buses) are an experience themselves. Taxis are cheap and plentiful.</p>
         </div>
 
         <!-- Best time -->
@@ -456,9 +475,9 @@
           <div style="width:48px;height:48px;border-radius:14px;background:rgba(201,37,45,0.2);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#c9252d"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
           </div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px">Best Time to Visit</p>
-          <h4 style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:12px">May – October</h4>
-          <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.75">Dry season. Clear skies, warm days, cool nights. Sucre is pleasant year-round — the rainy season (Nov–Mar) brings afternoon showers but stays green and lush.</p>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px" data-i18n="guia.plan4Title">Best Time to Visit</p>
+          <h4 style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:12px" data-i18n="guia.plan4H">May – October</h4>
+          <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.75"><span data-i18n="guia.plan4P">Dry season. Clear skies, warm days, cool nights. Sucre is pleasant year-round — the rainy season (Nov–Mar) brings afternoon showers but stays green and lush.</span></p>
         </div>
 
       </div>
@@ -474,7 +493,7 @@
             <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=80" alt="Coffee shop Sucre Bolivia" style="width:100%;height:100%;object-fit:cover" />
           </div>
           <a href="cafe.html" class="cafe-badge" style="position:absolute;bottom:-16px;right:-16px;background:#5aaa6a;color:#fff;padding:18px 22px;border-radius:20px;text-decoration:none;display:flex;align-items:center;gap:14px;cursor:pointer">
-            <img src="images/logos/me-gusta-cafe.png" alt="Me Gusta Café" style="width:44px;height:44px;object-fit:contain;border-radius:10px;background:#fff;padding:4px;flex-shrink:0" />
+            <img src="imagenes/logos/me-gusta-cafe.png" alt="Me Gusta Café" style="width:44px;height:44px;object-fit:contain;border-radius:10px;background:#fff;padding:4px;flex-shrink:0" />
             <div>
               <p style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:0.8;margin-bottom:3px">Me Gusta Café</p>
               <p style="font-family:'Lora',serif;font-size:0.95rem;font-weight:700;margin:0;line-height:1.4">Bolivar #603<br/>Mon–Sat 8am–8pm</p>
@@ -483,49 +502,49 @@
           </a>
         </div>
         <div class="fade-up order-1 md:order-2" style="transition-delay:0.15s">
-          <p class="eyebrow mb-4" style="color:#c9252d">Eat & Drink</p>
+          <p class="eyebrow mb-4" style="color:#c9252d" data-i18n="guia.foodEyebrow">Eat & Drink</p>
           <h2 style="font-family:'Lora',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:800;color:#111;line-height:1.1;margin-bottom:24px">
-            What to eat in <span style="color:#c9252d;font-style:italic">Sucre</span>
+            <span data-i18n-html="guia.foodTitle">What to eat in <span style="color:#c9252d;font-style:italic">Sucre</span></span>
           </h2>
           <p style="font-size:15px;color:#555;line-height:1.9;margin-bottom:28px">
-            Sucre has one of Bolivia's richest food traditions — built around slow-cooked stews, handmade doughs, and a spice culture unlike anywhere else in the country. These are the dishes you can't leave without trying.
+            <span data-i18n="guia.foodSub">Sucre has one of Bolivia's richest food traditions — built around slow-cooked stews, handmade doughs, and a spice culture unlike anywhere else in the country. These are the dishes you can't leave without trying.</span>
           </p>
           <!-- Dish names editorial -->
           <div style="margin-bottom:28px">
             <div style="border-top:1px solid #e5e5e5;padding:14px 0;display:flex;justify-content:space-between;align-items:center">
               <p style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#c9252d;font-style:italic;margin:0">Chorizo Chuquisaqueño</p>
-              <span style="background:#c9252d;color:#fff;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:20px">Most representative</span>
+              <span style="background:#c9252d;color:#fff;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:20px"><span data-i18n="guia.food1Badge">Most representative</span></span>
 
             </div>
             <div style="border-top:1px solid #e5e5e5;padding:14px 0;display:flex;justify-content:space-between;align-items:center">
               <p style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#111;margin:0">Mondongo</p>
-              <span style="font-size:11px;color:#aaa;font-weight:500">Sunday tradition</span>
+              <span style="font-size:11px;color:#aaa;font-weight:500"><span data-i18n="guia.food2Sub">Sunday tradition</span></span>
             </div>
             <div style="border-top:1px solid #e5e5e5;padding:14px 0;display:flex;justify-content:space-between;align-items:center">
               <p style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#111;margin:0">Salteña</p>
-              <span style="font-size:11px;color:#aaa;font-weight:500">Breakfast ritual</span>
+              <span style="font-size:11px;color:#aaa;font-weight:500"><span data-i18n="guia.food3Sub">Breakfast ritual</span></span>
             </div>
             <div style="border-top:1px solid #e5e5e5;padding:14px 0;display:flex;justify-content:space-between;align-items:center">
               <p style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#111;margin:0">Picante de Pollo</p>
-              <span style="font-size:11px;color:#aaa;font-weight:500">Rich aji sauce</span>
+              <span style="font-size:11px;color:#aaa;font-weight:500"><span data-i18n="guia.food4Sub">Rich aji sauce</span></span>
             </div>
             <div style="border-top:1px solid #e5e5e5;padding:14px 0;display:flex;justify-content:space-between;align-items:center">
               <p style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#111;margin:0">Picana</p>
-              <span style="font-size:11px;color:#aaa;font-weight:500">Chuquisaca classic</span>
+              <span style="font-size:11px;color:#aaa;font-weight:500"><span data-i18n="guia.food5Sub">Chuquisaca classic</span></span>
             </div>
             <div style="border-top:1px solid #e5e5e5;padding:14px 0;display:flex;justify-content:space-between;align-items:center">
               <p style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#b8860b;font-style:italic;margin:0">Chocolate de Sucre</p>
-              <span style="background:#b8860b;color:#fff;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:20px">Best in Bolivia</span>
+              <span style="background:#b8860b;color:#fff;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:20px"><span data-i18n="guia.food6Badge">Best in Bolivia</span></span>
             </div>
             <div style="border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:14px 0;display:flex;justify-content:space-between;align-items:center">
               <p style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#3a7d44;font-style:italic;margin:0">Ajenjo</p>
-              <span style="background:#3a7d44;color:#fff;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:20px">Regional liqueur</span>
+              <span style="background:#3a7d44;color:#fff;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:20px"><span data-i18n="guia.food7Badge">Regional liqueur</span></span>
             </div>
           </div>
           <!-- Aji note -->
           <div style="background:#1a0a05;border-radius:12px;padding:14px 18px;border-left:3px solid #c9252d;display:flex;align-items:center;gap:12px">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9252d" style="flex-shrink:0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
-            <p style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.6;margin:0">The secret ingredient: <strong style="color:#fff">Sucre's aji</strong> — a chili grown exclusively in Chuquisaca, unique in all of Bolivia.</p>
+            <p style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.6;margin:0"><span data-i18n-html="guia.foodAjiNote">The secret ingredient: <strong style="color:#fff">Sucre's aji</strong> — a chili grown exclusively in Chuquisaca, unique in all of Bolivia.</span></p>
           </div>
         </div>
       </div>
@@ -536,9 +555,9 @@
   <section style="padding:80px 0;background:#111">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-12 fade-up">
-        <p class="eyebrow mb-3" style="color:#c9252d">Make the most of your time</p>
+        <p class="eyebrow mb-3" style="color:#c9252d" data-i18n="guia.xsellEyebrow">Make the most of your time</p>
         <h2 style="font-family:'Lora',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:#fff;line-height:1.1">
-          More from <span style="color:#c9252d;font-style:italic">Me Gusta</span>
+          <span data-i18n-html="guia.xsellTitle">More from <span style="color:#c9252d;font-style:italic">Me Gusta</span></span>
         </h2>
       </div>
       <div class="grid md:grid-cols-2 gap-6 fade-up xsell-dual-grid">
@@ -548,20 +567,20 @@
           <div style="position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,59,107,0.12) 0%,transparent 70%)"></div>
           <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
             <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,59,107,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-              <img src="images/logos/logo-me-gusta-spanish.png" alt="Me Gusta Spanish School" style="width:44px;height:auto;filter:brightness(0) invert(1)" />
+              <img src="imagenes/logos/logo-me-gusta-spanish.png" alt="Me Gusta Spanish School" style="width:44px;height:auto;filter:brightness(0) invert(1)" />
             </div>
             <div>
-              <p style="font-size:10px;font-weight:700;color:#FF3B6B;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px">Language School</p>
+              <p style="font-size:10px;font-weight:700;color:#FF3B6B;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px" data-i18n="guia.xsell1Type">Language School</p>
               <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#fff;margin:0">Me Gusta Spanish</h3>
             </div>
           </div>
-          <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:24px">Sucre is South America's #1 city for Spanish immersion. Morning classes with native teachers at Audiencia #97 — then spend the afternoon exploring everything in this guide.</p>
+          <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:24px"><span data-i18n="guia.xsell1P">Sucre is South America's #1 city for Spanish immersion. Morning classes with native teachers at Audiencia #97 — then spend the afternoon exploring everything in this guide.</span></p>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px">
-            <span style="background:rgba(255,59,107,0.12);color:#FF3B6B;padding:6px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase">Private Classes</span>
-            <span style="background:rgba(255,59,107,0.12);color:#FF3B6B;padding:6px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase">Group Classes</span>
-            <span style="background:rgba(255,59,107,0.12);color:#FF3B6B;padding:6px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase">All Levels</span>
+            <span style="background:rgba(255,59,107,0.12);color:#FF3B6B;padding:6px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase" data-i18n="guia.xsell1Tag1">Private Classes</span>
+            <span style="background:rgba(255,59,107,0.12);color:#FF3B6B;padding:6px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase" data-i18n="guia.xsell1Tag2">Group Classes</span>
+            <span style="background:rgba(255,59,107,0.12);color:#FF3B6B;padding:6px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase" data-i18n="guia.xsell1Tag3">All Levels</span>
           </div>
-          <a href="clases.html" style="display:inline-block;background:#FF3B6B;color:#fff;padding:14px 28px;border-radius:0;font-weight:700;font-size:13px;text-decoration:none;letter-spacing:0.5px">See Spanish Classes</a>
+          <a href="clases.html" style="display:inline-block;background:#FF3B6B;color:#fff;padding:14px 28px;border-radius:0;font-weight:700;font-size:13px;text-decoration:none;letter-spacing:0.5px" data-i18n="guia.xsell1Btn">See Spanish Classes</a>
         </div>
 
         <!-- Inn card -->
@@ -569,19 +588,19 @@
           <div style="position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,0.1) 0%,transparent 70%)"></div>
           <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
             <div style="width:64px;height:64px;border-radius:50%;background:rgba(37,99,235,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-              <img src="images/logos/logo-me-gusta-inn.png" alt="Me Gusta Inn" style="width:44px;height:auto;filter:brightness(0) invert(1)" />
+              <img src="imagenes/logos/logo-me-gusta-inn.png" alt="Me Gusta Inn" style="width:44px;height:auto;filter:brightness(0) invert(1)" />
             </div>
             <div>
-              <p style="font-size:10px;font-weight:700;color:#93c5fd;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px">Boutique Inn</p>
+              <p style="font-size:10px;font-weight:700;color:#93c5fd;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px" data-i18n="guia.xsell2Type">Boutique Inn</p>
               <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#fff;margin:0">Me Gusta Inn</h3>
             </div>
           </div>
-          <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:24px">Steps from Plaza 25 de Mayo. Boutique rooms with private and shared bathrooms, a breakfast served at the inn, and a team that knows Sucre inside out. La Paz #571.</p>
+          <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:24px"><span data-i18n="guia.xsell2P">Steps from Plaza 25 de Mayo. Boutique rooms with private and shared bathrooms, a breakfast served at the inn, and a team that knows Sucre inside out. La Paz #571.</span></p>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px">
-            <span style="background:rgba(37,99,235,0.15);color:#93c5fd;padding:6px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase">Breakfast Included</span>
-            <span style="background:rgba(37,99,235,0.15);color:#93c5fd;padding:6px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase">Historic Center</span>
+            <span style="background:rgba(37,99,235,0.15);color:#93c5fd;padding:6px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase" data-i18n="guia.xsell2Tag1">Breakfast Included</span>
+            <span style="background:rgba(37,99,235,0.15);color:#93c5fd;padding:6px 14px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase" data-i18n="guia.xsell2Tag2">Historic Center</span>
           </div>
-          <a href="hospedaje.html" style="display:inline-block;background:#2563eb;color:#fff;padding:14px 28px;border-radius:0;font-weight:700;font-size:13px;text-decoration:none;letter-spacing:0.5px">See Rooms & Rates</a>
+          <a href="hospedaje.html" style="display:inline-block;background:#2563eb;color:#fff;padding:14px 28px;border-radius:0;font-weight:700;font-size:13px;text-decoration:none;letter-spacing:0.5px" data-i18n="index.brand2Cta">See Rooms & Rates</a>
         </div>
 
       </div>
@@ -603,12 +622,12 @@
           </div>
         </div>
 
-        <p style="font-family:'Satisfy',cursive;font-size:1.8rem;color:rgba(255,255,255,0.45);display:block;margin-bottom:14px">Ready to explore?</p>
-        <h2 style="font-family:'Lora',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:18px">Plan your Sucre trip<br/><span style="color:#c9252d;font-style:italic">with local experts.</span></h2>
-        <p style="font-size:15px;color:rgba(255,255,255,0.6);max-width:440px;margin:0 auto 36px;line-height:1.75">We live here. We know the city. Ask us anything — the best routes, hidden restaurants, transport to day trips, or how to structure a week in Sucre.</p>
+        <p style="font-family:'Satisfy',cursive;font-size:1.8rem;color:rgba(255,255,255,0.45);display:block;margin-bottom:14px"><span data-i18n="guia.ctaTag">Ready to explore?</span></p>
+        <h2 style="font-family:'Lora',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:18px"><span data-i18n-html="guia.ctaTitle">Plan your Sucre trip<br/><span style="color:#c9252d;font-style:italic">with local experts.</span></span></h2>
+        <p style="font-size:15px;color:rgba(255,255,255,0.6);max-width:440px;margin:0 auto 36px;line-height:1.75"><span data-i18n="guia.ctaSub">We live here. We know the city. Ask us anything — the best routes, hidden restaurants, transport to day trips, or how to structure a week in Sucre.</span></p>
         <div class="flex flex-wrap justify-center gap-4">
-          <a href="https://wa.me/59173425725?text=Hi%2C%20I%20found%20your%20Sucre%20city%20guide%20and%20I%27d%20like%20some%20travel%20tips." target="_blank" style="background:#c9252d;color:#fff;padding:16px 36px;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.5px">Ask Us on WhatsApp</a>
-          <a href="hospedaje.html" style="background:transparent;color:#fff;padding:16px 36px;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.5px;border:1px solid rgba(255,255,255,0.25)">Book the Inn</a>
+          <a href="https://wa.me/59173425725?text=Hi%2C%20I%20found%20your%20Sucre%20city%20guide%20and%20I%27d%20like%20some%20travel%20tips." target="_blank" style="background:#c9252d;color:#fff;padding:16px 36px;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.5px" data-i18n="contacto.heroCta" data-i18n="guia.ctaBtn1">Ask Us on WhatsApp</a>
+          <a href="hospedaje.html" style="background:transparent;color:#fff;padding:16px 36px;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.5px;border:1px solid rgba(255,255,255,0.25)" data-i18n="nav.book">Book the Inn</a>
         </div>
       </div>
     </div>
@@ -620,7 +639,7 @@
       <div class="grid md:grid-cols-4 gap-10 mb-12">
         <div>
           <p style="font-family:'Lora',serif;font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:10px">Me Gusta <span style="color:#c9252d;font-style:italic">Sucre</span></p>
-          <p style="font-size:14px;line-height:1.7;margin-bottom:20px">Your gateway to Bolivia's most beautiful city — Spanish classes, boutique inn, café, and city experiences.</p>
+          <p style="font-size:14px;line-height:1.7;margin-bottom:20px" data-i18n="footer.tagline">Your gateway to Bolivia's most beautiful city — Spanish classes, boutique inn, café, and city experiences.</p>
           <div style="display:flex;gap:10px">
             <a href="https://www.facebook.com" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700">f</a>
             <a href="https://www.instagram.com" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">ig</a>
@@ -628,44 +647,47 @@
           </div>
         </div>
         <div>
-          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px">Explore</p>
+          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.explore">Explore</p>
           <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
-            <li><a href="clases.html">Spanish Classes</a></li>
-            <li><a href="guia.html">City Guide</a></li>
-            <li><a href="cafe.html">Café &amp; Menu</a></li>
-            <li><a href="hospedaje.html">Stay</a></li>
-            <li><a href="contacto.html">Contact</a></li>
+            <li><a href="clases.html" data-i18n="nav.classes">Spanish Classes</a></li>
+            <li><a href="guia.html" data-i18n="nav.guide">City Guide</a></li>
+            <li><a href="cafe.html" data-i18n="nav.cafe">Café &amp; Menu</a></li>
+            <li><a href="hospedaje.html" data-i18n="nav.stay">Stay</a></li>
+            <li><a href="contacto.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px">Me Gusta</p>
+          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.megustaTitle">Me Gusta</p>
           <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
-            <li><a href="hospedaje.html">Inn — Boutique Hotel</a></li>
-            <li><a href="cafe.html">Café</a></li>
-            <li><a href="clases.html">Spanish Classes</a></li>
-            <li><a href="https://megustaspanish.com" target="_blank">School Website ↗</a></li>
+            <li><a href="hospedaje.html" data-i18n="index.brand2Pill">Inn — Boutique Hotel</a></li>
+            <li><a href="cafe.html" data-i18n="index.brand3Pill">Café</a></li>
+            <li><a href="clases.html" data-i18n="nav.classes">Spanish Classes</a></li>
+            <li><a href="https://megustaspanish.com" target="_blank" data-i18n="index.schoolBtn2">School Website ↗</a></li>
           </ul>
         </div>
         <div>
-          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px">Find Us</p>
+          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.findUs">Find Us</p>
           <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
-            <li>La Paz #571, Sucre</li>
-            <li>Bolivia</li>
-            <li><a href="tel:+59173425725">+591 734 25725</a></li>
-            <li><a href="mailto:info@megustasucre.com">info@megustasucre.com</a></li>
+            <li data-i18n="footer.address">La Paz #571, Sucre, Bolivia</li>
+            <!-- removed bolivia -->
+            <li><a href="tel:+59173425725" style="color:#aaa;text-decoration:none">+591 734 25725</a></li>
+            <li><a href="mailto:info@megustasucre.com" style="color:#aaa;text-decoration:none">info@megustasucre.com</a></li>
           </ul>
         </div>
       </div>
       <div style="border-top:1px solid #2d2010;padding-top:24px;text-align:center;font-size:13px;color:#555">
-        © 2026 Me Gusta Sucre. All rights reserved. · <a href="https://megustaspanish.com" target="_blank" style="color:#c9252d">Me Gusta Spanish School</a>
+        © 2026 Me Gusta Sucre. <span data-i18n="footer.rights">All rights reserved.</span> · <a href="https://megustaspanish.com" target="_blank" style="color:#c9252d">Me Gusta Spanish School</a>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/59173425725" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <script src="js/translations.js"></script>
+    <a href="https://wa.me/59173425725" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
   </a>
 
-  <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -2,6 +2,56 @@
 //  ME GUSTA SUCRE — main.js
 // ═══════════════════════════════════════════════
 
+/* ── i18n ── */
+function getLang() {
+  const params = new URLSearchParams(window.location.search);
+  const lang = params.get('lang');
+  if (lang && ['en', 'es', 'fr'].includes(lang)) {
+    localStorage.setItem('mgs_lang', lang);
+    return lang;
+  }
+  return localStorage.getItem('mgs_lang') || 'en';
+}
+
+function setLang(lang) {
+  localStorage.setItem('mgs_lang', lang);
+  applyTranslations(lang);
+  // Update active state on lang buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+function applyTranslations(lang) {
+  if (typeof translations === 'undefined') return;
+  const t = translations[lang] || translations.en;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    const parts = key.split('.');
+    let val = t;
+    for (const p of parts) { val = val?.[p]; }
+    if (val !== undefined && val !== null) el.textContent = val;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.dataset.i18nHtml;
+    const parts = key.split('.');
+    let val = t;
+    for (const p of parts) { val = val?.[p]; }
+    if (val !== undefined && val !== null) el.innerHTML = val;
+  });
+  document.documentElement.lang = lang;
+}
+
+// Init i18n on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const lang = getLang();
+  applyTranslations(lang);
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+    btn.addEventListener('click', () => setLang(btn.dataset.lang));
+  });
+});
+
 /* ── Navbar scroll ── */
 const navbar = document.getElementById('navbar');
 if (navbar) {
