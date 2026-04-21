@@ -1,73 +1,39 @@
-# Review — Me Gusta Sucre (Actualizado: 2026-04-17)
+# Me Gusta Sucre — Project Review
 
-## Estado General del Proyecto
+## Accomplishments (Latest Session)
 
-El sitio web es una plataforma **multi-idioma (Inglés, Español y Francés)** con subdirectorios `/en/`, `/es/`, `/fr/`. La infraestructura de enrutamiento, selección de idioma y UI compartida (nav/footer) ya están completas en las 21 páginas. Las traducciones editoriales del cuerpo de las páginas secundarias están parcialmente completas.
+### Logo oficial implementado en todo el sitio
 
----
+Se subio el archivo `logo-me-gusta-sucre-oficial.png` y se integro en los 8 archivos HTML del sitio (index, cafe, clases, contacto, guia, hospedaje, merchandising, 404).
 
-## Traducciones Completadas
+**Navbar desktop:** El logo reemplaza el texto "Me Gusta Sucre" que existia antes. Centrado con posicionamiento absoluto, igual que en me-gusta-spanish.
 
-| Página         | EN | ES | FR |
-|----------------|----|----|----|
-| index.html     | ok | ok | ok |
-| guia.html      | ok | pendiente | pendiente |
-| cafe.html      | ok | ok | ok |
-| clases.html    | ok | ok | ok |
-| hospedaje.html | ok | ok | pendiente |
-| merchandising.html | ok | pendiente | pendiente |
-| contacto.html  | ok | pendiente | pendiente |
+**Menu mobile:** Se agrego el logo centrado en la parte superior del menu desplegable en todas las paginas.
 
----
+**Tamano:** 62px de alto en desktop, 46px en mobile.
 
-## Tareas Pendientes
+### Fondo del logo eliminado con Python (PIL)
 
-### 1. Traducciones Editoriales Restantes (Prioridad Alta)
+El logo original tenia fondo blanco (no transparente). Se proceso con PIL en tres pasos:
+1. Flood fill con conectividad 8-direccional desde los bordes para identificar el fondo exterior
+2. Flood fill inverso para restaurar los blancos interiores del diseno (patrones geometricos del llama)
+3. Segunda pasada global eliminando todos los blancos (incluyendo interiores) para evitar manchas blancas sobre el hero oscuro
 
-Las siguientes 6 páginas necesitan traduccion completa del cuerpo (head meta + body content) en ambos idiomas. La UI (nav/footer) ya está en el idioma correcto — solo falta el contenido editorial:
+El resultado final: PNG con fondo 100% transparente, solo los elementos negros y rojos del diseno.
 
-- **es/guia.html** y **fr/guia.html**
-- **fr/hospedaje.html**
-- **es/merchandising.html** y **fr/merchandising.html**
-- **es/contacto.html** y **fr/contacto.html**
+### CSS limpio
 
-Nota sobre hospedaje.html: es/hospedaje.html completado el 2026-04-17. fr/hospedaje.html pendiente.
-
-### 2. Optimización SEO Multi-idioma (Prioridad Media)
-
-- **sitemap.xml**: Reescribir para incluir las tres variantes de URL por pagina con etiquetas `<xhtml:link rel="alternate" hreflang="x">`.
-- **Etiquetas hreflang**: Agregar `<link rel="alternate" hreflang="x" href="...">` en el `<head>` de todas las páginas de los tres idiomas.
-
-### 3. Reemplazo de Imágenes (Prioridad Baja)
-
-- Sustituir fotos de Unsplash por fotografías originales de Me Gusta Sucre cuando sean entregadas, optimizadas en WebP.
-
-### 4. Actualización de Enlaces Definitivos
-
-- Los enlaces del menu del Café apuntan a un flujo provisional de WhatsApp. Actualizar al link oficial cuando esté disponible.
+- Sin `mix-blend-mode` ni `filter` en el navbar — el logo funciona directamente con transparencia real
+- Regla `logo-img` en `css/style.css` con height y transicion
 
 ---
 
-## Estructura de Directorios Actual
+## Estado actual
 
-```
-/ (raíz)
- ├── index.html        (Redireccionamiento automatico por idioma del navegador)
- ├── css/              (Estilos compartidos)
- ├── js/               (Scripts compartidos)
- ├── images/           (Assets compartidos)
- ├── en/               (Contenido completo en ingles — fuente de referencia)
- │   └── index, guia, cafe, clases, hospedaje, merchandising, contacto.html
- ├── es/               (UI en español completa — body pendiente en 4 páginas)
- └── fr/               (UI en francés completa — body pendiente en 4 páginas)
-```
+- Todas las paginas del sitio usan el logo oficial
+- El logo es un PNG transparente listo para cualquier fondo
+- El sitio sigue siendo production-ready, i18n completo en EN/ES/FR, cart de merchandising activo
 
----
+## Pendiente
 
-## Notas Tecnicas para la Proxima Sesion
-
-- Al traducir, respetar el contenido ya traducido en nav/footer (no sobreescribir).
-- En fr/clases.html habia strings pre-traducidos ("Contactez-nous") de sesiones anteriores — siempre verificar con Grep antes de aplicar Edit.
-- Los WhatsApp links deben tener el texto pre-llenado URL-encoded en el idioma correcto.
-- Canonical URL y og:url deben apuntar a la ruta del idioma correspondiente (e.g. `/es/hospedaje.html`).
-- JSON-LD description tambien debe traducirse.
+- Nada urgente. Esperando indicaciones del usuario para proximos cambios o deploy.

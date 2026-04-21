@@ -5,209 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Page Not Found — Me Gusta Sucre</title>
   <meta name="robots" content="noindex, nofollow" />
-  <link rel="icon" type="image/svg+xml" href="/imagenes/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Satisfy&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/css/sucre-fonts.css" />
-
-  <script>
-    var i18n = {
-      en: {
-        lang: "en",
-        navClases:    "Spanish Classes",
-        navCafe:      "Café",
-        navGuia:      "City Guide",
-        navStay:      "Stay",
-        navMerch:     "Merch",
-        navContact:   "Contact",
-        navBook:      "Book a Stay",
-        langLabel:    "Language / Idioma",
-        handwritten:  "¡Ay, no!",
-        title:        "This page got lost",
-        titleAccent:  "somewhere in Sucre.",
-        subtitle:     "The page you're looking for doesn't exist or may have been moved. Let's get you back on track.",
-        btnHome:      "Back to Home",
-        btnContact:   "Contact Us",
-        quickLabel:   "Or go directly to",
-        lnkClases:    "Spanish Classes",
-        lnkStay:      "Stay",
-        lnkCafe:      "Café",
-        lnkGuia:      "City Guide",
-        lnkMerch:     "Merch",
-        prefix:       "en/"
-      },
-      es: {
-        lang: "es",
-        navClases:    "Clases de Español",
-        navCafe:      "Café",
-        navGuia:      "Guía de la Ciudad",
-        navStay:      "Hospedaje",
-        navMerch:     "Merch",
-        navContact:   "Contacto",
-        navBook:      "Reservar Hospedaje",
-        langLabel:    "Idioma / Language",
-        handwritten:  "¡Ay, no!",
-        title:        "Esta página se perdió",
-        titleAccent:  "en algún lugar de Sucre.",
-        subtitle:     "La página que buscas no existe o fue movida. Te ayudamos a volver al camino.",
-        btnHome:      "Volver al Inicio",
-        btnContact:   "Contáctanos",
-        quickLabel:   "O ve directamente a",
-        lnkClases:    "Clases de Español",
-        lnkStay:      "Hospedaje",
-        lnkCafe:      "Café",
-        lnkGuia:      "Guía de la Ciudad",
-        lnkMerch:     "Merch",
-        prefix:       "es/"
-      },
-      fr: {
-        lang: "fr",
-        navClases:    "Cours d'Espagnol",
-        navCafe:      "Café",
-        navGuia:      "Guide de la Ville",
-        navStay:      "Séjour",
-        navMerch:     "Merch",
-        navContact:   "Contact",
-        navBook:      "Réserver un Séjour",
-        langLabel:    "Langue / Language",
-        handwritten:  "¡Ay, no!",
-        title:        "Cette page s'est perdue",
-        titleAccent:  "quelque part à Sucre.",
-        subtitle:     "La page que vous cherchez n'existe pas ou a été déplacée. Revenons sur la bonne voie.",
-        btnHome:      "Retour à l'Accueil",
-        btnContact:   "Nous Contacter",
-        quickLabel:   "Ou allez directement à",
-        lnkClases:    "Cours d'Espagnol",
-        lnkStay:      "Séjour",
-        lnkCafe:      "Café",
-        lnkGuia:      "Guide de la Ville",
-        lnkMerch:     "Merch",
-        prefix:       "fr/"
-      }
-    };
-
-    var basePath = window.location.hostname === 'megustasucre.github.io'
-      ? '/me-gusta-sucre/'
-      : '/';
-
-    function detectLang() {
-      var l = navigator.language || navigator.userLanguage || "en";
-      if (l.startsWith("es")) return "es";
-      if (l.startsWith("fr")) return "fr";
-      return "en";
-    }
-
-    function applyLang(code) {
-      var t = i18n[code];
-      document.documentElement.lang = t.lang;
-
-      // Nav links
-      document.getElementById("nav-clases").textContent    = t.navClases;
-      document.getElementById("nav-cafe").textContent      = t.navCafe;
-      document.getElementById("nav-guia").textContent      = t.navGuia;
-      document.getElementById("nav-stay").textContent      = t.navStay;
-      document.getElementById("nav-merch").textContent     = t.navMerch;
-      document.getElementById("nav-contact").textContent   = t.navContact;
-      document.getElementById("m-clases").textContent      = t.navClases;
-      document.getElementById("m-cafe").textContent        = t.navCafe;
-      document.getElementById("m-guia").textContent        = t.navGuia;
-      document.getElementById("m-stay").textContent        = t.navStay;
-      document.getElementById("m-merch").textContent       = t.navMerch;
-      document.getElementById("m-contact").textContent     = t.navContact;
-      document.getElementById("m-book").textContent        = t.navBook;
-      document.getElementById("lang-label").textContent    = t.langLabel;
-      document.getElementById("m-lang-label").textContent  = t.langLabel;
-
-      // Content
-      document.getElementById("handwritten").textContent   = t.handwritten;
-      document.getElementById("title-main").textContent    = t.title;
-      document.getElementById("title-accent").textContent  = t.titleAccent;
-      document.getElementById("subtitle").textContent      = t.subtitle;
-      document.getElementById("btn-home-text").textContent = t.btnHome;
-      document.getElementById("btn-contact").textContent   = t.btnContact;
-      document.getElementById("quick-label").textContent   = t.quickLabel;
-      document.getElementById("lnk-clases").textContent    = t.lnkClases;
-      document.getElementById("lnk-stay").textContent      = t.lnkStay;
-      document.getElementById("lnk-cafe").textContent      = t.lnkCafe;
-      document.getElementById("lnk-guia").textContent      = t.lnkGuia;
-      document.getElementById("lnk-merch").textContent     = t.lnkMerch;
-
-      // Update all href prefixes
-      var p = basePath + t.prefix;
-      document.getElementById("logo-link").href          = p + "index.html";
-      document.getElementById("nav-clases").href         = p + "clases.html";
-      document.getElementById("nav-cafe").href           = p + "cafe.html";
-      document.getElementById("nav-guia").href           = p + "guia.html";
-      document.getElementById("nav-stay").href           = p + "hospedaje.html";
-      document.getElementById("nav-merch").href          = p + "merchandising.html";
-      document.getElementById("nav-contact").href        = p + "contacto.html";
-      document.getElementById("m-clases").href           = p + "clases.html";
-      document.getElementById("m-cafe").href             = p + "cafe.html";
-      document.getElementById("m-guia").href             = p + "guia.html";
-      document.getElementById("m-stay").href             = p + "hospedaje.html";
-      document.getElementById("m-merch").href            = p + "merchandising.html";
-      document.getElementById("m-contact").href          = p + "contacto.html";
-      document.getElementById("m-book").href             = p + "hospedaje.html";
-      document.getElementById("btn-home").href           = p + "index.html";
-      document.getElementById("btn-contact").href        = p + "contacto.html";
-      document.getElementById("lnk-clases").href         = p + "clases.html";
-      document.getElementById("lnk-stay").href           = p + "hospedaje.html";
-      document.getElementById("lnk-cafe").href           = p + "cafe.html";
-      document.getElementById("lnk-guia").href           = p + "guia.html";
-      document.getElementById("lnk-merch").href          = p + "merchandising.html";
-
-      // Active lang button
-      document.querySelectorAll(".lang-switcher-btn").forEach(function(btn) {
-        var isActive = btn.dataset.lang === code;
-        btn.style.color      = isActive ? "#fff"              : "rgba(255,255,255,0.4)";
-        btn.style.fontWeight = isActive ? "700"               : "600";
-      });
-      document.querySelectorAll(".m-lang-btn").forEach(function(btn) {
-        var isActive = btn.dataset.lang === code;
-        btn.style.color = isActive ? "#111" : "#aaa";
-      });
-    }
-
-    document.addEventListener("DOMContentLoaded", function() {
-      applyLang(detectLang());
-
-      document.querySelectorAll(".lang-switcher-btn, .m-lang-btn").forEach(function(btn) {
-        btn.addEventListener("click", function() { applyLang(btn.dataset.lang); });
-      });
-    });
-  </script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sucre-fonts.css" />
 </head>
 <body style="background:#0a0600">
 
-  <!-- NAVBAR -->
+    <div class="top-bar">
+    <span data-i18n="contacto.topbar">Questions? We reply fast on WhatsApp · Inn: +591 734 25725 · School: +591 734 00447</span>
+    <a href="https://wa.me/59173425725" target="_blank" data-i18n="contacto.topbarLink">Message Us</a>
+  </div>
+
+<!-- NAVBAR -->
   <nav id="navbar" class="fixed left-0 right-0 z-50" style="background:transparent">
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between relative">
 
       <div class="hidden md:flex items-center gap-7" style="flex:1">
-        <a id="nav-clases" href="en/clases.html"      class="nav-link text-white">Spanish Classes</a>
-        <a id="nav-cafe"   href="en/cafe.html"        class="nav-link text-white">Café</a>
-        <a id="nav-guia"   href="en/guia.html"        class="nav-link text-white">City Guide</a>
+        <a href="clases.html"      class="nav-link text-white" data-i18n="nav.classes">Spanish Classes</a>
+        <a href="cafe.html"        class="nav-link text-white" data-i18n="nav.cafe">Café</a>
+        <a href="guia.html" class="nav-link text-white" data-i18n="nav.guide">City Guide</a>
       </div>
 
-      <a id="logo-link" href="en/index.html" class="flex items-center md:absolute md:left-1/2 md:-translate-x-1/2">
-        <span class="logo-text text-white font-bold" style="font-family:'Lora',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap">
-          Me Gusta <span style="color:#c9252d;font-style:italic">Sucre</span>
-        </span>
+      <a href="index.html" class="flex items-center md:absolute md:left-1/2 md:-translate-x-1/2">
+        <img src="imagenes/logos/logo-me-gusta-sucre-oficial.png" alt="Me Gusta Sucre" class="logo-img">
       </a>
 
       <div class="hidden md:flex items-center justify-end gap-5" style="flex:1">
-        <a id="nav-stay"    href="en/hospedaje.html"     class="nav-link text-white">Stay</a>
-        <a id="nav-merch"   href="en/merchandising.html" class="nav-link text-white">Merch</a>
-        <a id="nav-contact" href="en/contacto.html"      class="nav-link text-white">Contact</a>
+        <a href="hospedaje.html"     class="nav-link text-white" data-i18n="nav.stay">Stay</a>
+        <a href="merchandising.html" class="nav-link text-white" data-i18n="nav.merch">Merch</a>
+        <a href="contacto.html"      class="nav-link text-white" data-i18n="nav.contact">Contact</a>
         <div class="flex items-center gap-3 border-l lang-container border-white/20 pl-6 ml-2">
-          <span id="lang-label" class="sr-only">Language</span>
-          <button class="lang-switcher-btn text-xs font-bold text-white transition-colors uppercase" data-lang="en" style="background:none;border:none;cursor:pointer">EN</button>
-          <span class="text-white/30 text-xs lang-sep">|</span>
-          <button class="lang-switcher-btn text-xs font-bold transition-colors uppercase" data-lang="es" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.4)">ES</button>
-          <span class="text-white/30 text-xs lang-sep">|</span>
-          <button class="lang-switcher-btn text-xs font-bold transition-colors uppercase" data-lang="fr" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.4)">FR</button>
+          <button class="lang-btn text-xs font-bold text-white uppercase active" data-lang="en">EN</button>
+          <span class="text-white/30 text-xs">|</span>
+          <button class="lang-btn text-xs font-bold text-white/50 uppercase" data-lang="es">ES</button>
+          <span class="text-white/30 text-xs">|</span>
+          <button class="lang-btn text-xs font-bold text-white/50 uppercase" data-lang="fr">FR</button>
         </div>
       </div>
 
@@ -219,202 +54,85 @@
     </div>
 
     <div id="mobile-menu" class="hidden bg-white shadow-xl px-6 pb-5">
-      <a id="m-clases"  href="en/clases.html"        class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Spanish Classes</a>
-      <a id="m-cafe"    href="en/cafe.html"           class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Café</a>
-      <a id="m-guia"    href="en/guia.html"           class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">City Guide</a>
-      <a id="m-stay"    href="en/hospedaje.html"      class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Stay</a>
-      <a id="m-merch"   href="en/merchandising.html"  class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100">Merch</a>
-      <a id="m-contact" href="en/contacto.html"       class="block py-2 text-sm font-semibold text-gray-800">Contact</a>
+      <div class="flex justify-center py-4 border-b border-gray-100 mb-2">
+        <img src="imagenes/logos/logo-me-gusta-sucre-oficial.png" alt="Me Gusta Sucre" style="height:56px">
+      </div>
+      <a href="clases.html"        class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.classes">Spanish Classes</a>
+      <a href="cafe.html"           class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.cafe">Café</a>
+      <a href="guia.html"           class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.guide">City Guide</a>
+      <a href="hospedaje.html"      class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.stay">Stay</a>
+      <a href="merchandising.html"  class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.merch">Merch</a>
+      <a href="contacto.html"       class="block py-2 text-sm font-semibold text-gray-800" data-i18n="nav.contact">Contact</a>
       <div class="py-4 mt-2 border-t border-b border-gray-100 mb-4">
-        <p id="m-lang-label" class="text-[10px] font-bold text-gray-400 mb-3 uppercase tracking-wider">Language / Idioma</p>
+        <p class="text-[10px] font-bold text-gray-400 mb-3 uppercase tracking-wider" data-i18n="nav.langLabel">Language</p>
         <div class="flex items-center gap-5">
-          <button class="m-lang-btn text-sm font-bold text-gray-900 transition-colors" data-lang="en" style="background:none;border:none;cursor:pointer">EN</button>
+          <button class="lang-btn text-sm font-bold text-gray-900" data-lang="en">EN</button>
           <span class="text-gray-300">|</span>
-          <button class="m-lang-btn text-sm font-bold text-gray-400 transition-colors" data-lang="es" style="background:none;border:none;cursor:pointer">ES</button>
+          <button class="lang-btn text-sm font-bold text-gray-400" data-lang="es">ES</button>
           <span class="text-gray-300">|</span>
-          <button class="m-lang-btn text-sm font-bold text-gray-400 transition-colors" data-lang="fr" style="background:none;border:none;cursor:pointer">FR</button>
+          <button class="lang-btn text-sm font-bold text-gray-400" data-lang="fr">FR</button>
         </div>
       </div>
-      <a id="m-book" href="en/hospedaje.html" class="btn-red block text-center mt-4">Book a Stay</a>
+      <a href="hospedaje.html" class="btn-red block text-center mt-4" data-i18n="nav.book">Book a Stay</a>
     </div>
   </nav>
 
   <!-- MAIN -->
   <main class="relative min-h-screen flex items-center justify-center overflow-hidden">
 
-    <div style="position:absolute;inset:0;background-image:url('/imagenes/wikipedia/hero_sucre.webp');background-size:cover;background-position:center;opacity:0.18"></div>
+    <div style="position:absolute;inset:0;background-image:url('imagenes/wikipedia/hero_sucre.webp');background-size:cover;background-position:center;opacity:0.18"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,6,2,0.75) 0%,rgba(10,6,2,0.97) 100%)"></div>
     <div style="position:absolute;top:0;left:0;right:0;height:5px;background:#000"></div>
     <div style="position:absolute;bottom:0;left:0;right:0;height:5px;background:#000"></div>
 
     <div class="relative text-center px-6 py-32 max-w-2xl mx-auto">
 
-      <p id="handwritten" style="font-family:'Satisfy',cursive;font-size:1.5rem;color:#c9252d;margin-bottom:8px">¡Ay, no!</p>
+      <p style="font-family:'Satisfy',cursive;font-size:1.5rem;color:#c9252d;margin-bottom:8px" data-i18n="error.handwritten">¡Ay, no!</p>
 
       <div style="font-family:'Lora',serif;font-size:clamp(7rem,20vw,11rem);font-weight:700;color:#fff;line-height:1;margin-bottom:16px">
         4<span style="color:#c9252d">0</span>4
       </div>
 
       <h1 style="font-family:'Lora',serif;font-size:clamp(1.5rem,4vw,2.3rem);font-weight:600;color:#fff;line-height:1.25;margin-bottom:16px">
-        <span id="title-main">This page got lost</span><br/>
-        <em id="title-accent" style="color:#c9252d">somewhere in Sucre.</em>
+        <span data-i18n="error.title">This page got lost</span><br/>
+        <em style="color:#c9252d" data-i18n="error.accent">somewhere in Sucre.</em>
       </h1>
 
-      <p id="subtitle" style="font-family:'Lora',serif;font-size:1.05rem;color:rgba(255,255,255,0.55);max-width:440px;margin:0 auto 40px;line-height:1.7">
+      <p style="font-family:'Lora',serif;font-size:1.05rem;color:rgba(255,255,255,0.55);max-width:440px;margin:0 auto 40px;line-height:1.7" data-i18n="error.sub">
         The page you're looking for doesn't exist or may have been moved. Let's get you back on track.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
-        <a id="btn-home" href="en/index.html" class="btn-red px-8 py-3 text-sm flex items-center gap-2" style="font-family:'DM Sans',sans-serif">
+        <a href="index.html" class="btn-red px-8 py-3 text-sm flex items-center gap-2" style="font-family:'DM Sans',sans-serif">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-          <span id="btn-home-text">Back to Home</span>
+          <span data-i18n="error.homeBtn">Back to Home</span>
         </a>
-        <a id="btn-contact" href="en/contacto.html" class="btn-outline-white px-8 py-3 text-sm" style="font-family:'DM Sans',sans-serif">
+        <a href="contacto.html" class="btn-outline-white px-8 py-3 text-sm" style="font-family:'DM Sans',sans-serif" data-i18n="error.contactBtn">
           Contact Us
         </a>
       </div>
 
       <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:36px">
-        <p id="quick-label" style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px">Or go directly to</p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px" data-i18n="error.quick">Or go directly to</p>
         <div class="flex flex-wrap justify-center gap-x-8 gap-y-3">
-          <a id="lnk-clases" href="en/clases.html"        style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">Spanish Classes</a>
-          <a id="lnk-stay"   href="en/hospedaje.html"     style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">Stay</a>
-          <a id="lnk-cafe"   href="en/cafe.html"          style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">Café</a>
-          <a id="lnk-guia"   href="en/guia.html"          style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">City Guide</a>
-          <a id="lnk-merch"  href="en/merchandising.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors">Merch</a>
+          <a href="clases.html"        style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors" data-i18n="nav.classes">Spanish Classes</a>
+          <a href="hospedaje.html"     style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors" data-i18n="nav.stay">Stay</a>
+          <a href="cafe.html"          style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors" data-i18n="nav.cafe">Café</a>
+          <a href="guia.html"          style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors" data-i18n="nav.guide">City Guide</a>
+          <a href="merchandising.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.45)" class="hover:text-white transition-colors" data-i18n="nav.merch">Merch</a>
         </div>
       </div>
 
     </div>
   </main>
 
-  <!-- CHINCHILLA (pixel art) -->
-  <div class="chin-wrap" aria-hidden="true">
-    <div class="chin-walk">
-      <svg class="chin-svg" viewBox="0 0 72 80" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-        <!-- tail -->
-        <rect x="48" y="0"  width="8" height="8" fill="#c4bcb4"/>
-        <rect x="56" y="0"  width="8" height="8" fill="#c4bcb4"/>
-        <rect x="48" y="8"  width="8" height="8" fill="#c4bcb4"/>
-        <rect x="56" y="8"  width="8" height="8" fill="#c4bcb4"/>
-        <rect x="64" y="8"  width="8" height="8" fill="#c4bcb4"/>
-        <rect x="48" y="16" width="8" height="8" fill="#c4bcb4"/>
-        <rect x="56" y="16" width="8" height="8" fill="#c4bcb4"/>
-        <!-- ear outer -->
-        <rect x="16" y="0"  width="8" height="8" fill="#888078"/>
-        <rect x="8"  y="8"  width="8" height="8" fill="#888078"/>
-        <rect x="24" y="8"  width="8" height="8" fill="#888078"/>
-        <rect x="8"  y="16" width="8" height="8" fill="#888078"/>
-        <rect x="24" y="16" width="8" height="8" fill="#888078"/>
-        <rect x="16" y="24" width="8" height="8" fill="#888078"/>
-        <!-- ear inner -->
-        <rect x="16" y="8"  width="8" height="8" fill="#f4b8c8"/>
-        <rect x="16" y="16" width="8" height="8" fill="#f4b8c8"/>
-        <!-- body -->
-        <rect x="32" y="16" width="8" height="8" fill="#a8a098"/>
-        <rect x="40" y="16" width="8" height="8" fill="#a8a098"/>
-        <rect x="24" y="24" width="8" height="8" fill="#a8a098"/>
-        <rect x="32" y="24" width="8" height="8" fill="#a8a098"/>
-        <rect x="40" y="24" width="8" height="8" fill="#a8a098"/>
-        <rect x="48" y="24" width="8" height="8" fill="#a8a098"/>
-        <rect x="56" y="24" width="8" height="8" fill="#a8a098"/>
-        <rect x="16" y="32" width="8" height="8" fill="#a8a098"/>
-        <rect x="24" y="32" width="8" height="8" fill="#a8a098"/>
-        <rect x="56" y="32" width="8" height="8" fill="#a8a098"/>
-        <rect x="8"  y="40" width="8" height="8" fill="#a8a098"/>
-        <rect x="16" y="40" width="8" height="8" fill="#a8a098"/>
-        <rect x="56" y="40" width="8" height="8" fill="#a8a098"/>
-        <rect x="8"  y="48" width="8" height="8" fill="#a8a098"/>
-        <rect x="16" y="48" width="8" height="8" fill="#a8a098"/>
-        <rect x="48" y="48" width="8" height="8" fill="#a8a098"/>
-        <rect x="8"  y="56" width="8" height="8" fill="#a8a098"/>
-        <rect x="16" y="56" width="8" height="8" fill="#a8a098"/>
-        <rect x="24" y="56" width="8" height="8" fill="#a8a098"/>
-        <rect x="32" y="56" width="8" height="8" fill="#a8a098"/>
-        <rect x="40" y="56" width="8" height="8" fill="#a8a098"/>
-        <!-- belly -->
-        <rect x="32" y="32" width="8" height="8" fill="#d0c8c0"/>
-        <rect x="40" y="32" width="8" height="8" fill="#d0c8c0"/>
-        <rect x="48" y="32" width="8" height="8" fill="#d0c8c0"/>
-        <rect x="24" y="40" width="8" height="8" fill="#d0c8c0"/>
-        <rect x="32" y="40" width="8" height="8" fill="#d0c8c0"/>
-        <rect x="40" y="40" width="8" height="8" fill="#d0c8c0"/>
-        <rect x="48" y="40" width="8" height="8" fill="#d0c8c0"/>
-        <rect x="24" y="48" width="8" height="8" fill="#d0c8c0"/>
-        <rect x="32" y="48" width="8" height="8" fill="#d0c8c0"/>
-        <rect x="40" y="48" width="8" height="8" fill="#d0c8c0"/>
-        <!-- nose -->
-        <rect x="0"  y="32" width="8" height="8" fill="#f08898"/>
-        <!-- eye -->
-        <rect x="8"  y="32" width="8" height="8" fill="#181420"/>
-        <!-- eye shine -->
-        <rect x="8"  y="32" width="4" height="4" fill="#d0c8c0"/>
-        <!-- legs frame A -->
-        <g class="chin-legs-a">
-          <rect x="8"  y="64" width="8" height="16" fill="#888070"/>
-          <rect x="24" y="64" width="8" height="16" fill="#888070"/>
-        </g>
-        <!-- legs frame B -->
-        <g class="chin-legs-b">
-          <rect x="16" y="64" width="8" height="16" fill="#888070"/>
-          <rect x="32" y="64" width="8" height="16" fill="#888070"/>
-        </g>
-      </svg>
-    </div>
-  </div>
-
-  <style>
-    .chin-wrap {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 80px;
-      pointer-events: none;
-      z-index: 40;
-      overflow: hidden;
-    }
-    .chin-walk {
-      position: absolute;
-      bottom: 0;
-      animation: chin-cross 18s linear infinite;
-    }
-    .chin-svg {
-      display: block;
-      width: 72px;
-      height: 80px;
-      image-rendering: pixelated;
-      filter: drop-shadow(2px 2px 0 rgba(0,0,0,0.3));
-    }
-    @keyframes chin-cross {
-      0%   { left: 105vw; transform: scaleX(1); }
-      48%  { left: -90px; transform: scaleX(1); }
-      49%  { left: -90px; transform: scaleX(-1); }
-      50%  { left: -90px; transform: scaleX(-1); }
-      98%  { left: 105vw; transform: scaleX(-1); }
-      99%  { left: 105vw; transform: scaleX(1); }
-      100% { left: 105vw; transform: scaleX(1); }
-    }
-    @keyframes chin-legA {
-      0%    { opacity: 1; }
-      49.9% { opacity: 1; }
-      50%   { opacity: 0; }
-      100%  { opacity: 0; }
-    }
-    @keyframes chin-legB {
-      0%    { opacity: 0; }
-      49.9% { opacity: 0; }
-      50%   { opacity: 1; }
-      100%  { opacity: 1; }
-    }
-    .chin-legs-a { animation: chin-legA 0.4s linear infinite; }
-    .chin-legs-b { animation: chin-legB 0.4s linear infinite; }
-  </style>
-
-  <a href="https://wa.me/59173425725" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <script src="js/translations.js"></script>
+    <a href="https://wa.me/59173425725" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
   </a>
 
-  <script src="/js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

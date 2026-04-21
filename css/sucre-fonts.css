@@ -1,17 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Satisfy&display=swap');
+/* ═══════════════════════════════════════════════════
+   SUCRE FONTS — sistema tipográfico definitivo
+   Fraunces (display) · Plus Jakarta Sans (body) · Sacramento (accent)
+   ═══════════════════════════════════════════════════ */
 
-body, .eyebrow, .btn-red, .btn-gold, .btn-outline, .btn-outline-dark, .top-bar, .nav-link, .badge, .float-tag, .room-amenity, .room-cta, .brand-card-pill, .brand-card-cta, .whatsapp-float {
-  font-family: 'DM Sans', sans-serif !important;
-}
+/* El @import principal vive en style.css — no duplicar aquí */
 
-.serif, .section-title, .brand-card-name {
-  font-family: 'Lora', serif !important;
+/* Clases semánticas — refuerzan el sistema sin !important */
+.serif,
+.section-title,
+.brand-card-name {
+  font-family: 'Fraunces', serif;
 }
 
 .handwritten {
-  font-family: 'Satisfy', cursive !important;
+  font-family: 'Sacramento', cursive;
 }
 
 .polaroid::after {
-  font-family: 'Satisfy', cursive !important;
+  font-family: 'Sacramento', cursive;
 }

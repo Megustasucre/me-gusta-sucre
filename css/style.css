@@ -50,7 +50,7 @@ body::before {
   font-weight: 700;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--red);
+  color: #111;
 }
 
 /* ─── BUTTONS ─── */
@@ -152,11 +152,49 @@ body.scrolled-past .top-bar { transform: translateY(-100%); }
 #navbar.scrolled .nav-link { color: var(--text) !important; }
 #navbar.scrolled .logo-text { color: var(--dark) !important; }
 #navbar.scrolled .logo-accent { color: var(--red) !important; }
+
+/* Logo image — navbar */
+.logo-img { height: 62px; display: block; }
+
+/* ─── LOGO WORDMARK ─── */
+.logo-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.logo-eyebrow {
+  font-family: 'Fraunces', serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.35s;
+  letter-spacing: 0.3px;
+}
+.logo-brand-text {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1;
+}
+#navbar.scrolled .logo-eyebrow { color: rgba(0,0,0,0.35); }
+
+/* Default (transparent desktop nav) */
+.lang-btn { color: rgba(255,255,255,0.5) !important; transition: color 0.2s; }
+.lang-btn:hover { color: rgba(255,255,255,0.9) !important; }
+.lang-btn.active { color: #ffffff !important; }
+
+/* Scrolled desktop nav */
 #navbar.scrolled .lang-btn { color: rgba(0,0,0,0.4) !important; }
 #navbar.scrolled .lang-btn:hover { color: var(--text) !important; }
 #navbar.scrolled .lang-btn.active { color: var(--text) !important; }
 #navbar.scrolled .lang-sep { color: rgba(0,0,0,0.1) !important; }
 #navbar.scrolled .lang-container { border-color: rgba(0,0,0,0.1) !important; }
+
+/* Mobile menu nav */
+#mobile-menu .lang-btn { color: rgba(0,0,0,0.4) !important; }
+#mobile-menu .lang-btn:hover { color: var(--text) !important; }
+#mobile-menu .lang-btn.active { color: var(--text) !important; }
 #navbar.scrolled #menu-btn { color: var(--text) !important; }
 #navbar.scrolled .btn-red-nav { background: var(--red) !important; }
 
@@ -439,7 +477,7 @@ body.scrolled-past .top-bar { transform: translateY(-100%); }
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  border-radius: 24px;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0,0,0,0.14);
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
@@ -512,6 +550,7 @@ body.scrolled-past .top-bar { transform: translateY(-100%); }
   letter-spacing: 0.5px;
   padding: 9px 20px;
   border-radius: 50px;
+  background: var(--red) !important;
   color: #fff;
   transition: opacity 0.2s, transform 0.2s;
 }
@@ -545,6 +584,112 @@ footer a:hover { color: var(--gold); }
   box-shadow: 0 8px 28px rgba(37,211,102,0.5);
 }
 
+/* ─── TESTIMONIALS MARQUEE ─── */
+.testimonial-strip {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+.testimonial-track {
+  display: inline-flex;
+  gap: 20px;
+  padding: 6px 0;
+  will-change: transform;
+}
+.testimonial-track.scroll-left  { animation: rev-scroll-left  50s linear infinite; }
+.testimonial-track.scroll-right { animation: rev-scroll-right 55s linear infinite; }
+@keyframes rev-scroll-left  { from { transform: translateX(0); }    to { transform: translateX(-50%); } }
+@keyframes rev-scroll-right { from { transform: translateX(-50%); } to { transform: translateX(0); }    }
+.testimonial-strip:hover .testimonial-track { animation-play-state: paused; }
+
+.tcard {
+  display: inline-flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid rgba(26,18,10,0.08);
+  box-shadow: 0 4px 20px rgba(26,18,10,0.06);
+  padding: 26px 28px 22px;
+  width: 320px;
+  min-width: 320px;
+  white-space: normal;
+  vertical-align: top;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: default;
+}
+.tcard:hover {
+  box-shadow: 0 14px 44px rgba(26,18,10,0.13);
+  transform: translateY(-5px);
+}
+.tcard-bg-mark {
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  font-family: 'Fraunces', serif;
+  font-size: 120px;
+  color: var(--red);
+  opacity: 0.06;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+.tcard-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.tcard-stars { color: var(--gold); font-size: 12px; letter-spacing: 1px; }
+.tcard-service {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--red);
+  background: rgba(201,37,45,0.08);
+  border: 1px solid rgba(201,37,45,0.18);
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+.tcard-quote {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: #2a1f18;
+  flex: 1;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.tcard-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(26,18,10,0.07);
+  position: relative;
+  z-index: 1;
+}
+.tcard-flag { font-size: 20px; line-height: 1; }
+.tcard-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+}
+.tcard-country {
+  font-size: 11px;
+  color: #9a8070;
+  font-weight: 500;
+}
+
 /* ─── MAP ─── */
 .map-frame {
   width: 100%;
@@ -557,6 +702,13 @@ footer a:hover { color: var(--gold); }
 /* ═══════════════════════════════════════════════════
    RESPONSIVE — TABLET & MOBILE
    ═══════════════════════════════════════════════════ */
+
+/* ─── POLAROID FLOAT — desactivar en mobile y reduced-motion ─── */
+@media (prefers-reduced-motion: reduce), (hover: none) {
+  .school-pol-wrap {
+    animation: pol-appear 0.65s var(--pol-delay, 0s) cubic-bezier(0.175, 0.885, 0.32, 1.275) both !important;
+  }
+}
 
 /* ─── PHOTO STAGGER GRID — reset offsets below 768px ─── */
 @media (max-width: 768px) {
@@ -601,6 +753,7 @@ footer a:hover { color: var(--gold); }
 
   /* Reduce navbar logo size */
   .logo-text { font-size: 1.4rem !important; }
+  .logo-img { height: 46px !important; }
 
   /* Hero: full viewport height on mobile so content never overflows into navbar */
   .hero-section {
