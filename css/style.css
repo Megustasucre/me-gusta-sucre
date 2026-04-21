@@ -154,7 +154,10 @@ body.scrolled-past .top-bar { transform: translateY(-100%); }
 #navbar.scrolled .logo-accent { color: var(--red) !important; }
 
 /* Logo image — navbar */
-.logo-img { height: 62px; display: block; }
+.logo-img { height: 56px; display: block; filter: brightness(0) invert(1); transition: filter 0.35s; }
+#navbar.scrolled .logo-img { filter: none; }
+.navbar-brand-logo { filter: brightness(0) invert(1); transition: filter 0.35s; }
+#navbar.scrolled .navbar-brand-logo { filter: none; }
 
 /* ─── LOGO WORDMARK ─── */
 .logo-wordmark {
