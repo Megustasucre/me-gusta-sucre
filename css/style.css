@@ -156,6 +156,29 @@ body.scrolled-past .top-bar { transform: translateY(-100%); }
 /* Logo image — navbar */
 .logo-img { height: 62px; display: block; }
 
+/* ─── LOGO WORDMARK ─── */
+.logo-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.logo-eyebrow {
+  font-family: 'Fraunces', serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.35s;
+  letter-spacing: 0.3px;
+}
+.logo-brand-text {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1;
+}
+#navbar.scrolled .logo-eyebrow { color: rgba(0,0,0,0.35); }
+
 /* Default (transparent desktop nav) */
 .lang-btn { color: rgba(255,255,255,0.5) !important; transition: color 0.2s; }
 .lang-btn:hover { color: rgba(255,255,255,0.9) !important; }
