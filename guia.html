@@ -45,6 +45,16 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/sucre-fonts.css" />
   <style>
+    @keyframes calSlide1 {
+      0%,45%   { opacity:1 }
+      50%,95%  { opacity:0 }
+      100%     { opacity:1 }
+    }
+    @keyframes calSlide2 {
+      0%,45%   { opacity:0 }
+      50%,95%  { opacity:0.7 }
+      100%     { opacity:0 }
+    }
     @keyframes floatBadge {
       0%,100% { transform: translateY(0px); box-shadow: 0 10px 28px rgba(90,170,106,0.35); }
       50% { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(90,170,106,0.45); }
@@ -297,8 +307,8 @@
 
         <!-- Card: Cathedral -->
         <div style="background:#fff;border-radius:32px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.06)">
-          <div style="height:180px;overflow:hidden">
-            <img src="imagenes/wikipedia/catedral.webp" alt="Catedral Sucre" style="width:100%;height:100%;object-fit:cover;transform:scale(0.8);transform-origin:center center" />
+          <div style="height:240px;overflow:hidden">
+            <img src="imagenes/wikipedia/catedral.webp" alt="Catedral Sucre" style="width:100%;height:100%;object-fit:cover;object-position:center 20%" />
           </div>
           <div style="padding:24px">
             <p style="font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px" data-i18n="guia.must4Pill">Architecture · Free to enter</p>
@@ -309,8 +319,8 @@
 
         <!-- Card: USFX Facultad de Derecho -->
         <div style="background:#fff;border-radius:32px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.06)">
-          <div style="height:180px;overflow:hidden">
-            <img src="imagenes/wikipedia/patio-usfx.webp" alt="Facultad de Derecho USFX Sucre Bolivia" style="width:100%;height:100%;object-fit:cover;object-position:center 10%;transform:scale(0.8);transform-origin:center center" />
+          <div style="height:240px;overflow:hidden">
+            <img src="imagenes/wikipedia/patio-usfx.webp" alt="Facultad de Derecho USFX Sucre Bolivia" style="width:100%;height:100%;object-fit:cover;object-position:center 35%" />
           </div>
           <div style="padding:24px">
             <p style="font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px" data-i18n="guia.must5Pill">Architecture · Free</p>
@@ -321,8 +331,9 @@
 
         <!-- Card: Cal Orcko Dinosaurs -->
         <div style="background:#111;border-radius:32px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.12)">
-          <div style="height:180px;overflow:hidden;position:relative">
-            <img src="imagenes/wikipedia/cal_orcko.webp" alt="Cal Orcko dinosaur footprints" style="width:100%;height:100%;object-fit:cover;opacity:0.7" />
+          <div style="height:240px;overflow:hidden;position:relative">
+            <img src="imagenes/wikipedia/cal_orcko_parque.webp" alt="Parque Cretácico dinosaurios Sucre" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:calSlide1 8s infinite" />
+            <img src="imagenes/wikipedia/cal_orcko.webp" alt="Cal Orcko huellas de dinosaurio" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;animation:calSlide2 8s infinite" />
             <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(17,17,17,0.6) 100%)"></div>
           </div>
           <div style="padding:24px">
