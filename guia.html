@@ -134,41 +134,17 @@
   </nav>
 
   <!-- ═══ HERO ════════════════════════════════════════ -->
-  <section class="hero-section min-h-screen flex flex-col justify-end relative" style="padding-top:140px;padding-bottom:80px">
-    <div style="position:absolute;inset:0;overflow:hidden">
+  <section style="position:relative;height:440px;display:flex;align-items:flex-end;overflow:hidden">
+    <div style="position:absolute;inset:0">
       <div class="hero-kenburns" style="position:absolute;inset:-8%;background-image:url('imagenes/wikipedia/hero_guia.webp');background-size:cover;background-position:center 40%"></div>
     </div>
-    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.94) 0%,rgba(10,6,2,0.55) 45%,rgba(10,6,2,0.18) 80%,rgba(10,6,2,0.05) 100%)"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(10,6,2,0.55) 0%,transparent 65%)"></div>
-    <div style="position:absolute;top:0;left:0;right:0;height:5px;background:#000"></div>
-    <div style="position:absolute;bottom:0;left:0;right:0;height:5px;background:#000"></div>
-
-    <!-- UNESCO badge -->
-    <div style="position:absolute;top:100px;right:32px;display:inline-flex;align-items:center;gap:10px;background:rgba(201,37,45,0.85);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.2);border-radius:0;padding:9px 18px;z-index:10">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12 1l3.09 6.26L22 8.27l-5 4.87 1.18 6.88L12 16.77l-6.18 3.25L7 13.14 2 8.27l6.91-1.01L12 1z"/></svg>
-      <p style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#fff;margin:0" data-i18n="guia.heroUNESCO">UNESCO World Heritage</p>
-    </div>
-
-    <!-- Location tag -->
-    <div style="position:absolute;bottom:44px;right:32px;display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.1);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.2);border-radius:0;padding:9px 18px;z-index:10">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="#c9252d"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-      <div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#fff;margin:0;line-height:1.3" data-i18n="guia.heroLocTitle">Sucre, Bolivia</p>
-        <p style="font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.55);margin:0;line-height:1.3" data-i18n="guia.heroLocSub">La Ciudad Blanca</p>
-      </div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 w-full relative z-10 hero-content" style="padding-bottom:60px">
-      <p class="eyebrow mb-4" style="color:#c9252d" data-i18n="guia.heroEyebrow">Essential Guide</p>
-      <h1 style="font-family:'Lora',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:800;color:#fff;line-height:1.0;margin-bottom:16px">
-        <span data-i18n="guia.heroTitle">Discover</span><br/><span style="color:#c9252d;font-style:italic" data-i18n="guia.heroAccent">Sucre like a Local</span>
-      </h1>
-      <p style="font-size:1.1rem;color:rgba(255,255,255,0.75);max-width:520px;line-height:1.7;margin-bottom:36px" data-i18n="guia.heroSub">
-        The 'White City' is more than just colonial architecture. It's a place of hidden markets, prehistoric footprints, and some of the best food in the Andes.
-      </p>
-      <div class="flex flex-wrap gap-5 items-center">
-        <a href="#must-see" style="background:#c9252d;color:#fff;padding:16px 36px;border-radius:0;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.5px" data-i18n="guia.heroCta1">Read the Guide</a>
-        <a href="contacto.html" class="btn-outline flex items-center gap-2 group" style="padding:16px 32px" data-i18n="guia.heroCta2">Find Us</a>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.92) 0%,rgba(10,6,2,0.55) 50%,rgba(10,6,2,0.2) 100%)"></div>
+    <div class="max-w-7xl mx-auto px-6 w-full relative z-10" style="padding-bottom:48px">
+      <p class="eyebrow mb-2" style="color:#c9252d" data-i18n="guia.heroEyebrow">Essential Guide</p>
+      <h1 style="font-family:'Lora',serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px"><span data-i18n="guia.heroTitle">Discover</span> <span style="color:#c9252d;font-style:italic" data-i18n="guia.heroAccent">Sucre like a Local</span></h1>
+      <div class="flex flex-wrap gap-4">
+        <a href="#spots" style="background:#c9252d;color:#fff;padding:12px 28px;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.5px" data-i18n="guia.heroCta1">Read the Guide</a>
+        <a href="contacto.html" class="btn-outline" style="padding:12px 28px" data-i18n="guia.heroCta2">Find Us</a>
       </div>
     </div>
   </section>
@@ -601,11 +577,11 @@
           <div style="position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,0.1) 0%,transparent 70%)"></div>
           <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
             <div style="width:64px;height:64px;border-radius:50%;background:rgba(37,99,235,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-              <img src="imagenes/logos/logo-me-gusta-inn.png" alt="Me Gusta Inn" style="width:44px;height:auto;filter:brightness(0) invert(1)" />
+              <img src="imagenes/logos/logo-me-gusta-inn.png" alt="Me Gusta Sucre Inn" style="width:44px;height:auto;filter:brightness(0) invert(1)" />
             </div>
             <div>
               <p style="font-size:10px;font-weight:700;color:#93c5fd;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px" data-i18n="guia.xsell2Type">Boutique Inn</p>
-              <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#fff;margin:0">Me Gusta Inn</h3>
+              <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#fff;margin:0">Me Gusta Sucre Inn</h3>
             </div>
           </div>
           <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:24px"><span data-i18n="guia.xsell2P">Steps from Plaza 25 de Mayo. Boutique rooms with private and shared bathrooms, a breakfast served at the inn, and a team that knows Sucre inside out. La Paz #571.</span></p>
@@ -621,27 +597,16 @@
   </section>
 
   <!-- ═══ FINAL CTA ════════════════════════════════════ -->
-  <section style="padding:100px 0;background:#fafafa">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="fade-up" style="background:linear-gradient(135deg,#1a120a 0%,#0a0602 100%);border:1px solid rgba(201,37,45,0.15);border-radius:28px;padding:60px 48px;text-align:center;position:relative;overflow:hidden">
-        <div style="position:absolute;top:-60px;right:-60px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(201,37,45,0.12) 0%,transparent 70%);pointer-events:none"></div>
-        <div style="position:absolute;bottom:-40px;left:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(232,160,32,0.1) 0%,transparent 70%);pointer-events:none"></div>
-
-        <div style="margin:0 auto 24px;display:inline-flex;align-items:center;gap:14px">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="flex-shrink:0"><circle cx="20" cy="20" r="20" fill="#c9252d"/><path d="M12 20l5 5 11-12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div style="text-align:left">
-            <p style="font-family:'Lora',serif;font-size:2rem;font-weight:800;font-style:italic;color:#fff;line-height:1;margin-bottom:4px">Me Gusta</p>
-            <p style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;color:#c9252d;text-transform:uppercase">Sucre Bolivia</p>
-          </div>
-        </div>
-
-        <p style="font-family:'Satisfy',cursive;font-size:1.8rem;color:rgba(255,255,255,0.45);display:block;margin-bottom:14px"><span data-i18n="guia.ctaTag">Ready to explore?</span></p>
-        <h2 style="font-family:'Lora',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:18px"><span data-i18n-html="guia.ctaTitle">Plan your Sucre trip<br/><span style="color:#c9252d;font-style:italic">with local experts.</span></span></h2>
-        <p style="font-size:15px;color:rgba(255,255,255,0.6);max-width:440px;margin:0 auto 36px;line-height:1.75"><span data-i18n="guia.ctaSub">We live here. We know the city. Ask us anything — the best routes, hidden restaurants, transport to day trips, or how to structure a week in Sucre.</span></p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="https://wa.me/59173425725?text=Hi%2C%20I%20found%20your%20Sucre%20city%20guide%20and%20I%27d%20like%20some%20travel%20tips." target="_blank" style="background:#c9252d;color:#fff;padding:16px 36px;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.5px" data-i18n="contacto.heroCta" data-i18n="guia.ctaBtn1">Ask Us on WhatsApp</a>
-          <a href="hospedaje.html" style="background:transparent;color:#fff;padding:16px 36px;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.5px;border:1px solid rgba(255,255,255,0.25)" data-i18n="nav.book">Book the Inn</a>
-        </div>
+  <section class="fade-up" style="position:relative;min-height:520px;display:flex;align-items:center;justify-content:center;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:url('imagenes/wikipedia/plaza_25mayo.webp');background-size:cover;background-position:center 50%"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,6,2,0.5) 0%,rgba(10,6,2,0.8) 100%)"></div>
+    <div style="position:relative;z-index:1;text-align:center;padding:80px 24px;max-width:700px;margin:0 auto">
+      <span class="handwritten" style="font-size:1.6rem;color:rgba(255,180,160,0.8);display:block;margin-bottom:14px" data-i18n="guia.ctaTag">Ready to explore?</span>
+      <h2 style="font-family:'Lora',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:18px"><span data-i18n-html="guia.ctaTitle">Plan your Sucre trip<br/><span style="color:#c9252d;font-style:italic">with local experts.</span></span></h2>
+      <p style="font-size:15px;color:rgba(255,255,255,0.65);max-width:440px;margin:0 auto 36px;line-height:1.75" data-i18n="guia.ctaSub">We live here. We know the city. Ask us anything — the best routes, hidden restaurants, transport to day trips, or how to structure a week in Sucre.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://wa.me/59173425725?text=Hi%2C%20I%20found%20your%20Sucre%20city%20guide%20and%20I%27d%20like%20some%20travel%20tips." target="_blank" style="background:#c9252d;color:#fff;padding:16px 36px;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.5px" data-i18n="guia.ctaBtn1">Ask Us on WhatsApp</a>
+        <a href="hospedaje.html" style="background:transparent;color:#fff;padding:16px 36px;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:0.5px;border:1px solid rgba(255,255,255,0.3)" data-i18n="nav.book">Book the Inn</a>
       </div>
     </div>
   </section>

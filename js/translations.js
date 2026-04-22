@@ -24,7 +24,7 @@ const translations = {
       "heroAccent": "Touch",
       "locationTitle": "Find the right location",
       "loc1Name": "Me Gusta Spanish",
-      "loc2Name": "Me Gusta Inn",
+      "loc2Name": "Me Gusta Sucre Inn",
       "loc3Name": "Me Gusta Café",
       "teamTitle": "Three brands, one team",
       "teamSub": "All managed by the same family. Reach any of us and we'll point you in the right direction."
@@ -101,7 +101,7 @@ const translations = {
       "ht2Desc": "We confirm availability, agree on price and delivery. Payment via transfer or in person at the Inn."
     },
     "hospedaje": {
-      "topbar": "Me Gusta Inn · Boutique accommodation in Sucre's UNESCO historic district. La Paz #571.",
+      "topbar": "Me Gusta Sucre Inn · Boutique accommodation in Sucre's UNESCO historic district. La Paz #571.",
       "topbarLink": "See Rooms",
       "heroTitle": "Your home",
       "heroAccent": "in the White City",
@@ -457,7 +457,7 @@ const translations = {
       "f4Name": "Torta de Zanahoria",
       "f4Desc": "Moist carrot cake topped with cream cheese frosting. Baked fresh every morning.",
       "muchMore": "There's much more…",
-      "menuItem1": "Pancakes, avocado toast, fresh juices, empanadas & cheesecake of the day",
+      "menuItem1": "Latte, Frappe de Oreo, Esfirra, Panini Italiano, Trifle de Chocolate & Torta de Zanahoria",
       "menuSub": "The full menu — with every item, price, and daily special — lives on our website. Come hungry.",
       "menuBtn": "See the Full Menu ↗",
       "photo1": "quiet corners",
@@ -585,7 +585,7 @@ const translations = {
       "brand1Desc": "Native Bolivian teachers, 750+ students from 50+ countries. Face-to-face & online.",
       "brand1Cta": "See Courses →",
       "brand2Pill": "Boutique Inn",
-      "brand2Name": "Me Gusta Inn",
+      "brand2Name": "Me Gusta Sucre Inn",
       "brand2Desc": "A cozy boutique inn in the historic district. Personal service, the best location in Sucre.",
       "brand2Cta": "Book a Room →",
       "brand3Pill": "Café",
@@ -647,7 +647,7 @@ const translations = {
       "heroAccent": "Contacto",
       "locationTitle": "Encuentra la ubicación correcta",
       "loc1Name": "Me Gusta Spanish",
-      "loc2Name": "Me Gusta Inn",
+      "loc2Name": "Me Gusta Sucre Inn",
       "loc3Name": "Me Gusta Café",
       "teamTitle": "Tres marcas, un solo equipo",
       "teamSub": "Todo gestionado por la misma familia. Contacta a cualquiera de nosotros y te orientaremos."
@@ -724,7 +724,7 @@ const translations = {
       "ht2Desc": "Confirmamos disponibilidad, acordamos el precio y la entrega. Pago vía transferencia o en persona en el hostal."
     },
     "hospedaje": {
-      "topbar": "Me Gusta Inn · Alojamiento boutique en el centro de Sucre. La Paz #571.",
+      "topbar": "Me Gusta Sucre Inn · Alojamiento boutique en el centro de Sucre. La Paz #571.",
       "topbarLink": "Ver Habitaciones",
       "heroTitle": "Tu hogar",
       "heroAccent": "en la Ciudad Blanca",
@@ -1080,7 +1080,7 @@ const translations = {
       "f4Name": "Torta de Zanahoria",
       "f4Desc": "Torta húmeda de zanahoria con frosting de queso crema. Horneada fresca cada mañana.",
       "muchMore": "Hay mucho más…",
-      "menuItem1": "Pancakes, tostadas de aguacate, jugos frescos, empanadas y cheesecake del día",
+      "menuItem1": "Latte, Frappe de Oreo, Esfirra, Panini Italiano, Trifle de Chocolate y Torta de Zanahoria",
       "menuSub": "El menú completo — con cada artículo, precio y especial del día — vive en nuestra web. Ven con apetito.",
       "menuBtn": "Ver Menú Completo ↗",
       "photo1": "rincones tranquilos",
@@ -1208,7 +1208,7 @@ const translations = {
       "brand1Desc": "Profesores nativos bolivianos, 750+ alumnos de 50+ países. Presencial y online.",
       "brand1Cta": "Ver Cursos →",
       "brand2Pill": "Posada Boutique",
-      "brand2Name": "Me Gusta Inn",
+      "brand2Name": "Me Gusta Sucre Inn",
       "brand2Desc": "Una acogedora posada boutique en el centro histórico. Atención personal, la mejor ubicación en Sucre.",
       "brand2Cta": "Reservar →",
       "brand3Pill": "Café",
@@ -1270,7 +1270,7 @@ const translations = {
       "heroAccent": "Contact",
       "locationTitle": "Trouvez le bon endroit",
       "loc1Name": "Me Gusta Spanish",
-      "loc2Name": "Me Gusta Inn",
+      "loc2Name": "Me Gusta Sucre Inn",
       "loc3Name": "Me Gusta Café",
       "teamTitle": "Trois marques, une seule équipe",
       "teamSub": "Tout géré par la même famille. Contactez l'un d'entre nous et nous vous orienterons."
@@ -1347,7 +1347,7 @@ const translations = {
       "ht2Desc": "Nous confirmons la disponibilité, le prix et la livraison. Paiement par virement ou sur place."
     },
     "hospedaje": {
-      "topbar": "Me Gusta Inn · Hébergement boutique dans le centre de Sucre. La Paz #571.",
+      "topbar": "Me Gusta Sucre Inn · Hébergement boutique dans le centre de Sucre. La Paz #571.",
       "topbarLink": "Voir les Chambres",
       "heroTitle": "Votre maison",
       "heroAccent": "dans la Ville Blanche",
@@ -1703,7 +1703,7 @@ const translations = {
       "f4Name": "Gâteau à la Carotte",
       "f4Desc": "Gâteau moelleux à la carotte avec glaçage au fromage frais. Cuit frais chaque matin.",
       "muchMore": "Il y a bien plus encore…",
-      "menuItem1": "Pancakes, tartines à l'avocat, jus frais, empanadas et cheesecake du jour",
+      "menuItem1": "Latte, Frappe de Oreo, Esfirra, Panini Italiano, Trifle de Chocolat & Torta de Zanahoria",
       "menuSub": "Le menu complet — avec chaque article, prix et spécialité du jour — est sur notre site. Venez affamés.",
       "menuBtn": "Voir le Menu Complet ↗",
       "photo1": "coins tranquilles",
@@ -1831,7 +1831,7 @@ const translations = {
       "brand1Desc": "Professeurs boliviens natifs, 750+ étudiants de 50+ pays. Présentiel et en ligne.",
       "brand1Cta": "Voir les Cours →",
       "brand2Pill": "Auberge Boutique",
-      "brand2Name": "Me Gusta Inn",
+      "brand2Name": "Me Gusta Sucre Inn",
       "brand2Desc": "Une charmante auberge boutique dans le quartier historique. Service personnalisé, meilleure adresse de Sucre.",
       "brand2Cta": "Réserver →",
       "brand3Pill": "Café",
