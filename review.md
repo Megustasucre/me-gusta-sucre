@@ -1,104 +1,103 @@
 # Me Gusta Sucre — Project Review
 
-## Estado actual del sitio
-
-**URL:** megustasucre.com
-**Rama:** master
-**Páginas:** index, cafe, clases, hospedaje, guia, contacto, merchandising, 404
+**URL:** megustasucre.com  
+**Rama:** master  
+**Páginas:** index, cafe, clases, hospedaje, guia, contacto, merchandising, 404  
 **Idiomas:** EN / ES / FR (i18n via `js/translations.js` + `data-i18n`)
 
 ---
 
-## Lo que está hecho
-
-### Navbar
-- Logo + texto wordmark en todas las páginas
-- Logo blanco cuando el navbar es transparente, a color cuando hace scroll (`filter: brightness(0) invert(1)`)
-- Logo oficial: `logo-me-gusta-sucre-chinchilla.png`
-- Cada sub-marca muestra su propio logo: Café (`me-gusta-cafe.png`), Spanish (`logo-me-gusta-spanish.png`), Inn (`logo-me-gusta-inn.png`)
-- Texto wordmark: Lora serif, 1.75rem, "Me Gusta" blanco + nombre de marca en color (`#5aaa6a` Café, `#FF3B6B` Spanish, `#2563eb` Inn, `#c9252d` Sucre)
-- Tamaño logos: 56px desktop, 40px mobile
+## Estado actual por página
 
 ### index.html
 - Hero con Ken Burns animation
-- Sección del café con galería de 3 fotos
-- Sección de la escuela con galería de 3 fotos
+- Sección del café: layout diagonal con `clip-path:polygon()`, imagen a la derecha, card de horarios/dirección
 - Brand cards: Spanish, Inn, Café, Merch
-- Sección de reseñas (testimonials): marquee infinito en dos filas, reseñas reales de Google Maps de los 3 negocios, rating 4.9 / 750+ reseñas
+- Reseñas: marquee infinito en dos filas, reseñas reales de Google Maps (4.9 / 750+)
 
-### cafe.html
-- Hero con foto de café + chips de características (BOLIVIAN COFFEE, COLONIAL PATIO, FREE WIFI, PET FRIENDLY, VEGETARIAN OPTIONS)
-- Tarjeta de horarios bottom-right con dot verde animado
-- Sección "Our Story", menú con fotos, galería 2x2, cross-sell con inn y escuela
+### cafe.html — MINI-PAGINA (pendiente)
+Actualmente tiene: Hero, Info Bar, Intro (historia), Nuestros Cafés (Lavazza/Jaqaku), Menú 8 items, CTA Full Menu, Atmosphere (polaroids), Cross-sell, Footer.  
+**Pendiente:** reducir a Hero + Info Bar + Menú (4 items) + CTA → sitio del café + Footer.
 
-### clases.html
-- Hero con strip de países de origen de estudiantes (50+ países, sin países hispanohablantes)
-- Location tag bottom-right
-- Sección de programas, metodología, host family, cross-sell
+### clases.html — MINI-PAGINA (hecho)
+- Hero con strip de países, botón directo a `megustaspanish.com`
+- Stats: 750+ estudiantes, 3 profesores, 50+ países, 20+ años
+- Programas: 4 cards compactas (nombre, tipo, precio)
+- CTA → `megustaspanish.com`
+- Footer
+- **Eliminado:** Why Sucre (3 cards), Host Family, Cross-sell. 604 → 429 líneas.
 
-### hospedaje.html
-- Hero con Ken Burns
-- 4 tipos de habitaciones con fotos y precios
-- Galería de 5 fotos
-- Cross-sell con café y escuela
+### hospedaje.html — MINI-PAGINA (pendiente)
+Actualmente tiene: Hero, Rooms (3 hab. detalladas), Amenidades, Galería, Reviews, Ubicación, Cross-sell, CTA Final, Footer.  
+**Pendiente:** reducir a Hero + Rooms compactas + CTA → sitio del inn + Footer.
 
 ### guia.html
-- Hero con foto propia (`hero_sucre.webp`)
-- Sección colonial architecture con foto propia (`san_felipe.webp`)
-- Cards de lugares: Plaza 25 de Mayo, Casa de la Libertad, La Recoleta, Catedral, Cal Orcko — todos con fotos propias
-- Cards de excursiones: Tarabuco, Maragua, Potosí (fotos propias), Chataquila (pendiente)
-- Sección de recomendaciones del café
+- Hero: `hero_guia.webp` (vista aérea de Sucre)
+- Cards (240px): Catedral (landscape, `object-position:center 20%`), USFX Derecho, Cal Orcko (carrusel CSS con `cal_orcko_parque.webp` + `cal_orcko.webp`), Casa de la Libertad
+- Plaza 25 de Mayo, La Recoleta, San Felipe Neri
+- Excursiones: Tarabuco, Maragua, Potosí, Chataquila
 
 ### merchandising.html
 - Hero con `sucre_street.webp`
 - 6 productos: camiseta, tote bag, mug, hoodie, libros, gift set
 
 ### 404.html
-- Página trilingual con chinchilla animada pixel art (walking animation)
-- Links de vuelta al sitio
+- Página trilingual con chinchilla animada pixel art
 
 ---
 
-## Imágenes
+## Técnico
 
-### Propias (en `/imagenes/wikipedia/`)
+### CSS
+- **Tailwind v3 CLI** — build local purged (~15KB) en `css/tw.css`. CDN reemplazado.
+- Input: `css/tw-input.css`, config: `tailwind.config.js`, script: `npm run build:css`
+
+### i18n
+- Todo en `js/translations.js` — objetos `en`, `es`, `fr` con claves anidadas por página
+- Atributo `data-i18n="clave"` en el HTML, sin routing por idioma
+
+### Imágenes
+- Propias en `/imagenes/wikipedia/` como `.webp` (convertidas con Pillow)
+- Unsplash para fotos de negocio (temporales hasta tener fotos reales)
+
+---
+
+## Imágenes propias actuales
+
 | Archivo | Usado en |
-|---------|---------|
-| `hero_sucre.webp` | guia.html — hero |
-| `plaza_25mayo.webp` | guia.html — card Plaza |
+|---------|----------|
+| `hero_guia.webp` | guia.html — hero |
 | `catedral.webp` | guia.html — card Catedral |
+| `cal_orcko.webp` | guia.html — card Cal Orcko (slide 2) |
+| `cal_orcko_parque.webp` | guia.html — card Cal Orcko (slide 1) |
 | `casa_libertad.webp` | guia.html — card Casa de la Libertad |
+| `patio_usfx.webp` | guia.html — card USFX |
 | `la_recoleta.webp` | guia.html — card La Recoleta |
 | `san_felipe.webp` | guia.html — sección colonial |
-| `cal_orcko.webp` | guia.html — card Cal Orcko |
+| `plaza_25mayo.webp` | guia.html — card Plaza |
 | `sucre_street.webp` | merchandising.html — hero |
 | `tarabuco.webp` | guia.html — excursión Tarabuco |
 | `maragua.webp` | guia.html — excursión Maragua |
 | `potosi.webp` | guia.html — excursión Potosí |
 | `chataquila.webp` | guia.html — excursión Chataquila |
-| `asur.webp` | guia.html — museo ASUR |
-
-### Pendientes de reemplazar (siguen con Unsplash)
-**Fotos propias del negocio (el usuario las tiene):**
-- Hero del café (interior, patio o fachada)
-- Fotos de platos y postres del menú
-- Galería del café (patio, interior, café servido)
-- Hero de la escuela (aula, clase en acción)
-- Foto de clase con profesor
-- Hero del inn (fachada o lobby)
-- Habitaciones: Suite Colonial, Patio Room, Standard, Dormitorio
-- Galería del inn
-
-**Fotos gratuitas a buscar:**
-- Foto familia boliviana (clases.html)
-- Fotos de productos merch (camiseta, tote bag, mug, hoodie)
 
 ---
 
-## Pendiente técnico
+## Pendiente
 
-1. **Vite + Tailwind CLI build** — Reemplazar Tailwind CDN (~400KB sin optimizar) por CSS estático purged (~5-15KB). Actualmente todas las páginas cargan `https://cdn.tailwindcss.com`.
+### Inmediato
+- [ ] Slim down `cafe.html` a mini-página
+- [ ] Slim down `hospedaje.html` a mini-página
 
-2. **Fotos propias** — Integrar fotos reales del café, escuela e inn cuando el usuario las pase.
+### Fotos reales (cuando el usuario las pase)
+- Hero del café (interior, patio o fachada)
+- Fotos de platos del menú
+- Galería del café
+- Hero de la escuela (aula, clase)
+- Hero del inn (fachada o lobby)
+- Habitaciones del inn
 
-3. **Commit pendiente** — Los cambios de esta sesión (logos, imágenes wikipedia) aún no están commiteados.
+### Futuro
+- Me Gusta Trekkers — página nueva
+- E-commerce con Takenos
+- CNAME en el repo para `megustasucre.com` (GitHub Pages custom domain)
