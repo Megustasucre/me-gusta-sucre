@@ -316,21 +316,27 @@
           </div>
           <a href="cafe.html" class="btn-gold" data-i18n="index.cafeBtn">See the Menu</a>
         </div>
-        <div class="fade-up flex flex-wrap justify-center items-center gap-4 py-8 relative w-full h-[500px]">
-          <div class="polaroid shadow-xl hover:scale-110 border border-[#e1d6c8] z-[1] absolute top-[10%] left-[5%] w-[220px] h-[240px]" style="transform:rotate(-6deg)">
-            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=500&fm=webp&q=78" alt="Me Gusta Café" />
+        <div class="fade-up cafe-diagonal-wrap" style="position:relative;height:520px">
+          <div class="cafe-diagonal-img" style="position:absolute;inset:0;overflow:hidden;clip-path:polygon(12% 0%,100% 0%,100% 100%,0% 100%)">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=900&fm=webp&q=80" alt="Me Gusta Café" style="width:100%;height:100%;object-fit:cover;object-position:center" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.55) 0%,transparent 55%)"></div>
           </div>
-          <div class="polaroid shadow-xl hover:scale-110 border border-[#e1d6c8] z-[2] absolute top-[35%] right-[5%] w-[240px] h-[260px]" style="transform:rotate(5deg)">
-            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&fm=webp&q=78" alt="Bolivian coffee" />
-          </div>
-          <div class="polaroid shadow-xl hover:scale-110 border border-[#e1d6c8] z-[3] absolute bottom-[5%] left-[25%] w-[200px] h-[220px]" style="transform:rotate(-8deg)">
-            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&fm=webp&q=78" alt="Café espresso" />
+          <div style="position:absolute;bottom:36px;right:28px;background:rgba(255,255,255,0.97);padding:18px 24px;box-shadow:0 8px 32px rgba(0,0,0,0.2)">
+            <p style="font-size:10px;font-weight:700;color:#c9252d;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px" data-i18n="index.cafeCardTag">Open Now</p>
+            <p style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#111;margin-bottom:4px">Mon–Sat · 8am–8pm</p>
+            <p style="font-size:12px;color:#666">Bolivar #603, Sucre</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <style>@media(max-width:768px){.gastro-grid{grid-template-columns:1fr!important}}</style>
+  <style>
+  @media(max-width:768px){
+    .gastro-grid{grid-template-columns:1fr!important}
+    .cafe-diagonal-wrap{height:300px!important}
+    .cafe-diagonal-img{clip-path:none!important}
+  }
+</style>
 
   <!-- ═══ SPANISH SCHOOL PREVIEW ══════════════════════ -->
   <section style="padding:100px 0;background:var(--white);position:relative;overflow:hidden">
