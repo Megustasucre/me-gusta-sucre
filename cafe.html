@@ -201,143 +201,111 @@
     </div>
   </div>
 
-  <!-- MENU -->
-  <section id="menu" style="padding:80px 0;background:var(--white);position:relative;overflow:hidden">
-    <!-- Background Decor -->
-    <div class="bg-text-decor" style="bottom:10%;right:-10%;transform:rotate(5deg);color:#5aaa6a;opacity:0.05">BOLIVIA</div>
+  <!-- PRESENTACION + CARRUSEL -->
+  <section style="padding:72px 0;background:#fdf6ec">
     <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2" style="gap:56px;align-items:center">
 
-      <div class="text-center mb-14 fade-up">
-        <p class="eyebrow mb-4" data-i18n="cafe.menuEyebrow">What We Serve</p>
-        <h2 class="section-title"><span data-i18n="cafe.menuTitle">A taste of our</span> <span class="accent" data-i18n="cafe.menuAccent">Menu</span></h2>
-        <p style="font-size:15px;color:#555555;max-width:480px;margin:14px auto 0;line-height:1.8" data-i18n="cafe.menuSub">Everything made fresh, every day. Here's a preview — the full menu awaits you at our location.</p>
-      </div>
+        <!-- Texto -->
+        <div class="fade-up">
+          <p class="eyebrow mb-4" data-i18n="cafe.introEyebrow">Bolivar #603, Sucre</p>
+          <h2 class="section-title" style="margin-bottom:20px">
+            <span data-i18n="cafe.introTitle">A café born from a</span> <span class="accent" data-i18n="cafe.introAccent">love for Sucre</span>
+          </h2>
+          <p style="font-size:15px;color:#555;line-height:1.85;margin-bottom:28px" data-i18n="cafe.introP">Single-origin Bolivian coffee, homemade pastries and honest food — in the heart of Sucre's historic center. The kind of place where one hour turns into three.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#8b4513;background:#f3e8dc;padding:7px 14px;border-radius:4px" data-i18n="cafe.tag1">Bolivian Coffee</span>
+            <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#8b4513;background:#f3e8dc;padding:7px 14px;border-radius:4px" data-i18n="cafe.tag2">Homemade Food</span>
+            <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#8b4513;background:#f3e8dc;padding:7px 14px;border-radius:4px" data-i18n="cafe.tag3">Colonial Patio</span>
+            <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#8b4513;background:#f3e8dc;padding:7px 14px;border-radius:4px" data-i18n="cafe.tag4">Free Wi-Fi</span>
+          </div>
+        </div>
 
-      <!-- BEBIDAS -->
-      <div class="mb-12">
-        <p style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#8b4513;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid #e8ddd0" data-i18n="cafe.drinksLabel">Drinks</p>
-        <div class="grid md:grid-cols-4 gap-4">
+        <!-- Carrusel -->
+        <div class="fade-up" style="position:relative;overflow:hidden;border-radius:8px;height:440px">
 
-          <!-- Latte -->
-          <div class="card fade-up" style="padding:0;overflow:hidden">
-            <div style="height:140px;overflow:hidden">
-              <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80" alt="Latte" class="card-img" style="width:100%;height:100%;object-fit:cover;object-position:center 40%" />
-            </div>
-            <div style="padding:16px 18px">
-              <p style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8b4513;margin-bottom:5px" data-i18n="cafe.d1Type">Espresso</p>
-              <h4 style="font-family:'Lora',serif;font-size:1rem;font-weight:700;color:#111111;margin-bottom:5px" data-i18n="cafe.d1Name">Latte</h4>
-              <p style="font-size:12px;color:#777;line-height:1.6" data-i18n="cafe.d1Desc">Bolivian espresso with velvety steamed milk.</p>
+          <div class="cafe-slide" style="position:absolute;inset:0;transition:opacity 0.7s ease;opacity:1;background-image:url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=900&q=85');background-size:cover;background-position:center 50%">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.65) 0%,transparent 55%)"></div>
+            <div style="position:absolute;bottom:22px;left:24px">
+              <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#8b4513;margin-bottom:4px" data-i18n="cafe.slide1Label">The Space</p>
+              <p style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#fff" data-i18n="cafe.slide1Cap">Our café in Sucre's historic center</p>
             </div>
           </div>
 
-          <!-- Americano -->
-          <div class="card fade-up" style="padding:0;overflow:hidden;transition-delay:0.08s">
-            <div style="height:140px;overflow:hidden">
-              <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400&q=80" alt="Americano" class="card-img" style="width:100%;height:100%;object-fit:cover" />
-            </div>
-            <div style="padding:16px 18px">
-              <p style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8b4513;margin-bottom:5px" data-i18n="cafe.d2Type">Espresso</p>
-              <h4 style="font-family:'Lora',serif;font-size:1rem;font-weight:700;color:#111111;margin-bottom:5px" data-i18n="cafe.d2Name">Americano</h4>
-              <p style="font-size:12px;color:#777;line-height:1.6" data-i18n="cafe.d2Desc">Bold espresso extended with hot water. Clean and strong.</p>
+          <div class="cafe-slide" style="position:absolute;inset:0;transition:opacity 0.7s ease;opacity:0;background-image:url('https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=900&q=85');background-size:cover;background-position:center 40%">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.65) 0%,transparent 55%)"></div>
+            <div style="position:absolute;bottom:22px;left:24px">
+              <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#8b4513;margin-bottom:4px" data-i18n="cafe.slide2Label">Drinks</p>
+              <p style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#fff" data-i18n="cafe.slide2Cap">Single-origin Bolivian coffee</p>
             </div>
           </div>
 
-          <!-- Flat White -->
-          <div class="card fade-up" style="padding:0;overflow:hidden;transition-delay:0.16s">
-            <div style="height:140px;overflow:hidden">
-              <img src="https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?w=400&q=80" alt="Flat White" class="card-img" style="width:100%;height:100%;object-fit:cover;object-position:center 30%" />
-            </div>
-            <div style="padding:16px 18px">
-              <p style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8b4513;margin-bottom:5px" data-i18n="cafe.d3Type">Espresso</p>
-              <h4 style="font-family:'Lora',serif;font-size:1rem;font-weight:700;color:#111111;margin-bottom:5px" data-i18n="cafe.d3Name">Flat White</h4>
-              <p style="font-size:12px;color:#777;line-height:1.6" data-i18n="cafe.d3Desc">Ristretto shots with a thin layer of microfoam. Intense and silky.</p>
+          <div class="cafe-slide" style="position:absolute;inset:0;transition:opacity 0.7s ease;opacity:0;background-image:url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=900&q=85');background-size:cover;background-position:center">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.65) 0%,transparent 55%)"></div>
+            <div style="position:absolute;bottom:22px;left:24px">
+              <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#8b4513;margin-bottom:4px" data-i18n="cafe.slide3Label">Food</p>
+              <p style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#fff" data-i18n="cafe.slide3Cap">Homemade pastries & food, every day</p>
             </div>
           </div>
 
-          <!-- Frappe de Oreo -->
-          <div class="card fade-up" style="padding:0;overflow:hidden;transition-delay:0.24s">
-            <div style="height:140px;overflow:hidden">
-              <img src="https://images.unsplash.com/photo-1572490122747-3d7d1b01b25b?w=400&q=80" alt="Frappe de Oreo" class="card-img" style="width:100%;height:100%;object-fit:cover" />
+          <div class="cafe-slide" style="position:absolute;inset:0;transition:opacity 0.7s ease;opacity:0;background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=85');background-size:cover;background-position:center 30%">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.65) 0%,transparent 55%)"></div>
+            <div style="position:absolute;bottom:22px;left:24px">
+              <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#8b4513;margin-bottom:4px" data-i18n="cafe.slide4Label">Atmosphere</p>
+              <p style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#fff" data-i18n="cafe.slide4Cap">The perfect spot to start your day</p>
             </div>
-            <div style="padding:16px 18px">
-              <p style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8b4513;margin-bottom:5px" data-i18n="cafe.d4Type">Frappe</p>
-              <h4 style="font-family:'Lora',serif;font-size:1rem;font-weight:700;color:#111111;margin-bottom:5px" data-i18n="cafe.d4Name">Frappe de Oreo</h4>
-              <p style="font-size:12px;color:#777;line-height:1.6" data-i18n="cafe.d4Desc">Blended ice, milk, Oreo and cream. The crowd pleaser.</p>
-            </div>
+          </div>
+
+          <!-- Flechas -->
+          <button onclick="cafeCarousel(-1)" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,0.4);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button onclick="cafeCarousel(1)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,0.4);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <!-- Dots -->
+          <div style="position:absolute;bottom:22px;right:20px;display:flex;gap:5px;z-index:10">
+            <button onclick="cafeGoTo(0)" class="cafe-dot" style="width:7px;height:7px;border-radius:50%;border:none;cursor:pointer;background:#8b4513"></button>
+            <button onclick="cafeGoTo(1)" class="cafe-dot" style="width:7px;height:7px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,0.4)"></button>
+            <button onclick="cafeGoTo(2)" class="cafe-dot" style="width:7px;height:7px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,0.4)"></button>
+            <button onclick="cafeGoTo(3)" class="cafe-dot" style="width:7px;height:7px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,0.4)"></button>
           </div>
 
         </div>
+
       </div>
-
-      <!-- COMIDA -->
-      <div class="mb-12">
-        <p style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#8b4513;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid #e8ddd0" data-i18n="cafe.foodLabel">Food</p>
-        <div class="grid md:grid-cols-2 gap-5">
-
-          <!-- Esfirra -->
-          <div class="card fade-up" style="padding:0;overflow:hidden;display:grid;grid-template-columns:120px 1fr">
-            <div style="overflow:hidden">
-              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300&q=80" alt="Esfirra" class="card-img" style="width:100%;height:100%;object-fit:cover" />
-            </div>
-            <div style="padding:18px 20px">
-              <p style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8b4513;margin-bottom:5px" data-i18n="cafe.f1Type">Snack · All day</p>
-              <h4 style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#111111;margin-bottom:6px" data-i18n="cafe.f1Name">Esfirra</h4>
-              <p style="font-size:12px;color:#555555;line-height:1.65" data-i18n="cafe.f1Desc">Soft open pastry with seasoned meat. A café staple — perfect with any coffee.</p>
-            </div>
-          </div>
-
-          <!-- Panini Italiano -->
-          <div class="card fade-up" style="padding:0;overflow:hidden;display:grid;grid-template-columns:120px 1fr;transition-delay:0.08s">
-            <div style="overflow:hidden">
-              <img src="https://images.unsplash.com/photo-1528736235302-52922df5c122?w=300&q=80" alt="Panini Italiano" class="card-img" style="width:100%;height:100%;object-fit:cover" />
-            </div>
-            <div style="padding:18px 20px">
-              <p style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8b4513;margin-bottom:5px" data-i18n="cafe.f2Type">Savory · All day</p>
-              <h4 style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#111111;margin-bottom:6px" data-i18n="cafe.f2Name">Panini Italiano</h4>
-              <p style="font-size:12px;color:#555555;line-height:1.65" data-i18n="cafe.f2Desc">Toasted panini with Italian-style fillings — fresh, satisfying, made to order.</p>
-            </div>
-          </div>
-
-          <!-- Trifle de Chocolate -->
-          <div class="card fade-up" style="padding:0;overflow:hidden;display:grid;grid-template-columns:120px 1fr;transition-delay:0.16s">
-            <div style="overflow:hidden">
-              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=300&q=80" alt="Trifle de Chocolate" class="card-img" style="width:100%;height:100%;object-fit:cover" />
-            </div>
-            <div style="padding:18px 20px">
-              <p style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8b4513;margin-bottom:5px" data-i18n="cafe.f3Type">Pastry · All day</p>
-              <h4 style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#111111;margin-bottom:6px" data-i18n="cafe.f3Name">Trifle de Chocolate</h4>
-              <p style="font-size:12px;color:#555555;line-height:1.65" data-i18n="cafe.f3Desc">Layers of brownie, cream and chocolate. Our most requested dessert — best enjoyed warm.</p>
-            </div>
-          </div>
-
-          <!-- Torta de Zanahoria -->
-          <div class="card fade-up" style="padding:0;overflow:hidden;display:grid;grid-template-columns:120px 1fr;transition-delay:0.24s">
-            <div style="overflow:hidden">
-              <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=300&q=80" alt="Torta de Zanahoria" class="card-img" style="width:100%;height:100%;object-fit:cover" />
-            </div>
-            <div style="padding:18px 20px">
-              <p style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8b4513;margin-bottom:5px" data-i18n="cafe.f4Type">Pastry · All day</p>
-              <h4 style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#111111;margin-bottom:6px" data-i18n="cafe.f4Name">Torta de Zanahoria</h4>
-              <p style="font-size:12px;color:#555555;line-height:1.65" data-i18n="cafe.f4Desc">Moist carrot cake topped with cream cheese frosting. Baked fresh every morning.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
     </div>
   </section>
 
+  <script>
+    (function(){
+      const slides = document.querySelectorAll('.cafe-slide');
+      const dots   = document.querySelectorAll('.cafe-dot');
+      let cur = 0, timer;
+      function show(n){
+        slides[cur].style.opacity = '0';
+        dots[cur].style.background = 'rgba(255,255,255,0.4)';
+        cur = (n + slides.length) % slides.length;
+        slides[cur].style.opacity = '1';
+        dots[cur].style.background = '#8b4513';
+      }
+      window.cafeCarousel = function(dir){ clearInterval(timer); show(cur+dir); startAuto(); };
+      window.cafeGoTo     = function(n){   clearInterval(timer); show(n);       startAuto(); };
+      function startAuto(){ timer = setInterval(()=> show(cur+1), 4500); }
+      startAuto();
+    })();
+  </script>
+
   <!-- CTA FULL MENU -->
-  <section class="fade-up" style="position:relative;min-height:520px;display:flex;align-items:center;justify-content:center;overflow:hidden">
+  <section class="fade-up" style="position:relative;min-height:360px;display:flex;align-items:center;justify-content:center;overflow:hidden">
     <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1600&q=85');background-size:cover;background-position:center 40%"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,10,5,0.55) 0%,rgba(15,10,5,0.78) 100%)"></div>
-    <div style="position:relative;z-index:1;text-align:center;padding:80px 24px;max-width:700px;margin:0 auto">
-      <img src="imagenes/logos/me-gusta-cafe.png" alt="Me Gusta Café" style="height:80px;width:auto;margin:0 auto 28px;display:block;filter:drop-shadow(0 2px 12px rgba(0,0,0,0.4))" />
-      <span class="handwritten" style="font-size:1.6rem;color:rgba(255,220,160,0.8);display:block;margin-bottom:14px" data-i18n="cafe.muchMore">There's much more…</span>
-      <h3 style="font-family:'Lora',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:18px" data-i18n="cafe.menuItem1">Latte, Frappe de Oreo, Esfirra, Panini Italiano, Trifle de Chocolate &amp; Torta de Zanahoria</h3>
-      <p style="font-size:15px;color:rgba(255,255,255,0.65);max-width:440px;margin:0 auto 36px;line-height:1.75" data-i18n="cafe.menuSub">The full menu — with every item, price, and daily special — lives on our website. Come hungry.</p>
-      <a href="https://wa.me/59173425725?text=Hello!%20I'd%20like%20to%20see%20the%20full%20menu%20of%20Me%20Gusta%20Café." target="_blank" class="cafe-btn-primary" style="padding:16px 40px;font-size:15px" data-i18n="cafe.menuBtn">See the Full Menu ↗</a>
+    <div style="position:relative;z-index:1;text-align:center;padding:56px 24px;max-width:560px;margin:0 auto">
+      <img src="imagenes/logos/me-gusta-cafe.png" alt="Me Gusta Café" style="height:96px;width:auto;margin:0 auto 20px;display:block;filter:drop-shadow(0 2px 12px rgba(0,0,0,0.4))" />
+      <h3 style="font-family:'Lora',serif;font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:700;color:#fff;line-height:1.3;margin-bottom:14px" data-i18n="cafe.ctaTitle">Bolivian coffee, homemade pastries &amp; good vibes — every day in Sucre.</h3>
+      <p style="font-size:14px;color:rgba(255,255,255,0.65);max-width:400px;margin:0 auto 28px;line-height:1.75" data-i18n="cafe.ctaSub">Ask us anything — menu, hours, reservations. We reply fast on WhatsApp.</p>
+      <a href="https://wa.me/59173425725?text=Hello!%20I'd%20like%20to%20know%20more%20about%20Me%20Gusta%20Café." target="_blank" class="cafe-btn-primary" style="padding:13px 32px;font-size:14px" data-i18n="cafe.ctaBtn">Chat with us on WhatsApp ↗</a>
     </div>
   </section>
 

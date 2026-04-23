@@ -15,27 +15,39 @@
 - Brand cards: Spanish, Inn, Café, Merch
 - Reseñas: marquee infinito en dos filas, reseñas reales de Google Maps (4.9 / 750+)
 
-### cafe.html — MINI-PAGINA (pendiente)
-Actualmente tiene: Hero, Info Bar, Intro (historia), Nuestros Cafés (Lavazza/Jaqaku), Menú 8 items, CTA Full Menu, Atmosphere (polaroids), Cross-sell, Footer.  
-**Pendiente:** reducir a Hero + Info Bar + Menú (4 items) + CTA → sitio del café + Footer.
+### cafe.html
+- Hero, Info Bar, Intro, Nuestros Cafés (Lavazza/Jaqaku), Menú 8 items (Bebidas + Comida), CTA, Atmosphere, Cross-sell, Footer
 
-### clases.html — MINI-PAGINA (hecho)
+### clases.html — MINI-PAGINA
 - Hero con strip de países, botón directo a `megustaspanish.com`
 - Stats: 750+ estudiantes, 3 profesores, 50+ países, 20+ años
 - Programas: 4 cards compactas (nombre, tipo, precio)
 - CTA → `megustaspanish.com`
-- Footer
-- **Eliminado:** Why Sucre (3 cards), Host Family, Cross-sell. 604 → 429 líneas.
 
-### hospedaje.html — MINI-PAGINA (pendiente)
-Actualmente tiene: Hero, Rooms (3 hab. detalladas), Amenidades, Galería, Reviews, Ubicación, Cross-sell, CTA Final, Footer.  
-**Pendiente:** reducir a Hero + Rooms compactas + CTA → sitio del inn + Footer.
+### hospedaje.html
+- Color de marca: **turquesa `#14b8a6`** (oscuro `#0f766e`, claro `#2dd4bf`, muy claro `#99f6e4`)
+- Hero → `#rooms` (ver habitaciones)
+- 4 habitaciones: Deluxe Suite ($65), Standard Private ($45), Standard Room ($35), Dorm Bed ($18)
+- Cada card tiene CTA que pre-selecciona la habitación en el formulario y scrollea a `#reservar`
+- **Formulario de reservas** (`#reservar`): selector visual de habitación, fechas con min-date automático, contador de noches en tiempo real, huéspedes, nombre, mensaje opcional → envía por WhatsApp con datos pre-formateados
+- CTA final → `#reservar` (no WhatsApp directo)
 
 ### guia.html
-- Hero: `hero_guia.webp` (vista aérea de Sucre)
-- Cards (240px): Catedral (landscape, `object-position:center 20%`), USFX Derecho, Cal Orcko (carrusel CSS con `cal_orcko_parque.webp` + `cal_orcko.webp`), Casa de la Libertad
-- Plaza 25 de Mayo, La Recoleta, San Felipe Neri
-- Excursiones: Tarabuco, Maragua, Potosí, Chataquila
+- Hero: `hero_guia.webp`, CTAs → `clases.html` + `hospedaje.html`
+- **Barra de sección sticky** con anclas: Must-See Spots / Day Trips / Practical Tips / Food & Coffee (scroll-spy activo, traducida EN/ES/FR)
+- Quick facts bar: 2810m, 1538, UNESCO 1991, 300+ días de sol
+- Bento grid de spots: Plaza 25 de Mayo (large), Casa de la Libertad, Recoleta Viewpoint, Catedral, USFX, Cal Orcko
+- Day trips: Tarabuco, Maragua, Potosí, Chataquila — todos con CTA "Ask us anything →" → WhatsApp
+- Practical tips: 4 cards (clima, moneda, transporte, mejor época)
+- Food & Coffee: lista editorial de platos + cross-sell Café
+- **Sección de cierre** (reemplaza cross-sell + CTA final): grid 2/3 + 1/3 — escuela con imagen de fondo (producto principal), Inn compact card con precio "from $18/night"
+  - Escuela: imagen de fondo, título "Learn Spanish while you're here", pills, CTA → `clases.html`
+  - Inn: turquesa, precio ancla, bullet list, CTA → `hospedaje.html`
+
+### contacto.html
+- Hero split: texto izquierda / brand preview cards derecha
+- 3 cards: Me Gusta Spanish (rosa), Inn (azul), Café (verde)
+- Cada card con dirección, teléfono, email, botón WhatsApp
 
 ### merchandising.html
 - Hero con `sucre_street.webp`
@@ -49,16 +61,21 @@ Actualmente tiene: Hero, Rooms (3 hab. detalladas), Amenidades, Galería, Review
 ## Técnico
 
 ### CSS
-- **Tailwind v3 CLI** — build local purged (~15KB) en `css/tw.css`. CDN reemplazado.
+- **Tailwind v3 CLI** — build local purged (~15KB) en `css/tw.css`
 - Input: `css/tw-input.css`, config: `tailwind.config.js`, script: `npm run build:css`
+- `css/style.css` — componentes custom: `.room-amenity`, `.room-cta`, `.btn-red`, `.eyebrow`, `.fade-up`, `.hero-kenburns`, `.whatsapp-float`, etc.
+- `hospedaje.html` tiene overrides de `.room-amenity` para turquesa (no afecta otras páginas)
 
 ### i18n
 - Todo en `js/translations.js` — objetos `en`, `es`, `fr` con claves anidadas por página
-- Atributo `data-i18n="clave"` en el HTML, sin routing por idioma
+- `data-i18n="clave"` → setea `textContent`
+- `data-i18n-html="clave"` → setea `innerHTML` (para claves con spans/HTML embebido)
+- `data-i18n-placeholder` → placeholders de inputs (con función custom en `hospedaje.html`)
 
 ### Imágenes
-- Propias en `/imagenes/wikipedia/` como `.webp` (convertidas con Pillow)
+- Propias en `/imagenes/wikipedia/` como `.webp`
 - Unsplash para fotos de negocio (temporales hasta tener fotos reales)
+- Logos en `/imagenes/logos/`
 
 ---
 
@@ -71,33 +88,44 @@ Actualmente tiene: Hero, Rooms (3 hab. detalladas), Amenidades, Galería, Review
 | `cal_orcko.webp` | guia.html — card Cal Orcko (slide 2) |
 | `cal_orcko_parque.webp` | guia.html — card Cal Orcko (slide 1) |
 | `casa_libertad.webp` | guia.html — card Casa de la Libertad |
-| `patio_usfx.webp` | guia.html — card USFX |
-| `la_recoleta.webp` | guia.html — card La Recoleta |
+| `patio-usfx.webp` | guia.html — card USFX |
+| `recoleta.webp` | guia.html — card La Recoleta |
 | `san_felipe.webp` | guia.html — sección colonial |
-| `plaza_25mayo.webp` | guia.html — card Plaza |
+| `plaza_25mayo.webp` | guia.html — card Plaza + CTA final |
 | `sucre_street.webp` | merchandising.html — hero |
 | `tarabuco.webp` | guia.html — excursión Tarabuco |
 | `maragua.webp` | guia.html — excursión Maragua |
 | `potosi.webp` | guia.html — excursión Potosí |
 | `chataquila.webp` | guia.html — excursión Chataquila |
+| `iglesia-san-francisco.webp` | contacto.html — hero background |
+
+---
+
+## Colores de marca por producto
+
+| Producto | Principal | Oscuro | Claro |
+|----------|-----------|--------|-------|
+| Me Gusta Sucre (global) | `#c9252d` | — | — |
+| Me Gusta Spanish (escuela) | `#FF3B6B` | — | — |
+| Me Gusta Inn | `#14b8a6` | `#0f766e` | `#99f6e4` |
+| Me Gusta Café | `#5aaa6a` | — | — |
 
 ---
 
 ## Pendiente
 
 ### Inmediato
-- [ ] Slim down `cafe.html` a mini-página
-- [ ] Slim down `hospedaje.html` a mini-página
+- [ ] Cambios de números de contacto (usuario debe proveer los nuevos números)
 
 ### Fotos reales (cuando el usuario las pase)
 - Hero del café (interior, patio o fachada)
 - Fotos de platos del menú
-- Galería del café
-- Hero de la escuela (aula, clase)
+- Hero de la escuela (aula, clase en curso)
 - Hero del inn (fachada o lobby)
-- Habitaciones del inn
+- Fotos de las habitaciones del inn
 
 ### Futuro
 - Me Gusta Trekkers — página nueva
+
 - E-commerce con Takenos
 - CNAME en el repo para `megustasucre.com` (GitHub Pages custom domain)

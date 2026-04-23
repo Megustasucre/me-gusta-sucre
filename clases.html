@@ -210,84 +210,163 @@
     </div>
   </div>
 
-  <!-- ═══ OUR PROGRAMS ══════════════════════════════ -->
+  <!-- ═══ PRESENTACION + CARRUSEL ═══════════════════ -->
+  <section style="padding:72px 0;background:#fafafa">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2" style="gap:56px;align-items:center">
+
+        <!-- Texto -->
+        <div class="fade-up">
+          <p class="eyebrow mb-4" data-i18n="clases.introEyebrow">Audiencia #97, Sucre</p>
+          <h2 class="section-title" style="margin-bottom:20px">
+            <span data-i18n="clases.introTitle">More than classes —</span> <span class="accent" data-i18n="clases.introAccent">a full experience</span>
+          </h2>
+          <p style="font-size:15px;color:#555;line-height:1.85;margin-bottom:24px" data-i18n="clases.introP">At Me Gusta Spanish you don't just study — you live the language. Native teachers, real conversations from day one, and a UNESCO World Heritage city as your classroom.</p>
+          <ul style="list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:12px">
+            <li style="display:flex;align-items:flex-start;gap:12px">
+              <span style="width:20px;height:20px;border-radius:50%;background:#FF3B6B;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">
+                <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span style="font-size:14px;color:#444;line-height:1.6" data-i18n="clases.exp1">Classes designed around your goals — travel, work, or full immersion</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:12px">
+              <span style="width:20px;height:20px;border-radius:50%;background:#FF3B6B;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">
+                <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span style="font-size:14px;color:#444;line-height:1.6" data-i18n="clases.exp2">Cultural activities outside the classroom: markets, cooking, city walks</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:12px">
+              <span style="width:20px;height:20px;border-radius:50%;background:#FF3B6B;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">
+                <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span style="font-size:14px;color:#444;line-height:1.6" data-i18n="clases.exp3">A community of 750+ alumni from 50+ countries — you'll make friends for life</span>
+            </li>
+          </ul>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#FF3B6B;background:#fff0f4;padding:7px 14px;border-radius:4px" data-i18n="clases.tag1">Native Teachers</span>
+            <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#FF3B6B;background:#fff0f4;padding:7px 14px;border-radius:4px" data-i18n="clases.tag2">All Levels</span>
+            <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#FF3B6B;background:#fff0f4;padding:7px 14px;border-radius:4px" data-i18n="clases.tag3">Flexible Schedule</span>
+            <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#FF3B6B;background:#fff0f4;padding:7px 14px;border-radius:4px" data-i18n="clases.tag4">Small Groups</span>
+          </div>
+        </div>
+
+        <!-- Carrusel -->
+        <div class="fade-up" style="position:relative;overflow:hidden;border-radius:8px;height:440px">
+
+          <div class="school-slide" style="position:absolute;inset:0;transition:opacity 0.7s ease;opacity:1;background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&q=85');background-size:cover;background-position:center 30%">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.65) 0%,transparent 55%)"></div>
+            <div style="position:absolute;bottom:22px;left:24px">
+              <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2ECEC4;margin-bottom:4px" data-i18n="clases.slide1Label">The School</p>
+              <p style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#fff" data-i18n="clases.slide1Cap">Small classes, big results</p>
+            </div>
+          </div>
+
+          <div class="school-slide" style="position:absolute;inset:0;transition:opacity 0.7s ease;opacity:0;background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=900&q=85');background-size:cover;background-position:center 30%">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.65) 0%,transparent 55%)"></div>
+            <div style="position:absolute;bottom:22px;left:24px">
+              <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2ECEC4;margin-bottom:4px" data-i18n="clases.slide2Label">Students</p>
+              <p style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#fff" data-i18n="clases.slide2Cap">50+ nationalities, one language</p>
+            </div>
+          </div>
+
+          <div class="school-slide" style="position:absolute;inset:0;transition:opacity 0.7s ease;opacity:0;background-image:url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=900&q=85');background-size:cover;background-position:center">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.65) 0%,transparent 55%)"></div>
+            <div style="position:absolute;bottom:22px;left:24px">
+              <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2ECEC4;margin-bottom:4px" data-i18n="clases.slide3Label">Learning</p>
+              <p style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#fff" data-i18n="clases.slide3Cap">Immersive, practical, effective</p>
+            </div>
+          </div>
+
+          <div class="school-slide" style="position:absolute;inset:0;transition:opacity 0.7s ease;opacity:0;background-image:url('https://images.unsplash.com/photo-1520531158340-44015069e78e?w=900&q=85');background-size:cover;background-position:center 40%">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.65) 0%,transparent 55%)"></div>
+            <div style="position:absolute;bottom:22px;left:24px">
+              <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2ECEC4;margin-bottom:4px" data-i18n="clases.slide4Label">Sucre</p>
+              <p style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#fff" data-i18n="clases.slide4Cap">The best city to learn Spanish</p>
+            </div>
+          </div>
+
+          <!-- Flechas -->
+          <button onclick="schoolCarousel(-1)" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,0.4);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button onclick="schoolCarousel(1)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,0.4);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <!-- Dots -->
+          <div style="position:absolute;bottom:22px;right:20px;display:flex;gap:5px;z-index:10">
+            <button onclick="schoolGoTo(0)" class="school-dot" style="width:7px;height:7px;border-radius:50%;border:none;cursor:pointer;background:#FF3B6B"></button>
+            <button onclick="schoolGoTo(1)" class="school-dot" style="width:7px;height:7px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,0.4)"></button>
+            <button onclick="schoolGoTo(2)" class="school-dot" style="width:7px;height:7px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,0.4)"></button>
+            <button onclick="schoolGoTo(3)" class="school-dot" style="width:7px;height:7px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,0.4)"></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function(){
+      const slides = document.querySelectorAll('.school-slide');
+      const dots   = document.querySelectorAll('.school-dot');
+      let cur = 0, timer;
+      function show(n){
+        slides[cur].style.opacity = '0';
+        dots[cur].style.background = 'rgba(255,255,255,0.4)';
+        cur = (n + slides.length) % slides.length;
+        slides[cur].style.opacity = '1';
+        dots[cur].style.background = '#FF3B6B';
+      }
+      window.schoolCarousel = function(dir){ clearInterval(timer); show(cur+dir); startAuto(); };
+      window.schoolGoTo     = function(n){   clearInterval(timer); show(n);       startAuto(); };
+      function startAuto(){ timer = setInterval(()=> show(cur+1), 4500); }
+      startAuto();
+    })();
+  </script>
+
+  <!-- ═══ MODALIDADES ═══════════════════════════════ -->
   <section style="padding:64px 0;background:var(--white)">
     <div class="max-w-4xl mx-auto px-6">
 
       <div class="text-center mb-10 fade-up">
         <p class="eyebrow mb-3" data-i18n="clases.programsEyebrow">Me Gusta Spanish School</p>
-        <h2 class="section-title"><span data-i18n="clases.programsTitle">Choose your</span> <span class="accent" data-i18n="clases.programsAccent">program</span></h2>
+        <h2 class="section-title"><span data-i18n="clases.programsTitle">How do you want to</span> <span class="accent" data-i18n="clases.programsAccent">learn?</span></h2>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-4 mb-10">
+      <div class="grid md:grid-cols-2 gap-6">
 
-        <!-- Card 1: Private -->
+        <!-- PRESENCIAL -->
         <div class="card fade-up" style="padding:0;overflow:hidden">
-          <div style="height:4px;background:linear-gradient(90deg,#FF3B6B,#2ECEC4)"></div>
-          <div style="padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px">
-            <div>
-              <p style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#FF3B6B;margin-bottom:6px" data-i18n="clases.prog1Type">Private Excellence</p>
-              <p style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#111111;margin-bottom:4px" data-i18n="clases.prog1Name">1-on-1 with a native teacher</p>
-              <p style="font-size:12px;color:#9a8070" data-i18n="clases.prog1Desc">Flexible schedule · Any level</p>
+          <div style="height:320px;overflow:hidden;position:relative">
+            <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=85');background-size:cover;background-position:center 30%;transition:transform 0.6s ease"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.6) 0%,transparent 60%)"></div>
+            <div style="position:absolute;bottom:20px;left:24px">
+              <p style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#FF3B6B;margin-bottom:4px" data-i18n="clases.modal1Type">In Sucre, Bolivia</p>
+              <p style="font-family:'Lora',serif;font-size:1.3rem;font-weight:800;color:#fff" data-i18n="clases.modal1Name">Face-to-Face Classes</p>
             </div>
-            <div style="text-align:right;flex-shrink:0">
-              <p style="font-family:'Lora',serif;font-size:1.9rem;font-weight:800;color:#111111;line-height:1">$160</p>
-              <p style="font-size:11px;color:#9a8070;margin-top:2px" data-i18n="clases.perWeek">per week</p>
-            </div>
+          </div>
+          <div style="padding:28px 30px 32px">
+            <p style="font-size:14px;color:#666;line-height:1.8" data-i18n="clases.modal1Desc">Full immersion in a Spanish-speaking environment. Learn in a UNESCO World Heritage city with native teachers and real-life practice every day.</p>
           </div>
         </div>
 
-        <!-- Card 2: Duo -->
+        <!-- ONLINE -->
         <div class="card fade-up" style="padding:0;overflow:hidden;transition-delay:0.1s">
-          <div style="height:4px;background:linear-gradient(90deg,#FF3B6B,#2ECEC4)"></div>
-          <div style="padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px">
-            <div>
-              <p style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#FF3B6B;margin-bottom:6px" data-i18n="clases.prog2Type">Duo Dynamics</p>
-              <p style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#111111;margin-bottom:4px" data-i18n="clases.prog2Name">2 students together</p>
-              <p style="font-size:12px;color:#9a8070" data-i18n="clases.prog2Desc">Study with a partner</p>
-            </div>
-            <div style="text-align:right;flex-shrink:0">
-              <p style="font-family:'Lora',serif;font-size:1.9rem;font-weight:800;color:#111111;line-height:1">$145</p>
-              <p style="font-size:11px;color:#9a8070;margin-top:2px" data-i18n="clases.perWeek">per week</p>
+          <div style="height:320px;overflow:hidden;position:relative">
+            <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=800&q=85');background-size:cover;background-position:center;transition:transform 0.6s ease"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,2,0.6) 0%,transparent 60%)"></div>
+            <div style="position:absolute;bottom:20px;left:24px">
+              <p style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2ECEC4;margin-bottom:4px" data-i18n="clases.modal2Type">From anywhere in the world</p>
+              <p style="font-family:'Lora',serif;font-size:1.3rem;font-weight:800;color:#fff" data-i18n="clases.modal2Name">Online Classes</p>
             </div>
           </div>
-        </div>
-
-        <!-- Card 3: Group — Most Popular -->
-        <div class="card fade-up" style="padding:0;overflow:hidden;position:relative;transition-delay:0.2s">
-          <div style="height:4px;background:linear-gradient(90deg,#FF3B6B,#2ECEC4)"></div>
-          <div style="position:absolute;top:14px;right:14px;background:#2ECEC4;color:#0d2626;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:50px" data-i18n="clases.mostPopular">Most Popular</div>
-          <div style="padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px">
-            <div>
-              <p style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#FF3B6B;margin-bottom:6px" data-i18n="clases.prog3Type">Group Immersion</p>
-              <p style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#111111;margin-bottom:4px" data-i18n="clases.prog3Name">Max 4 students per class</p>
-              <p style="font-size:12px;color:#9a8070" data-i18n="clases.prog3Desc">Mon–Fri · 8:30–12:30</p>
-            </div>
-            <div style="text-align:right;flex-shrink:0">
-              <p style="font-family:'Lora',serif;font-size:1.9rem;font-weight:800;color:#111111;line-height:1">$135</p>
-              <p style="font-size:11px;color:#9a8070;margin-top:2px" data-i18n="clases.perWeek">per week</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4: Cultural -->
-        <div class="card fade-up" style="padding:0;overflow:hidden;transition-delay:0.3s">
-          <div style="height:4px;background:linear-gradient(90deg,#FF3B6B,#2ECEC4)"></div>
-          <div style="padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px">
-            <div>
-              <p style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#FF3B6B;margin-bottom:6px" data-i18n="clases.prog4Type">Cultural Connection</p>
-              <p style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#111111;margin-bottom:4px" data-i18n="clases.prog4Name">Large group · Shared experience</p>
-              <p style="font-size:12px;color:#9a8070" data-i18n="clases.prog4Desc">Budget-friendly option</p>
-            </div>
-            <div style="text-align:right;flex-shrink:0">
-              <p style="font-family:'Lora',serif;font-size:1.9rem;font-weight:800;color:#111111;line-height:1">$110</p>
-              <p style="font-size:11px;color:#9a8070;margin-top:2px" data-i18n="clases.perWeek">per week</p>
-            </div>
+          <div style="padding:28px 30px 32px">
+            <p style="font-size:14px;color:#666;line-height:1.8" data-i18n="clases.modal2Desc">Live sessions with native Bolivian teachers, flexible scheduling adapted to your time zone. Start with a free trial class — no commitment required.</p>
           </div>
         </div>
 
       </div>
-
     </div>
   </section>
 
