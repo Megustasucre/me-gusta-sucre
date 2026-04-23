@@ -157,6 +157,13 @@ Problemas a resolver del análisis IA:
 - [ ] Blog de turistas en Sucre (atracciones gratuitas, de pago, familiares, entretenimiento)
 - [ ] Página de Actividades / Me Gusta Trekkers
 
+### guia.html — evolución a blog
+Convertir la guía de ciudad en un blog editorial de viajes:
+- Artículos sobre lugares para visitar en Sucre (gratuitos, de pago, familiares, entretenimiento)
+- Estilo blog: imagen destacada, fecha, categoría, texto editorial
+- Puede reemplazar o complementar el bento grid actual de spots
+- Contenido generado por el equipo de Me Gusta Sucre como expertos locales
+
 ### Funcionalidades nuevas
 - [ ] Chatbot de contacto (solo para Spanish School e Inn) — decidir plataforma (Tidio, Crisp o simulado con WhatsApp)
 - [ ] E-commerce con Takenos — merch, vouchers de clase, reservas
