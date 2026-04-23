@@ -112,20 +112,55 @@
 
 ---
 
-## Pendiente
+## Objetivos nuevos — próxima sesión
 
-### Inmediato
-- [ ] Cambios de números de contacto (usuario debe proveer los nuevos números)
+### Identidad de marca (problema central)
+La IA detectó que la página tiene identidad dividida. Se definió lo siguiente:
 
-### Fotos reales (cuando el usuario las pase)
-- Hero del café (interior, patio o fachada)
-- Fotos de platos del menú
-- Hero de la escuela (aula, clase en curso)
-- Hero del inn (fachada o lobby)
-- Fotos de las habitaciones del inn
+**Frase central de marca:**
+> "Los mejores recuerdos que te puedes llevar de Bolivia — desde la estadía, las clases y el café."
 
-### Futuro
-- Me Gusta Trekkers — página nueva
+**Audiencia:** turistas internacionales, regionales y nacionales (los tres por igual)
+**Acción principal:** guía de la ciudad + ofrecer los servicios (inn, café, clases, merch)
 
-- E-commerce con Takenos
-- CNAME en el repo para `megustasucre.com` (GitHub Pages custom domain)
+---
+
+### Re-arquitectura del index.html
+Rediseñar el flujo completo basado en la lógica del viajero:
+
+```
+1. Hero        — nueva frase central + CTA: "Explore Sucre" + "Book a Stay"
+2. Barra       — 4.9★ · 750+ viajeros · UNESCO Heritage · Ciudad Blanca
+3. Servicios   — 4 cards: Inn / Café / Clases / Merch
+4. City guide  — 3 highlights de Sucre → guia.html
+5. Reviews     — marquee actual (ya existe, mover más arriba)
+6. CTA final   — WhatsApp / Contacto
+```
+
+Problemas a resolver del análisis IA:
+- [ ] Jerarquía del nav — definir primario vs secundario
+- [ ] Hero CTA — un botón dominante, no dos del mismo peso
+- [ ] Reviews enterradas al 85% del scroll — moverlas más arriba
+- [ ] Duplicación de contenido (café aparece 2 veces en el index)
+
+---
+
+### Información pendiente que debe enviar el usuario
+- [ ] Números de contacto actualizados
+- [ ] Fotos reales del café (interior, patio, barra)
+- [ ] Fotos reales del inn (habitaciones, fachada, áreas comunes)
+- [ ] Fotos de clases (aula, profesor, estudiantes)
+
+---
+
+### Páginas nuevas solicitadas
+- [ ] Blog de turistas en Sucre (atracciones gratuitas, de pago, familiares, entretenimiento)
+- [ ] Página de Actividades / Me Gusta Trekkers
+
+### Funcionalidades nuevas
+- [ ] Chatbot de contacto (solo para Spanish School e Inn) — decidir plataforma (Tidio, Crisp o simulado con WhatsApp)
+- [ ] E-commerce con Takenos — merch, vouchers de clase, reservas
+- [ ] CNAME en el repo para `megustasucre.com` (GitHub Pages custom domain)
+
+### Pendiente anterior
+- [ ] Números de contacto actualizados
