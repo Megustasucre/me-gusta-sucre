@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aprender Español en Sucre — Me Gusta Sucre</title>
+  <meta name="description" content="Por qué miles de viajeros eligen Sucre para aprender español. El acento más neutro de Sudamérica, una ciudad universitaria y la inmersión real a bajo costo." />
+  <meta property="og:title" content="Aprender Español en Sucre — Me Gusta Sucre" />
+  <meta property="og:description" content="El acento más neutro del continente, una ciudad universitaria fundada en 1624, y la inmersión real que solo una ciudad pequeña puede ofrecer." />
+  <meta property="og:image" content="https://megustasucre.com/imagenes/og-image.svg" />
+  <meta property="og:url" content="https://megustasucre.com/blog-aprende-espanol.html" />
+  <meta property="og:type" content="article" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://megustasucre.com/blog-aprende-espanol.html" />
+  <link rel="icon" type="image/svg+xml" href="imagenes/favicon-guia.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,700;1,9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tw.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sucre-fonts.css" />
+</head>
+<body class="bg-white">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between relative">
+      <div class="hidden md:flex items-center gap-7" style="flex:1">
+        <a href="clases.html" class="nav-link nav-secondary text-white" data-i18n="nav.classes">Spanish Classes</a>
+        <a href="cafe.html" class="nav-link nav-secondary text-white" data-i18n="nav.cafe">Café</a>
+        <a href="guia.html" class="nav-link nav-primary text-white" data-i18n="nav.guide">City Guide</a>
+      </div>
+      <a href="index.html" class="flex items-center gap-3 md:absolute md:left-1/2 md:-translate-x-1/2">
+        <img src="imagenes/logos/logo-me-gusta-sucre-chinchilla.png" alt="Me Gusta Sucre" class="logo-img">
+        <span class="logo-text text-white font-bold" style="font-family:'Fraunces',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap">Me Gusta <span class="logo-accent" style="color:#c9252d;font-style:italic">Sucre</span></span>
+      </a>
+      <div class="hidden md:flex items-center justify-end gap-7" style="flex:1">
+        <a href="hospedaje.html" class="nav-link nav-primary text-white" data-i18n="nav.stay">Stay</a>
+        <a href="merchandising.html" class="nav-link nav-secondary text-white" data-i18n="nav.merch">Merch</a>
+        <a href="contacto.html" class="nav-link nav-secondary text-white" data-i18n="nav.contact">Contact</a>
+        <div class="flex items-center gap-3 border-l lang-container border-white/20 pl-6 ml-2">
+          <button class="lang-btn text-xs font-bold text-white uppercase active" data-lang="en">EN</button>
+          <span class="text-white/30 text-xs">|</span>
+          <button class="lang-btn text-xs font-bold text-white/50 uppercase" data-lang="es">ES</button>
+          <span class="text-white/30 text-xs">|</span>
+          <button class="lang-btn text-xs font-bold text-white/50 uppercase" data-lang="fr">FR</button>
+        </div>
+      </div>
+      <button id="menu-btn" class="md:hidden text-white p-1">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden bg-white shadow-xl px-6 pb-5">
+      <div class="flex justify-center items-center gap-3 py-4 border-b border-gray-100 mb-2">
+        <img src="imagenes/logos/logo-me-gusta-sucre-chinchilla.png" alt="Me Gusta Sucre" class="logo-img" style="filter:none">
+        <span class="logo-text font-bold" style="font-family:'Fraunces',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap;color:#111">Me Gusta <span class="logo-accent" style="color:#c9252d;font-style:italic">Sucre</span></span>
+      </div>
+      <a href="clases.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.classes">Spanish Classes</a>
+      <a href="cafe.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.cafe">Café</a>
+      <a href="guia.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.guide">City Guide</a>
+      <a href="hospedaje.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.stay">Stay</a>
+      <a href="merchandising.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.merch">Merch</a>
+      <a href="contacto.html" class="block py-2 text-sm font-semibold text-gray-800" data-i18n="nav.contact">Contact</a>
+      <div class="py-4 mt-2 border-t border-b border-gray-100 mb-4">
+        <p class="text-[10px] font-bold text-gray-400 mb-3 uppercase tracking-wider">Language</p>
+        <div class="flex items-center gap-5">
+          <button class="lang-btn text-sm font-bold text-gray-900" data-lang="en">EN</button>
+          <span class="text-gray-300">|</span>
+          <button class="lang-btn text-sm font-bold text-gray-400" data-lang="es">ES</button>
+          <span class="text-gray-300">|</span>
+          <button class="lang-btn text-sm font-bold text-gray-400" data-lang="fr">FR</button>
+        </div>
+      </div>
+      <a href="hospedaje.html" class="btn-red block text-center mt-4" style="border-radius:0" data-i18n="nav.book">Book a Stay</a>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ══════════════════════════════════════════════ -->
+  <section class="post-hero">
+    <div class="post-hero-bg hero-kenburns" style="background-image:url('imagenes/fotos_escuela/hero1.jpg')"></div>
+    <div class="post-hero-overlay"></div>
+    <div class="post-hero-body">
+      <div class="post-breadcrumb">
+        <a href="guia.html">City Guide</a>
+        <span>/</span>
+        <span>Las Crónicas</span>
+        <span>/</span>
+        <span style="color:rgba(255,255,255,0.7)">Español en Sucre</span>
+      </div>
+      <p class="post-tag">Clases de Español</p>
+      <h1 class="post-title">
+        El secreto mejor guardado<br><em>para aprender español</em>
+      </h1>
+      <div class="post-meta">
+        <span>Equipo Me Gusta Sucre</span>
+        <span class="post-meta-dot"></span>
+        <span>Sucre, Bolivia</span>
+        <span class="post-meta-dot"></span>
+        <span>2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ARTICLE BODY ══════════════════════════════════════ -->
+  <article class="post-body">
+
+    <a href="guia.html#cronicas" class="post-back">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+      Volver a Las Crónicas
+    </a>
+
+    <p class="post-lead">
+      Por qué miles de viajeros eligen esta pequeña ciudad blanca en los Andes para sumergirse en el idioma. La respuesta no solo está en sus fachadas coloniales, sino en algo que se siente en el aire: la claridad de sus palabras.
+    </p>
+
+    <!-- Quick facts bar -->
+    <div class="post-facts">
+      <div class="post-fact">
+        <p class="post-fact-label">Acento</p>
+        <p class="post-fact-value">El mas neutro</p>
+        <p class="post-fact-desc">De todo el continente sudamericano.</p>
+      </div>
+      <div class="post-fact">
+        <p class="post-fact-label">Universidad</p>
+        <p class="post-fact-value">Desde 1624</p>
+        <p class="post-fact-desc">USFX, una de las mas antiguas de America.</p>
+      </div>
+      <div class="post-fact">
+        <p class="post-fact-label">Costo de vida</p>
+        <p class="post-fact-value">Muy bajo</p>
+        <p class="post-fact-desc">Quedarse semanas o meses, sin sacrificios.</p>
+      </div>
+      <div class="post-fact">
+        <p class="post-fact-label">Tamano</p>
+        <p class="post-fact-value">Ciudad pequena</p>
+        <p class="post-fact-desc">Inmersion real. El espanol es inevitable.</p>
+      </div>
+    </div>
+
+    <hr class="post-divider" />
+
+    <!-- Acento -->
+    <div class="post-section">
+      <p class="post-section-eyebrow">01 — El Acento</p>
+      <h2 class="post-section-title">El acento mas neutro <em>de Sudamerica</em></h2>
+      <p class="post-p">Para un estudiante de español, no hay nada más frustrante que aterrizar en un lugar donde la jerga local o la velocidad del habla hacen que los años de estudio parezcan inútiles. En Sucre, sucede lo contrario.</p>
+      <p class="post-p">Los sucrenses son conocidos por tener uno de los acentos más claros, pausados y neutros de todo el continente. Aquí se pronuncian todas las letras: a diferencia de las zonas costeras, en Sucre no se "comen" las eses ni se acortan las palabras. El ritmo del habla es natural pero comprensible, ideal para quienes están entrenando el oído.</p>
+      <div class="post-callout">
+        <p class="post-callout-label">Por qué importa</p>
+        <p class="post-callout-text">"Se utiliza un español estándar que te servirá desde México hasta Argentina. Lo que aprendes aquí, funciona en cualquier parte."</p>
+      </div>
+      <p class="post-p">Cero voseo confuso, cero acortamientos costeros. El español que escucharás en Sucre es el mismo que encontrarás en los libros de texto — excepto que es real, vivo y está en la calle.</p>
+    </div>
+
+    <hr class="post-divider" />
+
+    <!-- Universidad -->
+    <div class="post-section">
+      <p class="post-section-eyebrow">02 — La Ciudad Universitaria</p>
+      <h2 class="post-section-title">Una universidad <em>desde 1624</em></h2>
+      <p class="post-p">Sucre es el hogar de la Universidad San Francisco Xavier (USFX), una de las más antiguas de América, fundada en 1624. Esto impregna a la ciudad de una energía joven y culta que se siente en cada esquina.</p>
+      <p class="post-p">El intercambio es natural. Es fácil conocer estudiantes locales en los cafés o plazas que están listos para conversar. La ciudad entera se siente como un campus: segura, caminable y llena de rincones tranquilos para leer y practicar.</p>
+      <div class="post-callout">
+        <p class="post-callout-label">Nota local</p>
+        <p class="post-callout-text">El Patio de la USFX, en el centro histórico, es uno de los lugares más hermosos para estudiar al aire libre — y siempre hay alguien dispuesto a charlar.</p>
+      </div>
+    </div>
+
+    <hr class="post-divider" />
+
+    <!-- Inversion -->
+    <div class="post-section">
+      <p class="post-section-eyebrow">03 — La Inversion</p>
+      <h2 class="post-section-title">Inmersion total <em>a bajo costo</em></h2>
+      <p class="post-p">A diferencia de ciudades más grandes como Buenos Aires o Medellín, en Sucre la inmersión es real. Al ser una ciudad pequeña, te verás obligado a usar tu español en el mercado, en el micro o al pedir un café.</p>
+      <p class="post-p">Además, el costo de vida permite quedarse semanas o meses, lo cual es la única forma real de alcanzar la fluidez. Las clases cuestan menos, el alojamiento cuesta menos, la comida cuesta menos — pero la calidad de la experiencia no tiene comparación.</p>
+      <div class="post-callout">
+        <p class="post-callout-label">La diferencia clave</p>
+        <p class="post-callout-text">No es solo una clase de gramática. Es vivir el idioma en la ciudad donde mejor suena.</p>
+      </div>
+    </div>
+
+    <hr class="post-divider" />
+
+    <!-- Conclusion -->
+    <div class="post-section">
+      <p class="post-section-eyebrow">04 — Conclusion</p>
+      <h2 class="post-section-title">Donde tu progreso <em>es tangible</em></h2>
+      <p class="post-p">Si buscas un lugar donde tu progreso sea tangible desde la primera semana, Sucre no tiene competencia. El acento neutro, la energía universitaria, el costo accesible y la inmersión forzada por el tamaño de la ciudad crean una combinación que es difícil de replicar en cualquier otro lugar del mundo hispanohablante.</p>
+      <p class="post-p">Venimos diciendo lo mismo toda la vida — y los miles de estudiantes que pasan por aquí cada año nos siguen dando la razón.</p>
+      <div class="post-callout">
+        <p class="post-callout-label">Escrito por</p>
+        <p class="post-callout-text">El equipo de Me Gusta Sucre &mdash; 100% Sucrenses.</p>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- ═══ CTA ESCUELA ══════════════════════════════════════ -->
+  <section style="background:#111;padding:100px 24px 80px">
+    <div style="max-width:900px;margin:0 auto">
+
+      <!-- Logo + nombre -->
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:48px;justify-content:center">
+        <img src="imagenes/logos/logo-me-gusta-spanish.png" alt="Me Gusta Spanish School" style="height:56px;width:auto" />
+        <div style="border-left:1px solid rgba(255,255,255,0.15);padding-left:16px">
+          <p style="font-family:'Fraunces',serif;font-size:1.4rem;font-weight:800;color:#fff;line-height:1;margin-bottom:4px">Me Gusta <span style="color:#c9252d;font-style:italic">Spanish</span></p>
+          <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.35)">Escuela de Español — Sucre, Bolivia</p>
+        </div>
+      </div>
+
+      <!-- Headline -->
+      <div style="text-align:center;margin-bottom:56px">
+        <h2 style="font-family:'Fraunces',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;color:#fff;line-height:1.05;margin-bottom:20px">Todo lo que leiste<br><em style="color:#c9252d;font-style:italic">lo puedes vivir</em></h2>
+        <p style="font-size:16px;color:rgba(255,255,255,0.55);max-width:520px;margin:0 auto;line-height:1.8">El acento neutro, la ciudad universitaria, la inversion total — eso es exactamente lo que ofrecemos. Clases disenadas para que progreses desde la primera semana.</p>
+      </div>
+
+      <!-- Features -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.07);margin-bottom:56px">
+        <div style="background:#111;padding:32px 28px;text-align:center">
+          <p style="font-family:'Fraunces',serif;font-size:2rem;font-weight:800;color:#fff;margin-bottom:8px">Todo el año</p>
+          <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c9252d;margin-bottom:10px">Clases individuales y privadas</p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7">La escuela no cierra. Empieza cualquier lunes, el tiempo que necesites — una semana o seis meses.</p>
+        </div>
+        <div style="background:#111;padding:32px 28px;text-align:center;border-left:1px solid rgba(255,255,255,0.07);border-right:1px solid rgba(255,255,255,0.07)">
+          <p style="font-family:'Fraunces',serif;font-size:2rem;font-weight:800;color:#fff;margin-bottom:8px">20+</p>
+          <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c9252d;margin-bottom:10px">Anos de experiencia</p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7">Ensenamos espanol a viajeros de todo el mundo desde hace mas de dos decadas.</p>
+        </div>
+        <div style="background:#111;padding:32px 28px;text-align:center">
+          <p style="font-family:'Fraunces',serif;font-size:2rem;font-weight:800;color:#fff;margin-bottom:8px">A1–C2</p>
+          <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c9252d;margin-bottom:10px">Todos los niveles</p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7">Desde cero absoluto hasta perfeccionamiento avanzado. Empieza donde estas.</p>
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="clases.html" class="btn-red" style="display:inline-block;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:18px 48px;text-decoration:none">Ver clases y precios</a>
+        <a href="https://megustaspanish.com" target="_blank" style="display:inline-block;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:18px 48px;text-decoration:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);transition:all 0.2s">Sitio de la escuela ↗</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ RELATED ARTICLES ══════════════════════════════════ -->
+  <section class="post-related">
+    <div class="post-related-inner">
+      <p class="post-related-eyebrow">Las Cronicas</p>
+      <h2 class="post-related-title">Mas del guide</h2>
+      <div class="post-related-grid">
+        <a href="blog-el-manual.html" class="post-related-card">
+          <div class="post-related-img">
+            <img src="imagenes/wikipedia/plaza_25mayo.webp" alt="El Manual del Viajero" loading="lazy" />
+          </div>
+          <div class="post-related-body">
+            <p class="post-related-tag">El Manual</p>
+            <p class="post-related-name">El Manual del Viajero</p>
+            <p class="post-related-desc">Altitud, moneda, transporte, clima y seguridad. Todo lo que necesitas saber antes de llegar.</p>
+          </div>
+        </a>
+        <a href="blog-tradiciones-domingo.html" class="post-related-card">
+          <div class="post-related-img">
+            <img src="imagenes/wikipedia/tarabuco.webp" alt="Tradiciones de Domingo" loading="lazy" />
+          </div>
+          <div class="post-related-body">
+            <p class="post-related-tag">Markets &amp; Culture</p>
+            <p class="post-related-name">Tradiciones de Domingo</p>
+            <p class="post-related-desc">Salteñas antes de las 10am, Tarabuco en van compartida, y mondongo al mediodia. El domingo en Sucre tiene su propio reloj.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-dark">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <p style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:10px">Me Gusta <span style="color:#c9252d;font-style:italic">Sucre</span></p>
+          <p style="font-size:14px;line-height:1.7;margin-bottom:20px" data-i18n="footer.tagline">Your gateway to Bolivia's most beautiful city — Spanish classes, hostal, café, and city experiences.</p>
+          <div style="display:flex;gap:10px">
+            <a href="https://www.facebook.com/MeGustaSucre" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#aaa;text-decoration:none">f</a>
+            <a href="https://www.instagram.com/megustasucre" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#aaa;text-decoration:none">ig</a>
+            <a href="https://wa.me/59173425725" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">wa</a>
+          </div>
+        </div>
+        <div>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.explore">Explore</p>
+          <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
+            <li><a href="clases.html" data-i18n="nav.classes">Spanish Classes</a></li>
+            <li><a href="guia.html" data-i18n="nav.guide">City Guide</a></li>
+            <li><a href="cafe.html" data-i18n="nav.cafe">Café &amp; Menu</a></li>
+            <li><a href="hospedaje.html" data-i18n="nav.stay">Stay</a></li>
+            <li><a href="contacto.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.megustaTitle">Me Gusta</p>
+          <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
+            <li><a href="hospedaje.html" data-i18n="index.brand2Pill">Inn — Boutique Hotel</a></li>
+            <li><a href="cafe.html" data-i18n="index.brand3Pill">Café</a></li>
+            <li><a href="clases.html" data-i18n="nav.classes">Spanish Classes</a></li>
+            <li><a href="https://megustaspanish.com" target="_blank" data-i18n="index.schoolBtn2">School Website ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.findUs">Find Us</p>
+          <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
+            <li data-i18n="footer.address">La Paz #571, Sucre, Bolivia</li>
+            <li><a href="tel:+59173425725" style="color:#aaa;text-decoration:none">+591 734 25725</a></li>
+            <li><a href="mailto:info@megustasucre.com" style="color:#aaa;text-decoration:none">info@megustasucre.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top:1px solid #2d2010;padding-top:24px;text-align:center;font-size:13px;color:#555">
+        &copy; 2026 Me Gusta Sucre. <span data-i18n="footer.rights">All rights reserved.</span> &middot; <a href="https://megustaspanish.com" target="_blank" style="color:#c9252d">Me Gusta Spanish School</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/59173425725" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

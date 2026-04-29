@@ -95,17 +95,32 @@ if (fadeEls.length) {
   fadeEls.forEach(el => observer.observe(el));
 }
 
+/* ── Section animations: divider line + scale reveal ── */
+(function () {
+  const animEls = document.querySelectorAll('[data-anim]');
+  if (!animEls.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.1 });
+  animEls.forEach(el => io.observe(el));
+})();
+
 /* ── Animated counters ── */
 function animateCounter(el) {
-  const target = parseInt(el.dataset.target, 10);
+  const target = parseFloat(el.dataset.target);
   const suffix = el.dataset.suffix || '';
+  const decimals = parseInt(el.dataset.decimals || '0', 10);
   const duration = 1800;
   const start = performance.now();
   const step = (now) => {
     const elapsed = now - start;
     const progress = Math.min(elapsed / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.floor(eased * target) + suffix;
+    el.textContent = (eased * target).toFixed(decimals) + suffix;
     if (progress < 1) requestAnimationFrame(step);
   };
   requestAnimationFrame(step);
@@ -122,6 +137,18 @@ if (counterEls.length) {
     });
   }, { threshold: 0.5 });
   counterEls.forEach(el => counterObserver.observe(el));
+}
+
+/* ── CTA banner parallax ── */
+const ctaBannerImg = document.querySelector('.cta-parallax-img');
+if (ctaBannerImg) {
+  const ctaSection = ctaBannerImg.closest('section');
+  window.addEventListener('scroll', () => {
+    const rect = ctaSection.getBoundingClientRect();
+    if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+    const progress = (window.innerHeight - rect.top) / (window.innerHeight + ctaSection.offsetHeight);
+    ctaBannerImg.style.transform = `translateY(${(progress - 0.5) * 80}px)`;
+  }, { passive: true });
 }
 
 /* ── Parallax hero ── */

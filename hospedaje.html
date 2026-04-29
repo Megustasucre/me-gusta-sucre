@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -43,23 +43,74 @@
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Satisfy&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,700;1,9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/tw.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/sucre-fonts.css" />
   <!-- Me Gusta Sucre Inn — page-scoped brand overrides -->
   <style>
-    .nav-link::after          { background: #2563eb !important; }
-    .nav-link:hover           { color: #93c5fd !important; }
+    .nav-link::after          { background: #14b8a6 !important; }
+    .nav-link:hover           { color: #99f6e4 !important; }
     .top-bar                  { background: #0c1e3b !important; border-color: #1a2d50 !important; }
-    .top-bar a                { color: #93c5fd !important; border-color: #93c5fd !important; }
+    .top-bar a                { color: #99f6e4 !important; border-color: #99f6e4 !important; }
+
+    /* ── Inn brand: turquoise overrides ── */
+    .room-amenity {
+      color: #99f6e4 !important;
+      background: rgba(20,184,166,0.15) !important;
+      border-color: rgba(20,184,166,0.3) !important;
+    }
+
+    /* ── Booking form inputs ── */
+    .booking-input:focus {
+      border-color: #14b8a6 !important;
+      background: rgba(20,184,166,0.08) !important;
+    }
+    .booking-input::placeholder { color: rgba(255,255,255,0.25); }
+
+    /* ── Room option cards ── */
+    .room-option:hover {
+      border-color: rgba(20,184,166,0.55) !important;
+      background: rgba(20,184,166,0.13) !important;
+    }
+    .room-option.selected {
+      border-color: #14b8a6 !important;
+      background: rgba(20,184,166,0.18) !important;
+    }
+    .room-option.selected .room-option-dot {
+      background: #14b8a6;
+      border-color: #14b8a6 !important;
+      box-shadow: 0 0 0 3px rgba(20,184,166,0.25);
+    }
+    .room-option.selected .room-option-dot::after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #fff;
+    }
+    .room-option.selected span:last-child {
+      color: #fff !important;
+    }
+
+    /* ── Submit button hover ── */
+    #booking-submit:hover {
+      background: #0f766e !important;
+      transform: translateY(-2px);
+    }
+    #booking-submit:active { transform: translateY(0); }
+
+    /* ── Booking form mobile responsive ── */
+    @media (max-width: 640px) {
+      .booking-dates-row,
+      .booking-meta-row { grid-template-columns: 1fr !important; }
+      #room-selector    { grid-template-columns: 1fr !important; }
+      #reservar > div > div { padding: 28px 24px 32px !important; }
+    }
   </style>
 </head>
 <body style="background:var(--white)">
-    <div class="top-bar">
-    <span data-i18n="contacto.topbar">Questions? We reply fast on WhatsApp · Inn: +591 734 25725 · School: +591 734 00447</span>
-    <a href="https://wa.me/59173425725" target="_blank" data-i18n="contacto.topbarLink">Message Us</a>
-  </div>
 
 <!-- NAVBAR -->
   <nav id="navbar" class="fixed left-0 right-0 z-50" style="background:transparent">
@@ -67,22 +118,22 @@
 
       <!-- Left links — desktop -->
       <div class="hidden md:flex items-center gap-7" style="flex:1">
-        <a href="clases.html"      class="nav-link text-white" data-i18n="nav.classes">Spanish Classes</a>
-        <a href="cafe.html" class="nav-link text-white" data-i18n="nav.cafe">Café</a>
-        <a href="guia.html" class="nav-link text-white" data-i18n="nav.guide">City Guide</a>
+        <a href="clases.html" class="nav-link nav-secondary text-white" data-i18n="nav.classes">Spanish Classes</a>
+        <a href="cafe.html" class="nav-link nav-secondary text-white" data-i18n="nav.cafe">Café</a>
+        <a href="guia.html" class="nav-link nav-primary text-white" data-i18n="nav.guide">City Guide</a>
       </div>
 
       <!-- Logo / Home — centrado desktop, izquierda mobile -->
       <a href="index.html" class="flex items-center gap-3 md:absolute md:left-1/2 md:-translate-x-1/2">
         <img src="imagenes/logos/logo-me-gusta-inn.png" alt="Me Gusta Sucre Inn" class="navbar-brand-logo" style="height:56px;width:auto;flex-shrink:0" />
-        <span class="logo-text text-white font-bold" style="font-family:'Lora',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap">Me Gusta <span class="logo-accent" style="color:#2563eb;font-style:italic">Inn</span></span>
+        <span class="logo-text text-white font-bold" style="font-family:'Fraunces',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap">Me Gusta <span class="logo-accent" style="color:#14b8a6;font-style:italic">Inn</span></span>
       </a>
 
       <!-- Right links — desktop -->
       <div class="hidden md:flex items-center justify-end gap-7" style="flex:1">
-        <a href="hospedaje.html"     class="nav-link nav-active text-white" data-i18n="nav.stay">Stay</a>
-        <a href="merchandising.html" class="nav-link text-white" data-i18n="nav.merch">Merch</a>
-        <a href="contacto.html"      class="nav-link text-white" data-i18n="nav.contact">Contact</a>
+        <a href="hospedaje.html" class="nav-link nav-primary nav-active text-white" data-i18n="nav.stay">Stay</a>
+        <a href="merchandising.html" class="nav-link nav-secondary text-white" data-i18n="nav.merch">Merch</a>
+        <a href="contacto.html" class="nav-link nav-secondary text-white" data-i18n="nav.contact">Contact</a>
         <div class="flex items-center gap-3 border-l lang-container border-white/20 pl-6 ml-2">
           <button class="lang-btn text-xs font-bold text-white uppercase active" data-lang="en">EN</button>
           <span class="text-white/30 text-xs">|</span>
@@ -104,7 +155,7 @@
     <div id="mobile-menu" class="hidden bg-white shadow-xl px-6 pb-5">
       <div class="flex justify-center items-center gap-3 py-4 border-b border-gray-100 mb-2">
         <img src="imagenes/logos/logo-me-gusta-inn.png" alt="Me Gusta Sucre Inn" class="logo-img" style="filter:none">
-        <span class="logo-text font-bold" style="font-family:'Lora',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap;color:#111">Me Gusta <span class="logo-accent" style="color:#2563eb;font-style:italic">Inn</span></span>
+        <span class="logo-text font-bold" style="font-family:'Fraunces',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap;color:#111">Me Gusta <span class="logo-accent" style="color:#14b8a6;font-style:italic">Inn</span></span>
       </div>
       <a href="clases.html"        class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.classes">Spanish Classes</a>
       <a href="cafe.html"   class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.cafe">Café</a>
@@ -136,19 +187,19 @@
     <div class="max-w-7xl mx-auto px-6 w-full relative z-10" style="padding-bottom:48px">
       <div style="margin-bottom:20px">
         <div style="display:inline-flex;align-items:center;gap:0;background:rgba(0,0,0,0.35);border-radius:6px;overflow:hidden">
-          <div style="width:5px;align-self:stretch;background:#2563eb;flex-shrink:0"></div>
+          <div style="width:5px;align-self:stretch;background:#14b8a6;flex-shrink:0"></div>
           <img src="imagenes/logos/logo-me-gusta-inn.png" alt="Me Gusta Sucre Inn" style="height:52px;width:auto;flex-shrink:0;padding:4px 10px" />
           <div style="width:1px;height:36px;background:rgba(255,255,255,0.15);flex-shrink:0"></div>
           <div style="padding:0 16px 0 14px;display:flex;flex-direction:column;justify-content:center;gap:2px">
-            <span style="font-family:'Lora',serif;font-size:1.2rem;font-weight:800;font-style:italic;color:#93c5fd;line-height:1">Me Gusta</span>
-            <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;color:#fff;text-transform:uppercase">Boutique Inn</span>
+            <span style="font-family:'Fraunces',serif;font-size:1.2rem;font-weight:800;font-style:italic;color:#99f6e4;line-height:1">Me Gusta</span>
+            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;color:#fff;text-transform:uppercase">Boutique Inn</span>
           </div>
         </div>
       </div>
-      <p class="eyebrow mb-2" style="color:#2563eb" data-i18n="hospedaje.heroEyebrow">La Paz #571, Sucre</p>
-      <h1 style="font-family:'Lora',serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px"><span data-i18n="hospedaje.heroTitle">Your home</span> <span style="color:#2563eb;font-style:italic" data-i18n="hospedaje.heroAccent">in the White City</span></h1>
+      <p class="eyebrow mb-2" style="color:#14b8a6" data-i18n="hospedaje.heroEyebrow">La Paz #571, Sucre</p>
+      <h1 style="font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px"><span data-i18n="hospedaje.heroTitle">Your home</span> <span style="color:#14b8a6;font-style:italic" data-i18n="hospedaje.heroAccent">in the White City</span></h1>
       <div class="flex flex-wrap gap-4">
-        <a href="#rooms" style="display:inline-block;background:#2563eb;color:#fff;padding:12px 28px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:13px;text-decoration:none;border:2px solid #2563eb;transition:all 0.2s" data-i18n="hospedaje.heroCta1">Book your Room</a>
+        <a href="#rooms" style="display:inline-block;background:#14b8a6;color:#fff;padding:12px 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:13px;text-decoration:none;border:2px solid #14b8a6;transition:all 0.2s" data-i18n="hospedaje.heroCta1">Book your Room</a>
         <a href="contacto.html" class="btn-outline" data-i18n="hospedaje.heroCta2">Contact Us</a>
       </div>
     </div>
@@ -159,7 +210,7 @@
     <div class="max-w-7xl mx-auto px-6">
 
       <div class="text-center mb-14 fade-up">
-        <p class="eyebrow mb-4" style="color:#2563eb" data-i18n="hospedaje.heroEyebrow">Boutique Inn</p>
+        <p class="eyebrow mb-4" style="color:#14b8a6" data-i18n="hospedaje.heroEyebrow">Boutique Inn</p>
         <h2 class="section-title"><span data-i18n="hospedaje.roomsTitle">Rooms built for comfort</span></h2>
         <p style="font-size:15px;color:#555555;max-width:480px;margin:12px auto 0" data-i18n="hospedaje.roomsSub">Whether you're here for a weekend or a month of Spanish classes, we have the perfect space for you.</p>
       </div>
@@ -171,13 +222,13 @@
           <div style="position:relative;height:320px;overflow:hidden">
             <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1200&q=85" alt="Suite Colonial" class="room-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease" />
             <div style="position:absolute;inset:0;background:linear-gradient(to top,#0a1628 0%,rgba(10,22,40,0.25) 60%,transparent 100%)"></div>
-            <span style="position:absolute;top:20px;left:20px;background:#2563eb;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:50px">Best Room</span>
+            <span style="position:absolute;top:20px;left:20px;background:#14b8a6;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:50px">Best Room</span>
             <div style="position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:7px 18px">
-              <span style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#fff">$65 <span style="font-size:11px;font-weight:400;opacity:0.65;font-family:'DM Sans',sans-serif">/ night</span></span>
+              <span style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:#fff">$65 <span style="font-size:11px;font-weight:400;opacity:0.65;font-family:'Plus Jakarta Sans',sans-serif">/ night</span></span>
             </div>
           </div>
           <div style="padding:28px 32px 34px">
-            <h3 style="font-family:'Lora',serif;font-size:1.7rem;font-weight:800;color:#fff;margin-bottom:8px" data-i18n="hospedaje.room1Name">Deluxe Suite</h3>
+            <h3 style="font-family:'Fraunces',serif;font-size:1.7rem;font-weight:800;color:#fff;margin-bottom:8px" data-i18n="hospedaje.room1Name">Deluxe Suite</h3>
             <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:20px;max-width:480px" data-i18n="hospedaje.room1Desc">Large sunny balcony overlooking the inner courtyard. King-size bed and private en-suite bathroom.</p>
             <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px">
               <span class="room-amenity" data-i18n="hospedaje.amKing">King Bed</span>
@@ -186,7 +237,7 @@
               <span class="room-amenity" data-i18n="hospedaje.amWifi">Free WiFi</span>
               <span class="room-amenity" data-i18n="hospedaje.amBreakfast">Breakfast Included</span>
             </div>
-            <a href="https://wa.me/59173425725?text=Hello!%20I'd%20like%20to%20book%20the%20Colonial%20Suite%20at%20Me%20Gusta%20Inn." target="_blank" class="room-cta" style="background:#2563eb" data-i18n="hospedaje.btnWhatsApp">Reserve via WhatsApp →</a>
+            <a href="#reservar" class="room-cta" style="background:#14b8a6" data-i18n="hospedaje.btnWhatsApp" onclick="selectRoom('Deluxe Suite ($65/night)')">Reserve →</a>
           </div>
         </div>
 
@@ -196,11 +247,11 @@
             <img src="https://images.unsplash.com/photo-1590490359683-658d3d23f972?w=800&q=85" alt="Patio Room" class="room-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease" />
             <div style="position:absolute;inset:0;background:linear-gradient(to top,#0a1628 0%,rgba(10,22,40,0.2) 60%,transparent 100%)"></div>
             <div style="position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:6px 14px">
-              <span style="font-family:'Lora',serif;font-size:1rem;font-weight:700;color:#fff">$45 <span style="font-size:10px;font-weight:400;opacity:0.65;font-family:'DM Sans',sans-serif">/ night</span></span>
+              <span style="font-family:'Fraunces',serif;font-size:1rem;font-weight:700;color:#fff">$45 <span style="font-size:10px;font-weight:400;opacity:0.65;font-family:'Plus Jakarta Sans',sans-serif">/ night</span></span>
             </div>
           </div>
           <div style="padding:22px 24px 28px">
-            <h3 style="font-family:'Lora',serif;font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px" data-i18n="hospedaje.room2Name">Standard Private</h3>
+            <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px" data-i18n="hospedaje.room2Name">Standard Private</h3>
             <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:16px" data-i18n="hospedaje.room2Desc">Cozy and quiet. Perfect for solo travelers or couples focusing on their Spanish studies.</p>
             <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px">
               <span class="room-amenity" data-i18n="hospedaje.amDouble">Double Bed</span>
@@ -210,14 +261,14 @@
               <span class="room-amenity">Free WiFi</span>
               <span class="room-amenity">Breakfast</span>
             </div>
-            <div style="border-top:1px solid rgba(37,99,235,0.2);padding-top:16px;margin-bottom:18px">
-              <p style="font-size:11px;color:rgba(255,255,255,0.35);font-family:'DM Sans',sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px" data-i18n="hospedaje.includes">Includes</p>
+            <div style="border-top:1px solid rgba(20,184,166,0.2);padding-top:16px;margin-bottom:18px">
+              <p style="font-size:11px;color:rgba(255,255,255,0.35);font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px" data-i18n="hospedaje.includes">Includes</p>
               <div style="display:flex;gap:16px;font-size:12px;color:rgba(255,255,255,0.55)">
                 <span data-i18n="hospedaje.incBreakfast">Breakfast at the Inn</span>
                 <span data-i18n="hospedaje.incCleaning">Daily Cleaning</span>
               </div>
             </div>
-            <a href="https://wa.me/59173425725?text=Hello!%20I'd%20like%20to%20book%20the%20Colonial%20Suite%20at%20Me%20Gusta%20Inn." target="_blank" class="room-cta" style="background:#2563eb" data-i18n="hospedaje.btnReserve">Reserve →</a>
+            <a href="#reservar" class="room-cta" style="background:#14b8a6" data-i18n="hospedaje.btnReserve" onclick="selectRoom('Standard Private ($45/night)')">Reserve →</a>
           </div>
         </div>
 
@@ -227,11 +278,11 @@
             <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=85" alt="Standard Room" class="room-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease" />
             <div style="position:absolute;inset:0;background:linear-gradient(to top,#0a1628 0%,rgba(10,22,40,0.2) 60%,transparent 100%)"></div>
             <div style="position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:6px 14px">
-              <span style="font-family:'Lora',serif;font-size:1rem;font-weight:700;color:#fff">$35 <span style="font-size:10px;font-weight:400;opacity:0.65;font-family:'DM Sans',sans-serif">/ night</span></span>
+              <span style="font-family:'Fraunces',serif;font-size:1rem;font-weight:700;color:#fff">$35 <span style="font-size:10px;font-weight:400;opacity:0.65;font-family:'Plus Jakarta Sans',sans-serif">/ night</span></span>
             </div>
           </div>
           <div style="padding:22px 24px 28px">
-            <h3 style="font-family:'Lora',serif;font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px"><span data-i18n-html="hospedaje.room4Name">Standard <em style="color:#2563eb">Room</em></span></h3>
+            <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px"><span data-i18n-html="hospedaje.room4Name">Standard <em style="color:#14b8a6">Room</em></span></h3>
             <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:16px"><span data-i18n="hospedaje.room4Desc">Cozy, warm, and thoughtfully furnished. The perfect base for exploring Sucre — everything you need without the extra cost. Shared bathroom kept spotlessly clean.</span></p>
             <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px">
               <span class="room-amenity" data-i18n="hospedaje.amTwin">Twin / Double</span>
@@ -240,15 +291,15 @@
               <span class="room-amenity">Free WiFi</span>
               <span class="room-amenity" data-i18n="hospedaje.amLocal">Local Decor</span>
             </div>
-            <div style="border-top:1px solid rgba(37,99,235,0.2);padding-top:16px;margin-bottom:18px">
-              <p style="font-size:11px;color:rgba(255,255,255,0.35);font-family:'DM Sans',sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Includes</p>
+            <div style="border-top:1px solid rgba(20,184,166,0.2);padding-top:16px;margin-bottom:18px">
+              <p style="font-size:11px;color:rgba(255,255,255,0.35);font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Includes</p>
               <div style="display:flex;gap:16px;font-size:12px;color:rgba(255,255,255,0.55)">
                 <span>Breakfast at the Inn</span>
                 <span data-i18n="hospedaje.incMap">City Map & Tips</span>
                 <span>Daily Cleaning</span>
               </div>
             </div>
-            <a href="https://wa.me/59173425725?text=Hello!%20I'd%20like%20to%20book%20the%20Standard%20Room%20at%20Me%20Gusta%20Inn." target="_blank" class="room-cta" style="background:transparent;border:2px solid #2563eb;color:#93c5fd">Reserve</a>
+            <a href="#reservar" class="room-cta" style="background:transparent;border:2px solid #14b8a6;color:#99f6e4" onclick="selectRoom('Standard Room ($35/night)')">Reserve →</a>
           </div>
         </div>
 
@@ -257,19 +308,19 @@
           <div style="position:relative;height:240px;overflow:hidden">
             <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1200&q=85" alt="Shared Dorm" class="room-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease" />
             <div style="position:absolute;inset:0;background:linear-gradient(to top,#0d1f35 0%,rgba(13,31,53,0.25) 60%,transparent 100%)"></div>
-            <span style="position:absolute;top:20px;left:20px;background:rgba(255,255,255,0.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:6px 16px;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#93c5fd" data-i18n="hospedaje.badgeBudget">Budget Friendly</span>
+            <span style="position:absolute;top:20px;left:20px;background:rgba(255,255,255,0.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:6px 16px;font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#99f6e4" data-i18n="hospedaje.badgeBudget">Budget Friendly</span>
             <div style="position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:7px 18px">
-              <span style="font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:#fff">$18 <span style="font-size:11px;font-weight:400;opacity:0.65;font-family:'DM Sans',sans-serif">/ night</span></span>
+              <span style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:#fff">$18 <span style="font-size:11px;font-weight:400;opacity:0.65;font-family:'Plus Jakarta Sans',sans-serif">/ night</span></span>
             </div>
           </div>
           <div style="padding:28px 32px 34px">
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start">
               <!-- Left: title + description -->
               <div>
-                <h3 style="font-family:'Lora',serif;font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:10px" data-i18n="hospedaje.room3Name">Dorm Room</h3>
+                <h3 style="font-family:'Fraunces',serif;font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:10px" data-i18n="hospedaje.room3Name">Dorm Room</h3>
                 <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:18px" data-i18n="hospedaje.room3Desc">The most social option. High ceilings, comfy bunk beds, and large individual lockers.</p>
-                <div style="border-top:1px solid rgba(37,99,235,0.2);padding-top:16px">
-                  <p style="font-size:11px;color:rgba(255,255,255,0.35);font-family:'DM Sans',sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px">Includes</p>
+                <div style="border-top:1px solid rgba(20,184,166,0.2);padding-top:16px">
+                  <p style="font-size:11px;color:rgba(255,255,255,0.35);font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px">Includes</p>
                   <div style="display:flex;flex-direction:column;gap:6px;font-size:12px;color:rgba(255,255,255,0.55)">
                     <span>Breakfast at the Inn</span>
                     <span data-i18n="hospedaje.incMap2">City map & local tips</span>
@@ -280,7 +331,7 @@
               <!-- Right: amenities + CTA -->
               <div style="display:flex;flex-direction:column;justify-content:space-between;height:100%">
                 <div>
-                  <p style="font-size:11px;color:rgba(255,255,255,0.35);font-family:'DM Sans',sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px" data-i18n="hospedaje.features">Room Features</p>
+                  <p style="font-size:11px;color:rgba(255,255,255,0.35);font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px" data-i18n="hospedaje.features">Room Features</p>
                   <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px">
                     <span class="room-amenity" data-i18n="hospedaje.am6Bed">6-Bed Room</span>
                     <span class="room-amenity" data-i18n="hospedaje.amBunk">Bunk Beds</span>
@@ -292,12 +343,113 @@
                     <span class="room-amenity" data-i18n="hospedaje.amLight">Reading Light</span>
                   </div>
                 </div>
-                <a href="https://wa.me/59173425725?text=Hello!%20I'd%20like%20to%20book%20a%20Dorm%20bed%20at%20Me%20Gusta%20Inn." target="_blank" class="room-cta" style="background:transparent;border:2px solid #2563eb;color:#93c5fd;align-self:flex-start">Reserve via WhatsApp →</a>
+                <a href="#reservar" class="room-cta" style="background:transparent;border:2px solid #14b8a6;color:#99f6e4;align-self:flex-start" onclick="selectRoom('Dorm Bed ($18/night)')">Reserve →</a>
               </div>
             </div>
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION: BOOKING FORM ══════════════ -->
+  <section id="reservar" class="fade-up" style="background:#0a1628;padding:100px 0 110px">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Section header -->
+      <div class="text-center" style="margin-bottom:52px">
+        <p class="eyebrow" style="color:#14b8a6;margin-bottom:14px" data-i18n="hospedaje.formEyebrow">Booking Request</p>
+        <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:16px" data-i18n="hospedaje.formTitle">Reserve Your Room</h2>
+        <p style="font-size:15px;color:rgba(255,255,255,0.55);max-width:500px;margin:0 auto;line-height:1.75" data-i18n="hospedaje.formSub">Fill in the details and we'll confirm via WhatsApp — usually within the hour.</p>
+      </div>
+
+      <!-- Form card -->
+      <div style="max-width:780px;margin:0 auto;background:#0d1f35;border-radius:32px;border:1px solid rgba(20,184,166,0.18);overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.4)">
+
+        <!-- Blue accent bar -->
+        <div style="height:4px;background:linear-gradient(to right,#0f766e,#14b8a6,#2dd4bf)"></div>
+
+        <div style="padding:48px 48px 52px">
+
+          <!-- Room type selector -->
+          <fieldset style="border:none;padding:0;margin:0 0 32px">
+            <legend style="font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;display:block" data-i18n="hospedaje.formRoom">Room Type</legend>
+            <div id="room-selector" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+
+              <label class="room-option" style="display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:14px;border:1.5px solid rgba(20,184,166,0.25);background:rgba(20,184,166,0.07);cursor:pointer;transition:all 0.2s">
+                <input type="radio" name="room" value="Deluxe Suite ($65/night)" style="display:none" />
+                <span class="room-option-dot" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(20,184,166,0.4);flex-shrink:0;transition:all 0.2s;display:flex;align-items:center;justify-content:center"></span>
+                <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4" data-i18n="hospedaje.formRoomDeluxe">Deluxe Suite — $65 / night</span>
+              </label>
+
+              <label class="room-option" style="display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:14px;border:1.5px solid rgba(20,184,166,0.25);background:rgba(20,184,166,0.07);cursor:pointer;transition:all 0.2s">
+                <input type="radio" name="room" value="Standard Private ($45/night)" style="display:none" />
+                <span class="room-option-dot" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(20,184,166,0.4);flex-shrink:0;transition:all 0.2s;display:flex;align-items:center;justify-content:center"></span>
+                <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4" data-i18n="hospedaje.formRoomStdPrivate">Standard Private — $45 / night</span>
+              </label>
+
+              <label class="room-option" style="display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:14px;border:1.5px solid rgba(20,184,166,0.25);background:rgba(20,184,166,0.07);cursor:pointer;transition:all 0.2s">
+                <input type="radio" name="room" value="Standard Room ($35/night)" style="display:none" />
+                <span class="room-option-dot" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(20,184,166,0.4);flex-shrink:0;transition:all 0.2s;display:flex;align-items:center;justify-content:center"></span>
+                <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4" data-i18n="hospedaje.formRoomStdRoom">Standard Room — $35 / night</span>
+              </label>
+
+              <label class="room-option" style="display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:14px;border:1.5px solid rgba(20,184,166,0.25);background:rgba(20,184,166,0.07);cursor:pointer;transition:all 0.2s">
+                <input type="radio" name="room" value="Dorm Bed ($18/night)" style="display:none" />
+                <span class="room-option-dot" style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(20,184,166,0.4);flex-shrink:0;transition:all 0.2s;display:flex;align-items:center;justify-content:center"></span>
+                <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4" data-i18n="hospedaje.formRoomDorm">Dorm Bed — $18 / night</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+          <!-- Date row -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:10px" class="booking-dates-row">
+            <div>
+              <label for="arrival-date" style="display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:10px" data-i18n="hospedaje.formArrival">Check-in Date</label>
+              <input id="arrival-date" type="date" class="booking-input" style="width:100%;background:rgba(255,255,255,0.05);border:1.5px solid rgba(20,184,166,0.25);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;padding:13px 16px;border-radius:12px;outline:none;transition:border-color 0.2s;appearance:none;-webkit-appearance:none;color-scheme:dark" />
+            </div>
+            <div>
+              <label for="departure-date" style="display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:10px" data-i18n="hospedaje.formDeparture">Check-out Date</label>
+              <input id="departure-date" type="date" class="booking-input" style="width:100%;background:rgba(255,255,255,0.05);border:1.5px solid rgba(20,184,166,0.25);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;padding:13px 16px;border-radius:12px;outline:none;transition:border-color 0.2s;appearance:none;-webkit-appearance:none;color-scheme:dark" />
+            </div>
+          </div>
+          <!-- Nights counter -->
+          <div id="nights-counter" style="display:none;margin-bottom:20px;padding:10px 16px;background:rgba(20,184,166,0.12);border:1px solid rgba(20,184,166,0.3);border-radius:10px">
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:700;color:#99f6e4;letter-spacing:1px;text-transform:uppercase;margin:0" id="nights-counter-text"></p>
+          </div>
+
+          <!-- Guests + Name row -->
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:20px;margin-bottom:20px" class="booking-meta-row">
+            <div>
+              <label for="guests" style="display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:10px" data-i18n="hospedaje.formGuests">Guests</label>
+              <input id="guests" type="number" min="1" max="12" value="1" class="booking-input" style="width:100%;background:rgba(255,255,255,0.05);border:1.5px solid rgba(20,184,166,0.25);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;padding:13px 16px;border-radius:12px;outline:none;transition:border-color 0.2s" />
+            </div>
+            <div>
+              <label for="guest-name" style="display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:10px" data-i18n="hospedaje.formName">Your Name</label>
+              <input id="guest-name" type="text" class="booking-input" style="width:100%;background:rgba(255,255,255,0.05);border:1.5px solid rgba(20,184,166,0.25);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;padding:13px 16px;border-radius:12px;outline:none;transition:border-color 0.2s" />
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div style="margin-bottom:36px">
+            <label for="booking-message" style="display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:10px" data-i18n="hospedaje.formMessage">Message (optional)</label>
+            <textarea id="booking-message" rows="3" class="booking-input" data-i18n-placeholder="hospedaje.formMessagePlaceholder" placeholder="Anything you'd like us to know — special requests, arrival time, etc." style="width:100%;background:rgba(255,255,255,0.05);border:1.5px solid rgba(20,184,166,0.25);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;padding:13px 16px;border-radius:12px;outline:none;transition:border-color 0.2s;resize:vertical;min-height:90px"></textarea>
+          </div>
+
+          <!-- CTA -->
+          <button id="booking-submit" type="button" style="width:100%;background:#14b8a6;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;letter-spacing:0.5px;padding:17px 32px;border:none;border-radius:14px;cursor:pointer;transition:background 0.2s,transform 0.15s;display:flex;align-items:center;justify-content:center;gap:12px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span id="booking-submit-label" data-i18n="hospedaje.formBtn">Send via WhatsApp</span>
+          </button>
+
+          <!-- Footer note -->
+          <p style="text-align:center;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:rgba(255,255,255,0.3);margin-top:18px;letter-spacing:0.3px" data-i18n="hospedaje.formNote">No account needed. We reply fast — usually within the hour.</p>
+
+        </div>
       </div>
     </div>
   </section>
@@ -309,11 +461,11 @@
     <div style="position:relative;z-index:1;text-align:center;padding:80px 24px;max-width:700px;margin:0 auto">
       <img src="imagenes/logos/logo-me-gusta-inn.png" alt="Me Gusta Sucre Inn" style="height:80px;width:auto;margin:0 auto 28px;display:block;filter:drop-shadow(0 2px 12px rgba(0,0,0,0.4))" />
       <span class="handwritten" style="font-size:1.6rem;color:rgba(147,197,253,0.8);display:block;margin-bottom:14px" data-i18n="hospedaje.ctaTag">We're waiting for you</span>
-      <h2 style="font-family:'Lora',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:18px" data-i18n="hospedaje.ctaTitle">Ready to wake up in Sucre?</h2>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:18px" data-i18n="hospedaje.ctaTitle">Ready to wake up in Sucre?</h2>
       <p style="font-size:15px;color:rgba(255,255,255,0.65);max-width:440px;margin:0 auto 36px;line-height:1.75" data-i18n="hospedaje.ctaSub">Rooms fill up fast during high season (June–August). Book ahead to secure your spot.</p>
       <div class="flex flex-wrap justify-center gap-4">
-        <a href="https://wa.me/59173425725?text=Hello!%20I'd%20like%20to%20book%20a%20room%20at%20Me%20Gusta%20Inn." target="_blank" style="display:inline-block;background:#2563eb;color:#fff;padding:16px 36px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:14px;text-decoration:none;border:2px solid #2563eb;transition:all 0.2s" data-i18n="hospedaje.ctaBtn">Check Availability on WhatsApp</a>
-        <a href="contacto.html" class="btn-outline" style="padding:16px 36px;font-size:14px;border-color:rgba(147,197,253,0.4);color:#93c5fd" data-i18n="nav.contact">Contact Us</a>
+        <a href="#reservar" style="display:inline-block;background:#14b8a6;color:#fff;padding:16px 36px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;text-decoration:none;border:2px solid #14b8a6;transition:all 0.2s" data-i18n="hospedaje.ctaBtn">Book Your Room</a>
+        <a href="contacto.html" class="btn-outline" style="padding:16px 36px;font-size:14px;border-color:rgba(153,246,228,0.4);color:#99f6e4" data-i18n="nav.contact">Contact Us</a>
       </div>
     </div>
   </section>
@@ -323,7 +475,7 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-10 mb-12">
         <div>
-          <p style="font-family:'Lora',serif;font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:10px">Me Gusta <span style="color:#2563eb;font-style:italic">Sucre</span></p>
+          <p style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:10px">Me Gusta <span style="color:#14b8a6;font-style:italic">Sucre</span></p>
           <p style="font-size:14px;line-height:1.7;margin-bottom:20px" data-i18n="footer.tagline">Your gateway to Bolivia's most beautiful city — Spanish classes, boutique inn, café, and city experiences.</p>
           <div style="display:flex;gap:10px">
             <a href="https://www.facebook.com" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700">f</a>
@@ -332,7 +484,7 @@
           </div>
         </div>
         <div>
-          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.explore">Explore</p>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.explore">Explore</p>
           <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
             <li><a href="guia.html" data-i18n="nav.guide">City Guide</a></li>
             <li><a href="cafe.html" data-i18n="nav.cafe">Café &amp; Menu</a></li>
@@ -342,7 +494,7 @@
           </ul>
         </div>
         <div>
-          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.megustaTitle">Me Gusta</p>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.megustaTitle">Me Gusta</p>
           <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
             <li><a href="hospedaje.html" data-i18n="index.brand2Pill">Inn — Boutique Hotel</a></li>
             <li><a href="cafe.html" data-i18n="index.brand3Pill">Café</a></li>
@@ -351,7 +503,7 @@
           </ul>
         </div>
         <div>
-          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.findUs">Find Us</p>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.findUs">Find Us</p>
           <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
             <li data-i18n="footer.address">La Paz #571, Sucre, Bolivia</li>
             <!-- removed bolivia -->
@@ -374,5 +526,158 @@
   </a>
 
 <script src="js/main.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ── Extend i18n: handle data-i18n-placeholder attributes ── */
+  function applyPlaceholderTranslations(lang) {
+    if (typeof translations === 'undefined') { return; }
+    var t = translations[lang] || translations.en;
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+      var parts = el.dataset.i18nPlaceholder.split('.');
+      var val = t;
+      parts.forEach(function (p) { val = val && val[p]; });
+      if (val) { el.placeholder = val; }
+    });
+  }
+  /* Run after translations.js + main.js have both initialised */
+  document.addEventListener('DOMContentLoaded', function () {
+    var lang = localStorage.getItem('lang') || 'en';
+    applyPlaceholderTranslations(lang);
+  });
+  /* Also patch lang-btn clicks to update placeholder on language switch */
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        applyPlaceholderTranslations(btn.dataset.lang);
+      });
+    });
+  });
+
+  /* ── Set min dates to today ── */
+  var today = new Date().toISOString().split('T')[0];
+  document.getElementById('arrival-date').min = today;
+  document.getElementById('departure-date').min = today;
+
+  /* ── Live nights counter ── */
+  function updateNightsCounter() {
+    var a = document.getElementById('arrival-date').value;
+    var d = document.getElementById('departure-date').value;
+    var counter = document.getElementById('nights-counter');
+    var text    = document.getElementById('nights-counter-text');
+    if (a && d) {
+      var diff = Math.round((new Date(d) - new Date(a)) / 86400000);
+      if (diff > 0) {
+        text.textContent = diff + (diff === 1 ? ' night' : ' nights') + '  ·  ' + new Date(a + 'T12:00').toLocaleDateString('en-GB', {day:'numeric',month:'short'}) + ' — ' + new Date(d + 'T12:00').toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'});
+        counter.style.display = 'block';
+      } else {
+        counter.style.display = 'none';
+      }
+    } else {
+      counter.style.display = 'none';
+    }
+  }
+  document.getElementById('arrival-date').addEventListener('change', function() {
+    /* Auto-advance checkout min to day after arrival */
+    if (this.value) {
+      var nextDay = new Date(this.value + 'T12:00');
+      nextDay.setDate(nextDay.getDate() + 1);
+      document.getElementById('departure-date').min = nextDay.toISOString().split('T')[0];
+    }
+    updateNightsCounter();
+  });
+  document.getElementById('departure-date').addEventListener('change', updateNightsCounter);
+
+  /* ── Pre-select room from card CTA ── */
+  window.selectRoom = function(value) {
+    var options = document.querySelectorAll('.room-option');
+    options.forEach(function(l) {
+      var input = l.querySelector('input[type="radio"]');
+      if (input.value === value) {
+        options.forEach(function(x) { x.classList.remove('selected'); });
+        l.classList.add('selected');
+        input.checked = true;
+      }
+    });
+  };
+
+  /* ── Room option visual selection ── */
+  var options = document.querySelectorAll('.room-option');
+  options.forEach(function (label) {
+    label.addEventListener('click', function () {
+      options.forEach(function (l) { l.classList.remove('selected'); });
+      label.classList.add('selected');
+      label.querySelector('input[type="radio"]').checked = true;
+    });
+  });
+
+  /* ── WhatsApp message builder ── */
+  document.getElementById('booking-submit').addEventListener('click', function () {
+    var selectedOption = document.querySelector('.room-option.selected');
+    var room      = selectedOption
+                    ? selectedOption.querySelector('input[type="radio"]').value
+                    : '';
+    var arrival   = document.getElementById('arrival-date').value;
+    var departure = document.getElementById('departure-date').value;
+    var guests    = document.getElementById('guests').value;
+    var name      = document.getElementById('guest-name').value.trim();
+    var message   = document.getElementById('booking-message').value.trim();
+
+    /* Basic validation — highlight missing fields */
+    var valid = true;
+    [
+      { el: document.getElementById('arrival-date'),   val: arrival },
+      { el: document.getElementById('departure-date'), val: departure },
+      { el: document.getElementById('guest-name'),     val: name }
+    ].forEach(function (f) {
+      if (!f.val) {
+        f.el.style.borderColor = '#ef4444';
+        valid = false;
+      } else {
+        f.el.style.borderColor = '';
+      }
+    });
+
+    if (!room) {
+      document.getElementById('room-selector').style.outline = '2px solid #ef4444';
+      document.getElementById('room-selector').style.outlineOffset = '6px';
+      document.getElementById('room-selector').style.borderRadius = '14px';
+      valid = false;
+    } else {
+      document.getElementById('room-selector').style.outline = '';
+    }
+
+    if (!valid) { return; }
+
+    /* Format dates for readability */
+    function fmtDate(str) {
+      if (!str) { return '—'; }
+      var d = new Date(str + 'T12:00:00');
+      return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    }
+
+    var nights = '';
+    if (arrival && departure) {
+      var diff = (new Date(departure) - new Date(arrival)) / 86400000;
+      if (diff > 0) { nights = ' (' + diff + (diff === 1 ? ' night' : ' nights') + ')'; }
+    }
+
+    var lines = [
+      'Hello! I would like to book a room at Me Gusta Inn.',
+      '',
+      'Room: ' + room,
+      'Check-in: ' + fmtDate(arrival),
+      'Check-out: ' + fmtDate(departure) + nights,
+      'Guests: ' + guests,
+      'Name: ' + name
+    ];
+    if (message) { lines.push('', 'Notes: ' + message); }
+
+    var waText = encodeURIComponent(lines.join('\n'));
+    window.open('https://wa.me/59173425725?text=' + waText, '_blank');
+  });
+})();
+</script>
 </body>
 </html>

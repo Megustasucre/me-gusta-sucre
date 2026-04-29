@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -19,7 +19,7 @@
   <link rel="canonical" href="https://megustasucre.com/merchandising.html" />
   <link rel="icon" type="image/svg+xml" href="imagenes/favicon-merch.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Satisfy&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,700;1,9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/tw.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/sucre-fonts.css" />
@@ -37,18 +37,18 @@
 
     /* ── Size Picker ── */
     .size-picker { display:flex; gap:6px; margin-bottom:14px; flex-wrap:wrap; }
-    .size-btn { width:36px; height:36px; border-radius:8px; border:1.5px solid #d4c3b0; background:#fff; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:700; color:#7a5c3a; cursor:pointer; transition:all 0.15s; display:flex; align-items:center; justify-content:center; }
+    .size-btn { width:36px; height:36px; border-radius:8px; border:1.5px solid #d4c3b0; background:#fff; font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; font-weight:700; color:#7a5c3a; cursor:pointer; transition:all 0.15s; display:flex; align-items:center; justify-content:center; }
     .size-btn:hover { border-color:#c9252d; color:#c9252d; }
     .size-btn.selected { background:#c9252d; border-color:#c9252d; color:#fff; }
-    .size-label { font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; color:#b09a80; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; }
+    .size-label { font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#b09a80; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; }
     .size-required-msg { font-size:12px; color:#c9252d; margin-top:8px; display:none; font-style:italic; }
 
     /* ── Price Tag ── */
-    .price-tag { font-family:'DM Sans',sans-serif; font-size:1.05rem; font-weight:800; color:#c9252d; margin-bottom:10px; display:block; letter-spacing:-0.3px; }
+    .price-tag { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.05rem; font-weight:800; color:#c9252d; margin-bottom:10px; display:block; letter-spacing:-0.3px; }
     .price-tag-range { font-size:0.8rem; color:#b09a80; font-weight:600; margin-left:4px; font-style:italic; }
 
     /* ── Floating Cart Button (FAB) ── */
-    #cart-fab { position:fixed; bottom:28px; left:50%; transform:translateX(-50%) translateY(120px); z-index:9000; background:#c9252d; color:#fff; border:none; border-radius:50px; padding:14px 28px; font-family:'DM Sans',sans-serif; font-weight:700; font-size:15px; cursor:pointer; display:flex; align-items:center; gap:10px; box-shadow:0 8px 32px rgba(201,37,45,0.45); transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s; white-space:nowrap; }
+    #cart-fab { position:fixed; bottom:28px; left:50%; transform:translateX(-50%) translateY(120px); z-index:9000; background:#c9252d; color:#fff; border:none; border-radius:50px; padding:14px 28px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:15px; cursor:pointer; display:flex; align-items:center; gap:10px; box-shadow:0 8px 32px rgba(201,37,45,0.45); transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s; white-space:nowrap; }
     #cart-fab.cart-fab--visible { transform:translateX(-50%) translateY(0); }
     #cart-fab:hover { box-shadow:0 12px 42px rgba(201,37,45,0.6); }
     #cart-fab-badge { background:#fff; color:#c9252d; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; line-height:1; }
@@ -61,17 +61,17 @@
     #cart-modal { position:fixed; bottom:0; left:50%; transform:translateX(-50%) translateY(100%); width:min(480px,96vw); background:#fff; z-index:9200; border-radius:24px 24px 0 0; box-shadow:0 -8px 48px rgba(0,0,0,0.22); transition:transform 0.4s cubic-bezier(0.34,1.2,0.64,1); padding:0 0 env(safe-area-inset-bottom,16px); }
     #cart-modal.cart-modal--open { transform:translateX(-50%) translateY(0); }
     .cart-modal-header { display:flex; align-items:center; justify-content:space-between; padding:20px 24px 16px; border-bottom:1px solid #f0e8dc; }
-    .cart-modal-title { font-family:'Lora',serif; font-size:1.2rem; font-weight:700; color:#120402; }
+    .cart-modal-title { font-family:'Fraunces',serif; font-size:1.2rem; font-weight:700; color:#120402; }
     .cart-close-btn { border:none; background:none; font-size:22px; cursor:pointer; color:#7a5c3a; line-height:1; padding:4px 8px; border-radius:8px; }
     .cart-close-btn:hover { background:#f5ede0; }
     .cart-modal-body { padding:16px 24px; max-height:45vh; overflow-y:auto; }
     .cart-item { display:flex; align-items:center; justify-content:space-between; padding:12px 0; border-bottom:1px solid #f5ede0; gap:10px; }
     .cart-item:last-child { border-bottom:none; }
-    .cart-item-name { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:600; color:#120402; flex:1; }
+    .cart-item-name { font-family:'Plus Jakarta Sans',sans-serif; font-size:14px; font-weight:600; color:#120402; flex:1; }
     .cart-item-controls { display:flex; align-items:center; gap:6px; flex-shrink:0; }
     .cart-qty-btn { width:28px; height:28px; border-radius:50%; border:1.5px solid #e0d4c4; background:#fff; font-size:16px; font-weight:700; color:#120402; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.15s; }
     .cart-qty-btn:hover { background:#f5ede0; }
-    .cart-qty-num { font-family:'DM Sans',sans-serif; font-size:15px; font-weight:700; color:#120402; min-width:22px; text-align:center; }
+    .cart-qty-num { font-family:'Plus Jakarta Sans',sans-serif; font-size:15px; font-weight:700; color:#120402; min-width:22px; text-align:center; }
     .cart-delete-btn { width:28px; height:28px; border-radius:50%; border:1.5px solid rgba(201,37,45,0.25); background:#fff; font-size:12px; color:#c9252d; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.15s; margin-left:4px; }
     .cart-delete-btn:hover { background:#fff0f0; }
     #cart-modal-empty { text-align:center; color:#b09a80; font-size:14px; padding:24px 0; font-style:italic; }
@@ -79,20 +79,20 @@
 
     /* ── Toast Notifications ── */
     #toast-container { position:fixed; bottom:100px; left:50%; transform:translateX(-50%); z-index:9999; display:flex; flex-direction:column; gap:10px; pointer-events:none; }
-    .toast { background:#120402; color:#fff; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:700; padding:12px 24px; border-radius:50px; box-shadow:0 8px 32px rgba(18,4,2,0.4); opacity:0; transform:translateY(20px); transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1); display:flex; align-items:center; gap:8px; }
+    .toast { background:#120402; color:#fff; font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:700; padding:12px 24px; border-radius:50px; box-shadow:0 8px 32px rgba(18,4,2,0.4); opacity:0; transform:translateY(20px); transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1); display:flex; align-items:center; gap:8px; }
     .toast.show { opacity:1; transform:translateY(0); }
     .toast-icon { width:18px; height:18px; background:#c9252d; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:10px; }
 
     /* ── Cart Form ── */
     #cart-contact-form { margin-top:16px; border-top:1px solid #f0e8dc; padding-top:16px; display:none; }
     #cart-contact-form.visible { display:block; }
-    .cart-input { width:100%; padding:10px 12px; border:1.5px solid #e0d4c4; border-radius:10px; font-family:'DM Sans',sans-serif; font-size:14px; margin-bottom:10px; outline:none; transition:border-color 0.2s; color:#120402; background:#fff; box-sizing:border-box; }
+    .cart-input { width:100%; padding:10px 12px; border:1.5px solid #e0d4c4; border-radius:10px; font-family:'Plus Jakarta Sans',sans-serif; font-size:14px; margin-bottom:10px; outline:none; transition:border-color 0.2s; color:#120402; background:#fff; box-sizing:border-box; }
     .cart-input:focus { border-color:#c9252d; }
     .cart-input::placeholder { color:#b09a80; }
     #cart-form-err { font-size:12px; color:#c9252d; display:none; margin-bottom:10px; font-style:italic; }
 
     .cart-modal-footer { padding:16px 24px 24px; border-top:1px solid #f0e8dc; }
-    #cart-send-btn { width:100%; padding:15px; background:#c9252d; color:#fff; border:none; border-radius:14px; font-family:'DM Sans',sans-serif; font-weight:700; font-size:15px; cursor:pointer; transition:background 0.2s, transform 0.1s; }
+    #cart-send-btn { width:100%; padding:15px; background:#c9252d; color:#fff; border:none; border-radius:14px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:15px; cursor:pointer; transition:background 0.2s, transform 0.1s; }
     #cart-send-btn:hover:not(:disabled) { background:#a81e25; }
     #cart-send-btn:active:not(:disabled) { transform:scale(0.98); }
     #cart-send-btn:disabled { background:#d4b0b0; cursor:not-allowed; }
@@ -112,27 +112,22 @@
 </head>
 <body style="background:#f5ede0">
 
-  <div class="top-bar">
-    <span data-i18n="contacto.topbar">Questions? We reply fast on WhatsApp · Inn: +591 734 25725 · School: +591 734 00447</span>
-    <a href="https://wa.me/59173425725" target="_blank" data-i18n="contacto.topbarLink">Message Us</a>
-  </div>
-
   <!-- NAVBAR -->
   <nav id="navbar" class="fixed left-0 right-0 z-50" style="background:transparent">
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between relative">
       <div class="hidden md:flex items-center gap-7" style="flex:1">
-        <a href="clases.html"      class="nav-link text-white" data-i18n="nav.classes">Spanish Classes</a>
-        <a href="cafe.html"        class="nav-link text-white" data-i18n="nav.cafe">Café</a>
-        <a href="guia.html"        class="nav-link text-white" data-i18n="nav.guide">City Guide</a>
+        <a href="clases.html" class="nav-link nav-secondary text-white" data-i18n="nav.classes">Spanish Classes</a>
+        <a href="cafe.html" class="nav-link nav-secondary text-white" data-i18n="nav.cafe">Café</a>
+        <a href="guia.html" class="nav-link nav-primary text-white" data-i18n="nav.guide">City Guide</a>
       </div>
       <a href="index.html" class="flex items-center gap-3 md:absolute md:left-1/2 md:-translate-x-1/2">
         <img src="imagenes/logos/logo-me-gusta-sucre-chinchilla.png" alt="Me Gusta Sucre" class="logo-img">
-        <span class="logo-text text-white font-bold" style="font-family:'Lora',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap">Me Gusta <span class="logo-accent" style="color:#c9252d;font-style:italic">Sucre</span></span>
+        <span class="logo-text text-white font-bold" style="font-family:'Fraunces',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap">Me Gusta <span class="logo-accent" style="color:#c9252d;font-style:italic">Sucre</span></span>
       </a>
       <div class="hidden md:flex items-center justify-end gap-7" style="flex:1">
-        <a href="hospedaje.html"     class="nav-link text-white" data-i18n="nav.stay">Stay</a>
-        <a href="merchandising.html" class="nav-link nav-active text-white" data-i18n="nav.merch">Merch</a>
-        <a href="contacto.html"      class="nav-link text-white" data-i18n="nav.contact">Contact</a>
+        <a href="hospedaje.html" class="nav-link nav-primary text-white" data-i18n="nav.stay">Stay</a>
+        <a href="merchandising.html" class="nav-link nav-secondary nav-active text-white" data-i18n="nav.merch">Merch</a>
+        <a href="contacto.html" class="nav-link nav-secondary text-white" data-i18n="nav.contact">Contact</a>
         <div class="flex items-center gap-3 border-l lang-container border-white/20 pl-6 ml-2">
           <button class="lang-btn text-xs font-bold text-white uppercase active" data-lang="en">EN</button>
           <span class="text-white/30 text-xs">|</span>
@@ -150,7 +145,7 @@
     <div id="mobile-menu" class="hidden bg-white shadow-xl px-6 pb-5">
       <div class="flex justify-center items-center gap-3 py-4 border-b border-gray-100 mb-2">
         <img src="imagenes/logos/logo-me-gusta-sucre-chinchilla.png" alt="Me Gusta Sucre" class="logo-img" style="filter:none">
-        <span class="logo-text font-bold" style="font-family:'Lora',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap;color:#111">Me Gusta <span class="logo-accent" style="color:#c9252d;font-style:italic">Sucre</span></span>
+        <span class="logo-text font-bold" style="font-family:'Fraunces',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap;color:#111">Me Gusta <span class="logo-accent" style="color:#c9252d;font-style:italic">Sucre</span></span>
       </div>
       <a href="clases.html"        class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.classes">Spanish Classes</a>
       <a href="cafe.html"          class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.cafe">Café</a>
@@ -179,7 +174,7 @@
     <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,0.96) 0%,rgba(10,10,10,0.55) 50%,rgba(10,10,10,0.15) 100%)"></div>
     <div class="max-w-7xl mx-auto px-6 w-full relative" style="z-index:1;padding-bottom:80px">
       <p class="eyebrow mb-4" style="color:#c9252d" data-i18n="merchandising.heroEyebrow">Wear your Story</p>
-      <h1 style="font-family:'Lora',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:800;color:#e8d5bb;line-height:1.0;margin-bottom:16px">
+      <h1 style="font-family:'Fraunces',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:800;color:#e8d5bb;line-height:1.0;margin-bottom:16px">
         <span data-i18n="merchandising.heroTitle">Limited Edition</span><br/><span style="color:#c9252d;font-style:italic" data-i18n="merchandising.heroAccent">Sucre Collection</span>
       </h1>
       <p style="font-size:1.1rem;color:rgba(232,213,187,0.68);max-width:500px;line-height:1.75" data-i18n="merchandising.heroSub">High-quality cotton, ethical production, and designs that capture the spirit of our city. Take a piece of Sucre with you.</p>
@@ -197,6 +192,29 @@
       <p style="font-size:13px;color:#7a5c3a"><a href="index.html" style="color:#c9252d;text-decoration:none;font-weight:600" data-i18n="merchandising.bcHome">Home</a> / <span data-i18n="merchandising.bcMerch">Merch</span></p>
     </div>
   </div>
+
+  <!-- ═══ VALUE PROPS ═══ -->
+  <section style="background:var(--cream2);padding:56px 0;border-bottom:1px solid rgba(110,50,15,0.1)">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-0" style="border:1px solid rgba(110,50,15,0.12)">
+        <div style="padding:32px 36px;border-right:1px solid rgba(110,50,15,0.12)">
+          <p style="font-family:'Fraunces',serif;font-size:1.8rem;font-weight:800;color:var(--red);margin-bottom:8px">I</p>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--dark);margin-bottom:6px" data-i18n="merchandising.prop1Title">Designed in Sucre</p>
+          <p style="font-size:13px;color:var(--muted);line-height:1.7" data-i18n="merchandising.prop1Desc">Each piece reflects the identity of Bolivia's White City — colonial architecture, hand-drawn lines.</p>
+        </div>
+        <div style="padding:32px 36px;border-right:1px solid rgba(110,50,15,0.12)">
+          <p style="font-family:'Fraunces',serif;font-size:1.8rem;font-weight:800;color:var(--red);margin-bottom:8px">II</p>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--dark);margin-bottom:6px" data-i18n="merchandising.prop2Title">Quality Materials</p>
+          <p style="font-size:13px;color:var(--muted);line-height:1.7" data-i18n="merchandising.prop2Desc">100% Pima cotton and durable prints — made to last longer than your memories of the trip.</p>
+        </div>
+        <div style="padding:32px 36px">
+          <p style="font-family:'Fraunces',serif;font-size:1.8rem;font-weight:800;color:var(--red);margin-bottom:8px">III</p>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--dark);margin-bottom:6px" data-i18n="merchandising.prop3Title">Nationwide Shipping</p>
+          <p style="font-size:13px;color:var(--muted);line-height:1.7" data-i18n="merchandising.prop3Desc">Delivered anywhere in Bolivia. Pick up at our school on Audiencia #97, or ship via Tigo Money.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ═══ PRODUCTS ═══ -->
   <section id="shop-section" style="background:#f5ede0;padding:80px 0">
@@ -219,7 +237,7 @@
           </div>
           <div style="height:3px;background:#c9252d"></div>
           <div style="padding:24px">
-            <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#120402;margin-bottom:4px" data-i18n="merchandising.item1Name">Historic Center Tee</h3>
+            <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:#120402;margin-bottom:4px" data-i18n="merchandising.item1Name">Historic Center Tee</h3>
             <span class="price-tag">$18</span>
             <p style="font-size:13px;color:#7a5c3a;line-height:1.7;margin-bottom:14px" data-i18n="merchandising.item1Desc">Minimalist sketch of Sucre's skyline. 100% Pima cotton.</p>
             <p class="size-label" data-i18n="merchandising.sizeLabel">Size</p>
@@ -242,7 +260,7 @@
           </div>
           <div style="height:3px;background:#c9252d"></div>
           <div style="padding:24px">
-            <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#120402;margin-bottom:4px" data-i18n="merchandising.item2Name">Digital Nomad Tote</h3>
+            <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:#120402;margin-bottom:4px" data-i18n="merchandising.item2Name">Digital Nomad Tote</h3>
             <span class="price-tag">$22</span>
             <p style="font-size:13px;color:#7a5c3a;line-height:1.7;margin-bottom:16px" data-i18n="merchandising.item2Desc">Heavy-duty canvas bag for your laptop and market finds.</p>
             <button class="btn-red add-to-cart-btn" data-product="tote" data-name="Digital Nomad Tote" onclick="addToCart('tote','Digital Nomad Tote')" style="font-size:13px;padding:10px 22px"><span data-i18n="merchandising.addToOrder">Add to Order</span></button>
@@ -257,7 +275,7 @@
           </div>
           <div style="height:3px;background:#c9252d"></div>
           <div style="padding:24px">
-            <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#120402;margin-bottom:4px" data-i18n="merchandising.mugTitle">Café Mug</h3>
+            <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:#120402;margin-bottom:4px" data-i18n="merchandising.mugTitle">Café Mug</h3>
             <span class="price-tag">$12</span>
             <p style="font-size:13px;color:#7a5c3a;line-height:1.7;margin-bottom:16px"><span data-i18n="merchandising.mugDesc">Ceramic mug with the Me Gusta Café logo. Ideal for carrying the memory of your morning coffee in Sucre back home.</span></p>
             <button class="btn-red add-to-cart-btn" data-product="mug" data-name="Café Mug" onclick="addToCart('mug','Café Mug')" style="font-size:13px;padding:10px 22px"><span data-i18n="merchandising.addToOrder">Add to Order</span></button>
@@ -272,7 +290,7 @@
           </div>
           <div style="height:3px;background:#c9252d"></div>
           <div style="padding:24px">
-            <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#120402;margin-bottom:4px" data-i18n="merchandising.item3Name">Spanish Student Hoodie</h3>
+            <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:#120402;margin-bottom:4px" data-i18n="merchandising.item3Name">Spanish Student Hoodie</h3>
             <span class="price-tag">$35</span>
             <p style="font-size:13px;color:#7a5c3a;line-height:1.7;margin-bottom:14px" data-i18n="merchandising.item3Desc">Warm and cozy for those cool Sucre nights. Unisex fit.</p>
             <p class="size-label" data-i18n="merchandising.sizeLabel">Size</p>
@@ -296,11 +314,11 @@
           </div>
           <div style="height:3px;background:#c9252d"></div>
           <div style="padding:24px">
-            <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#120402;margin-bottom:4px" data-i18n="merchandising.bookTitle">Me Gusta Student Books</h3>
+            <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:#120402;margin-bottom:4px" data-i18n="merchandising.bookTitle">Me Gusta Student Books</h3>
             <span class="price-tag">$15 <span class="price-tag-range">– $17</span></span>
             <p style="font-size:13px;color:#7a5c3a;line-height:1.7;margin-bottom:14px" data-i18n="merchandising.bookDesc">Written by our teachers. Six levels from A1 to B2 — choose your book below and add it to your order.</p>
             <label for="picker-book-select" class="size-label" data-i18n="merchandising.bookSelect">Select a book</label>
-            <select id="picker-book-select" style="width:100%;margin-bottom:14px;padding:12px;border:1.5px solid #d4c3b0;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:13px;background:#fff;appearance:none;cursor:pointer;color:#7a5c3a;font-weight:600" onchange="document.getElementById('size-err-book').style.display='none'">
+            <select id="picker-book-select" style="width:100%;margin-bottom:14px;padding:12px;border:1.5px solid #d4c3b0;border-radius:12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;background:#fff;appearance:none;cursor:pointer;color:#7a5c3a;font-weight:600" onchange="document.getElementById('size-err-book').style.display='none'">
               <option value="" disabled selected data-i18n="merchandising.bookSelect">Select a book...</option>
               <option value="book1" data-i18n="merchandising.book1">Book 1 — Learn the Basics of Spanish</option>
               <option value="book2" data-i18n="merchandising.book2">Book 2 — Practice Verbs in Present and Past</option>
@@ -320,13 +338,13 @@
             <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.45s ease"/>
             <div style="position:absolute;inset:0;background:rgba(10,10,10,0.58)"></div>
             <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px">
-              <p style="font-family:'Satisfy',cursive;font-size:1.8rem;color:rgba(232,213,187,0.65);margin-bottom:6px" data-i18n="merchandising.gcHero1">Give the gift of</p>
-              <p style="font-family:'Lora',serif;font-size:1.8rem;font-weight:800;color:#e8d5bb;line-height:1.1" data-i18n="merchandising.gcHero2">Me Gusta</p>
+              <p style="font-family:'Sacramento',cursive;font-size:1.8rem;color:rgba(232,213,187,0.65);margin-bottom:6px" data-i18n="merchandising.gcHero1">Give the gift of</p>
+              <p style="font-family:'Fraunces',serif;font-size:1.8rem;font-weight:800;color:#e8d5bb;line-height:1.1" data-i18n="merchandising.gcHero2">Me Gusta</p>
             </div>
           </div>
           <div style="height:3px;background:#c9252d"></div>
           <div style="padding:24px;background:#fffaf4">
-            <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:#120402;margin-bottom:4px" data-i18n="merchandising.gcTitle">Me Gusta Gift Coupon</h3>
+            <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:#120402;margin-bottom:4px" data-i18n="merchandising.gcTitle">Me Gusta Gift Coupon</h3>
             <span class="price-tag">$10 <span class="price-tag-range">– $100</span></span>
             <p style="font-size:13px;color:#7a5c3a;line-height:1.7;margin-bottom:14px" data-i18n="merchandising.gcDesc">A gift coupon redeemable at any Me Gusta experience. Choose the business and amount below.</p>
             <p class="size-label" data-i18n="merchandising.gcBusiness">Redeem at</p>
@@ -365,18 +383,18 @@
       <h2 class="section-title mb-12" style="color:#e8d5bb"><span data-i18n-html="merchandising.htTitle">How to <span style="color:#c9252d;font-style:italic">Order</span></span></h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="fade-up">
-          <div style="width:52px;height:52px;border-radius:50%;background:#c9252d;color:#fff;font-family:'Lora',serif;font-size:1.3rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">1</div>
-          <h4 style="font-family:'Lora',serif;font-weight:700;color:#e8d5bb;margin-bottom:8px" data-i18n="merchandising.ht1Title">Add to Order</h4>
+          <div style="width:52px;height:52px;border-radius:50%;background:#c9252d;color:#fff;font-family:'Fraunces',serif;font-size:1.3rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">1</div>
+          <h4 style="font-family:'Fraunces',serif;font-weight:700;color:#e8d5bb;margin-bottom:8px" data-i18n="merchandising.ht1Title">Add to Order</h4>
           <p style="font-size:13px;color:rgba(232,213,187,0.62);line-height:1.7"><span data-i18n="merchandising.ht1Desc">Browse the shop, select your size or book, and add products to your order.</span></p>
         </div>
         <div class="fade-up" style="transition-delay:0.1s">
-          <div style="width:52px;height:52px;border-radius:50%;background:#c9252d;color:#fff;font-family:'Lora',serif;font-size:1.3rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">2</div>
-          <h4 style="font-family:'Lora',serif;font-weight:700;color:#e8d5bb;margin-bottom:8px" data-i18n="merchandising.ht2Title">Confirm & Pay</h4>
+          <div style="width:52px;height:52px;border-radius:50%;background:#c9252d;color:#fff;font-family:'Fraunces',serif;font-size:1.3rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">2</div>
+          <h4 style="font-family:'Fraunces',serif;font-weight:700;color:#e8d5bb;margin-bottom:8px" data-i18n="merchandising.ht2Title">Confirm & Pay</h4>
           <p style="font-size:13px;color:rgba(232,213,187,0.62);line-height:1.7"><span data-i18n="merchandising.ht2Desc">We confirm availability, agree on price and delivery. Payment via transfer or in person at the Inn.</span></p>
         </div>
         <div class="fade-up" style="transition-delay:0.2s">
-          <div style="width:52px;height:52px;border-radius:50%;background:#c9252d;color:#fff;font-family:'Lora',serif;font-size:1.3rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">3</div>
-          <h4 style="font-family:'Lora',serif;font-weight:700;color:#e8d5bb;margin-bottom:8px" data-i18n="merchandising.ht3Title">Pick Up or Ship</h4>
+          <div style="width:52px;height:52px;border-radius:50%;background:#c9252d;color:#fff;font-family:'Fraunces',serif;font-size:1.3rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">3</div>
+          <h4 style="font-family:'Fraunces',serif;font-weight:700;color:#e8d5bb;margin-bottom:8px" data-i18n="merchandising.ht3Title">Pick Up or Ship</h4>
           <p style="font-size:13px;color:rgba(232,213,187,0.62);line-height:1.7"><span data-i18n="merchandising.ht3Desc">Collect your order at the School (Audiencia #97), or we ship anywhere within Bolivia.</span></p>
         </div>
       </div>
@@ -392,7 +410,7 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-10 mb-12">
         <div>
-          <p style="font-family:'Lora',serif;font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:10px">Me Gusta <span style="color:#c9252d;font-style:italic">Sucre</span></p>
+          <p style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:10px">Me Gusta <span style="color:#c9252d;font-style:italic">Sucre</span></p>
           <p style="font-size:14px;line-height:1.7;margin-bottom:20px" data-i18n="footer.tagline">Your gateway to Bolivia's most beautiful city — Spanish classes, boutique inn, café, and city experiences.</p>
           <div style="display:flex;gap:10px">
             <a href="https://www.facebook.com" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700">f</a>
@@ -401,7 +419,7 @@
           </div>
         </div>
         <div>
-          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.explore">Explore</p>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.explore">Explore</p>
           <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
             <li><a href="guia.html" data-i18n="nav.guide">City Guide</a></li>
             <li><a href="cafe.html" data-i18n="nav.cafeFull">Café & Menu</a></li>
@@ -411,7 +429,7 @@
           </ul>
         </div>
         <div>
-          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.megustaTitle">Me Gusta</p>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.megustaTitle">Me Gusta</p>
           <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
             <li><a href="hospedaje.html" data-i18n="index.brand2Pill">Inn — Boutique Hotel</a></li>
             <li><a href="cafe.html" data-i18n="index.brand3Pill">Café</a></li>
@@ -420,7 +438,7 @@
           </ul>
         </div>
         <div>
-          <p style="font-family:'DM Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.findUs">Find Us</p>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.findUs">Find Us</p>
           <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
             <li data-i18n="footer.address">La Paz #571, Sucre, Bolivia</li>
             <li><a href="tel:+59173425725" style="color:#aaa;text-decoration:none">+591 734 25725</a></li>
@@ -454,7 +472,7 @@
       <p id="cart-modal-empty" data-i18n="merchandising.emptyCart">Your order list is empty.</p>
       <p id="cart-modal-total"></p>
       <div id="cart-contact-form">
-        <p style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:#120402;margin-bottom:10px" data-i18n="merchandising.deliveryLabel">Delivery Method</p>
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#120402;margin-bottom:10px" data-i18n="merchandising.deliveryLabel">Delivery Method</p>
         <select id="cart-delivery-method" class="cart-input" style="font-weight:700" onchange="document.getElementById('cart-address').style.display = this.value === 'delivery' ? 'block' : 'none'">
           <option value="pickup" data-i18n="merchandising.optPickup">Pickup at the School</option>
           <option value="delivery" data-i18n="merchandising.optDelivery">Shipping in Bolivia</option>

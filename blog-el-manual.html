@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Manual del Viajero — Me Gusta Sucre</title>
+  <meta name="description" content="Everything you need to know before arriving in Sucre, Bolivia. Altitude, currency, transport, climate, and safety — from locals who live here." />
+  <meta property="og:title" content="El Manual del Viajero — Me Gusta Sucre" />
+  <meta property="og:description" content="Altitude, currency, transport, climate, safety. The practical information — complete, no filler." />
+  <meta property="og:image" content="https://megustasucre.com/imagenes/og-image.svg" />
+  <meta property="og:url" content="https://megustasucre.com/blog-el-manual.html" />
+  <meta property="og:type" content="article" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://megustasucre.com/blog-el-manual.html" />
+  <link rel="icon" type="image/svg+xml" href="imagenes/favicon-guia.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,700;1,9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tw.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sucre-fonts.css" />
+  
+</head>
+<body class="bg-white">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between relative">
+      <div class="hidden md:flex items-center gap-7" style="flex:1">
+        <a href="clases.html" class="nav-link nav-secondary text-white" data-i18n="nav.classes">Spanish Classes</a>
+        <a href="cafe.html" class="nav-link nav-secondary text-white" data-i18n="nav.cafe">Café</a>
+        <a href="guia.html" class="nav-link nav-primary text-white" data-i18n="nav.guide">City Guide</a>
+      </div>
+      <a href="index.html" class="flex items-center gap-3 md:absolute md:left-1/2 md:-translate-x-1/2">
+        <img src="imagenes/logos/logo-me-gusta-sucre-chinchilla.png" alt="Me Gusta Sucre" class="logo-img">
+        <span class="logo-text text-white font-bold" style="font-family:'Fraunces',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap">Me Gusta <span class="logo-accent" style="color:#c9252d;font-style:italic">Sucre</span></span>
+      </a>
+      <div class="hidden md:flex items-center justify-end gap-7" style="flex:1">
+        <a href="hospedaje.html" class="nav-link nav-primary text-white" data-i18n="nav.stay">Stay</a>
+        <a href="merchandising.html" class="nav-link nav-secondary text-white" data-i18n="nav.merch">Merch</a>
+        <a href="contacto.html" class="nav-link nav-secondary text-white" data-i18n="nav.contact">Contact</a>
+        <div class="flex items-center gap-3 border-l lang-container border-white/20 pl-6 ml-2">
+          <button class="lang-btn text-xs font-bold text-white uppercase active" data-lang="en">EN</button>
+          <span class="text-white/30 text-xs">|</span>
+          <button class="lang-btn text-xs font-bold text-white/50 uppercase" data-lang="es">ES</button>
+          <span class="text-white/30 text-xs">|</span>
+          <button class="lang-btn text-xs font-bold text-white/50 uppercase" data-lang="fr">FR</button>
+        </div>
+      </div>
+      <button id="menu-btn" class="md:hidden text-white p-1">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden bg-white shadow-xl px-6 pb-5">
+      <div class="flex justify-center items-center gap-3 py-4 border-b border-gray-100 mb-2">
+        <img src="imagenes/logos/logo-me-gusta-sucre-chinchilla.png" alt="Me Gusta Sucre" class="logo-img" style="filter:none">
+        <span class="logo-text font-bold" style="font-family:'Fraunces',serif;font-size:1.75rem;letter-spacing:-0.5px;white-space:nowrap;color:#111">Me Gusta <span class="logo-accent" style="color:#c9252d;font-style:italic">Sucre</span></span>
+      </div>
+      <a href="clases.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.classes">Spanish Classes</a>
+      <a href="cafe.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.cafe">Café</a>
+      <a href="guia.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.guide">City Guide</a>
+      <a href="hospedaje.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.stay">Stay</a>
+      <a href="merchandising.html" class="block py-2 text-sm font-semibold text-gray-800 border-b border-gray-100" data-i18n="nav.merch">Merch</a>
+      <a href="contacto.html" class="block py-2 text-sm font-semibold text-gray-800" data-i18n="nav.contact">Contact</a>
+      <div class="py-4 mt-2 border-t border-b border-gray-100 mb-4">
+        <p class="text-[10px] font-bold text-gray-400 mb-3 uppercase tracking-wider">Language</p>
+        <div class="flex items-center gap-5">
+          <button class="lang-btn text-sm font-bold text-gray-900" data-lang="en">EN</button>
+          <span class="text-gray-300">|</span>
+          <button class="lang-btn text-sm font-bold text-gray-400" data-lang="es">ES</button>
+          <span class="text-gray-300">|</span>
+          <button class="lang-btn text-sm font-bold text-gray-400" data-lang="fr">FR</button>
+        </div>
+      </div>
+      <a href="hospedaje.html" class="btn-red block text-center mt-4" style="border-radius:0" data-i18n="nav.book">Book a Stay</a>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ══════════════════════════════════════════════ -->
+  <section class="post-hero">
+    <div class="post-hero-bg hero-kenburns"></div>
+    <div class="post-hero-overlay"></div>
+    <div class="post-hero-body">
+      <div class="post-breadcrumb">
+        <a href="guia.html">City Guide</a>
+        <span>/</span>
+        <span>Las Crónicas</span>
+        <span>/</span>
+        <span style="color:rgba(255,255,255,0.7)">El Manual</span>
+      </div>
+      <p class="post-tag">El Manual</p>
+      <h1 class="post-title">
+        Everything you need to know<br><em>before you arrive</em>
+      </h1>
+      <div class="post-meta">
+        <span>Me Gusta Sucre Team</span>
+        <span class="post-meta-dot"></span>
+        <span>Sucre, Bolivia</span>
+        <span class="post-meta-dot"></span>
+        <span>2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ARTICLE BODY ══════════════════════════════════════ -->
+  <article class="post-body">
+
+    <a href="guia.html#cronicas" class="post-back">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+      Back to Las Crónicas
+    </a>
+
+    <p class="post-lead">
+      Altitude, currency, transport, climate, safety. The practical information — complete, no filler. Written by people who have lived in Sucre their whole lives.
+    </p>
+
+    <!-- Quick facts bar -->
+    <div class="post-facts">
+      <div class="post-fact">
+        <p class="post-fact-label">Altitude</p>
+        <p class="post-fact-value">2,810m</p>
+        <p class="post-fact-desc">Gentle. Acclimatize in one slow day.</p>
+      </div>
+      <div class="post-fact">
+        <p class="post-fact-label">Currency</p>
+        <p class="post-fact-value">Boliviano</p>
+        <p class="post-fact-desc">1 USD &asymp; Bs 6.91. Cash essential.</p>
+      </div>
+      <div class="post-fact">
+        <p class="post-fact-label">Best Season</p>
+        <p class="post-fact-value">May &ndash; Oct</p>
+        <p class="post-fact-desc">Dry season. Clear skies every day.</p>
+      </div>
+      <div class="post-fact">
+        <p class="post-fact-label">Safety</p>
+        <p class="post-fact-value">Very safe</p>
+        <p class="post-fact-desc">One of Bolivia's safest cities.</p>
+      </div>
+    </div>
+
+    <hr class="post-divider" />
+
+    <!-- Altitude -->
+    <div class="post-section">
+      <p class="post-section-eyebrow">01 — Altitude</p>
+      <h2 class="post-section-title">2,810 meters — <em>the good kind</em></h2>
+      <p class="post-p">Sucre sits at 2,810 meters above sea level — high enough to feel the Andean light and the cool nights, low enough to acclimatize in a single day. This is one of its most underrated advantages over La Paz (3,640m) or Potosí (4,090m): most visitors feel completely normal by the end of their first full day.</p>
+      <p class="post-p">The first 24 hours are the ones to take seriously. Drink water constantly — more than you think you need. Avoid alcohol on day one. Move slowly. If you feel a headache coming on, rest, drink water, and let your body catch up. The second day almost always feels entirely different.</p>
+      <div class="post-callout">
+        <p class="post-callout-label">Local tip</p>
+        <p class="post-callout-text">"Give yourself one slow first day. Walk, eat, sleep early. By morning two, the altitude is yours."</p>
+      </div>
+      <p class="post-p">The altitude also means the sun is more intense than it looks. Bring sunscreen with a high SPF — the sky at this elevation is unforgiving even on overcast days. A light jacket for evenings is essential year-round: temperatures drop sharply after sunset.</p>
+    </div>
+
+    <hr class="post-divider" />
+
+    <!-- Currency -->
+    <div class="post-section">
+      <p class="post-section-eyebrow">02 — Currency</p>
+      <h2 class="post-section-title">Cash is <em>still king</em></h2>
+      <p class="post-p">Bolivia's currency is the Boliviano (Bs). As of 2026, the exchange rate is approximately 1 USD = Bs 6.91. ATMs are available throughout the historic center and accept most international cards.</p>
+      <p class="post-p">That said, cash is essential for daily life in Sucre. Street food, market stalls, taxis, small shops, and most local restaurants operate cash-only. Cards are accepted at the Inn, major restaurants, and some larger stores — but don't count on it beyond that.</p>
+      <div class="post-callout">
+        <p class="post-callout-label">Important</p>
+        <p class="post-callout-text">ATMs in the historic center can run out of cash on weekends. Withdraw on a Friday — don't wait for Saturday morning.</p>
+      </div>
+      <p class="post-p">Counterfeit notes are rare but present. Always check Bs 100 and Bs 200 notes when receiving change. If a vendor gives you a note that feels wrong, you can politely decline.</p>
+    </div>
+
+    <hr class="post-divider" />
+
+    <!-- Transport -->
+    <div class="post-section">
+      <p class="post-section-eyebrow">03 — Transport</p>
+      <h2 class="post-section-title">The center is <em>entirely walkable</em></h2>
+      <p class="post-p">Sucre's historic center is compact — almost everything worth seeing is within a 15-minute walk from the main plaza. If you're staying at the Inn (La Paz #571), you're already at the center of everything.</p>
+      <p class="post-p">Taxis are available everywhere and are cheap by any standard: Bs 3–5 for a ride within the center, Bs 8–15 to reach places like Cal Orck'o or the bus terminal. Always agree on the price before you get in — meters are not common. The price is typically negotiated at the window before you open the door.</p>
+      <p class="post-p">Micros (local minibuses) cover the entire city for Bs 1.50–2 and are an experience in themselves. Destinations are written on the windshield or called out by a helper at the door. They're reliable but require knowing where you're going.</p>
+    </div>
+
+    <hr class="post-divider" />
+
+    <!-- Climate -->
+    <div class="post-section">
+      <p class="post-section-eyebrow">04 — Climate</p>
+      <h2 class="post-section-title">Eternal spring — with <em>one caveat</em></h2>
+      <p class="post-p">Sucre is often called the city of eternal spring, and the description holds for most of the year. The dry season runs from May through October: clear blue skies every day, warm afternoons (18–22°C), and cold nights that drop to 5–8°C. This is the best time to visit.</p>
+      <p class="post-p">The wet season runs from November through April. Mornings are usually clear; afternoon rain arrives reliably between 2pm and 5pm and clears by evening. It rarely ruins a day — it just defines the rhythm of it. Temperatures are slightly warmer, and the countryside around the city turns a vivid green.</p>
+      <div class="post-callout">
+        <p class="post-callout-label">What to pack</p>
+        <p class="post-callout-text">Light layers, a rain layer for Nov–Apr, sunscreen for all seasons, and shoes built for cobblestones — not sandals.</p>
+      </div>
+    </div>
+
+    <hr class="post-divider" />
+
+    <!-- Safety -->
+    <div class="post-section">
+      <p class="post-section-eyebrow">05 — Safety</p>
+      <h2 class="post-section-title">One of Bolivia's <em>safest cities</em></h2>
+      <p class="post-p">Sucre is consistently ranked among the safest cities in Bolivia, and by regional standards it's genuinely low-risk. Petty theft exists as in any city, but violent crime directed at tourists is rare. The historic center is well-lit and active into the late evening.</p>
+      <p class="post-p">Standard precautions apply: don't display expensive cameras or phones unnecessarily, use ATMs during the day, and avoid poorly lit areas late at night. Taxis booked through your hostal or hailed from a taxi stand are safer than random street taxis at night.</p>
+      <p class="post-p">If something goes wrong, the tourist police (Policía Turística) operate in the historic center and speak basic English. The Inn's team is also available around the clock — ask us anything on WhatsApp.</p>
+    </div>
+
+  </article>
+
+  <!-- ═══ RELATED ARTICLES ══════════════════════════════════ -->
+  <section class="post-related">
+    <div class="post-related-inner">
+      <p class="post-related-eyebrow">Las Crónicas</p>
+      <h2 class="post-related-title">More from the guide</h2>
+      <div class="post-related-grid">
+        <a href="blog-tradiciones-domingo.html" class="post-related-card">
+          <div class="post-related-img">
+            <img src="imagenes/wikipedia/tarabuco.webp" alt="Tradiciones de Domingo" loading="lazy" />
+          </div>
+          <div class="post-related-body">
+            <p class="post-related-tag">Markets &amp; Culture</p>
+            <p class="post-related-name">Tradiciones de Domingo</p>
+            <p class="post-related-desc">Salteñas before 10am, Tarabuco by shared van, and mondongo by mid-afternoon. Sunday in Sucre runs on its own clock.</p>
+          </div>
+        </a>
+        <a href="blog-insider-tips.html" class="post-related-card">
+          <div class="post-related-img">
+            <img src="imagenes/wikipedia/catedral.webp" alt="10 Insider Tips" loading="lazy" />
+          </div>
+          <div class="post-related-body">
+            <p class="post-related-tag">Local Secrets</p>
+            <p class="post-related-name">10 Insider Tips</p>
+            <p class="post-related-desc">The things a lifetime in Sucre teaches you that will actually change the way your trip goes.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-dark">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <p style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:10px">Me Gusta <span style="color:#c9252d;font-style:italic">Sucre</span></p>
+          <p style="font-size:14px;line-height:1.7;margin-bottom:20px" data-i18n="footer.tagline">Your gateway to Bolivia's most beautiful city — Spanish classes, hostal, café, and city experiences.</p>
+          <div style="display:flex;gap:10px">
+            <a href="https://www.facebook.com/MeGustaSucre" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#aaa;text-decoration:none">f</a>
+            <a href="https://www.instagram.com/megustasucre" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#aaa;text-decoration:none">ig</a>
+            <a href="https://wa.me/59173425725" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">wa</a>
+          </div>
+        </div>
+        <div>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.explore">Explore</p>
+          <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
+            <li><a href="clases.html" data-i18n="nav.classes">Spanish Classes</a></li>
+            <li><a href="guia.html" data-i18n="nav.guide">City Guide</a></li>
+            <li><a href="cafe.html" data-i18n="nav.cafe">Café &amp; Menu</a></li>
+            <li><a href="hospedaje.html" data-i18n="nav.stay">Stay</a></li>
+            <li><a href="contacto.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.megustaTitle">Me Gusta</p>
+          <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
+            <li><a href="hospedaje.html" data-i18n="index.brand2Pill">Inn — Boutique Hotel</a></li>
+            <li><a href="cafe.html" data-i18n="index.brand3Pill">Café</a></li>
+            <li><a href="clases.html" data-i18n="nav.classes">Spanish Classes</a></li>
+            <li><a href="https://megustaspanish.com" target="_blank" data-i18n="index.schoolBtn2">School Website ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:12px;text-transform:uppercase;letter-spacing:2px" data-i18n="footer.findUs">Find Us</p>
+          <ul style="list-style:none;padding:0;font-size:14px;line-height:2.4">
+            <li data-i18n="footer.address">La Paz #571, Sucre, Bolivia</li>
+            <li><a href="tel:+59173425725" style="color:#aaa;text-decoration:none">+591 734 25725</a></li>
+            <li><a href="mailto:info@megustasucre.com" style="color:#aaa;text-decoration:none">info@megustasucre.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top:1px solid #2d2010;padding-top:24px;text-align:center;font-size:13px;color:#555">
+        &copy; 2026 Me Gusta Sucre. <span data-i18n="footer.rights">All rights reserved.</span> &middot; <a href="https://megustaspanish.com" target="_blank" style="color:#c9252d">Me Gusta Spanish School</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/59173425725" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
