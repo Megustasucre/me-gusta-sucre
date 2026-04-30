@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Blog Premium — Me Gusta Sucre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,700;1,9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red: #c9252d;
+            --dark: #111111;
+            --cream: #fdfcf9;
+            --text: #2a1f18;
+            --muted: #888;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--text);
+            padding: 100px 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section-header {
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1;
+        }
+
+        .section-title em {
+            color: var(--red);
+            font-style: italic;
+        }
+
+        /* ─── GRID EDITORIAL ─── */
+        .blog-grid-premium {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        /* Articulo Destacado */
+        .art-featured {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+        }
+
+        .art-img-container {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+            margin-bottom: 32px;
+            background: #eee;
+            clip-path: inset(0 0 0 0);
+            transition: clip-path 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .art-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.2s ease;
+        }
+
+        .art-featured:hover .art-img-container {
+            clip-path: inset(20px 20px 20px 20px);
+        }
+
+        .art-featured:hover .art-img-container img {
+            transform: scale(1.1);
+        }
+
+        .art-tag {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 16px;
+            display: inline-block;
+            background: rgba(201, 37, 45, 0.08);
+            padding: 4px 12px;
+        }
+
+        .art-title-lg {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .art-featured:hover .art-title-lg {
+            color: var(--red);
+        }
+
+        .art-excerpt {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 24px;
+            max-width: 90%;
+        }
+
+        .art-meta {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .art-meta::before {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: #e8dfd0;
+        }
+
+        /* Lista Lateral */
+        .art-side-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .art-minimal {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 24px;
+            text-decoration: none;
+            color: inherit;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e8dfd0;
+            transition: transform 0.3s ease;
+        }
+
+        .art-minimal:last-child {
+            border-bottom: none;
+        }
+
+        .art-minimal:hover {
+            transform: translateX(10px);
+        }
+
+        .art-minimal-img {
+            height: 140px;
+            overflow: hidden;
+            background: #eee;
+        }
+
+        .art-minimal-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .art-minimal:hover .art-minimal-img img {
+            transform: scale(1.1);
+        }
+
+        .art-minimal-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .art-minimal:hover .art-minimal-title {
+            color: var(--red);
+        }
+
+        .art-minimal-excerpt {
+            font-size: 14px;
+            color: #666;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        @media (max-width: 1024px) {
+            .blog-grid-premium {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            .art-img-container {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="section-header">
+            <span class="eyebrow">Las Crónicas</span>
+            <h2 class="section-title">El <em>Blog</em> de Sucre</h2>
+        </header>
+
+        <main class="blog-grid-premium">
+            
+            <!-- ARTICULO DESTACADO -->
+            <a href="#" class="art-featured">
+                <div class="art-img-container">
+                    <img src="imagenes/fotos_escuela/hero1.jpg" alt="Aprender Español en Sucre">
+                </div>
+                <div class="art-body">
+                    <span class="art-tag">Spanish Classes</span>
+                    <h3 class="art-title-lg">El secreto mejor guardado para aprender español en Sudamérica</h3>
+                    <p class="art-excerpt">Descubre por qué Sucre se ha convertido en el epicentro de la inmersión lingüística, combinando historia viva con el acento más neutro del continente.</p>
+                    <div class="art-meta">8 min lectura · Mayo 2026</div>
+                </div>
+            </a>
+
+            <!-- LISTA LATERAL -->
+            <div class="art-side-list">
+                
+                <a href="#" class="art-minimal">
+                    <div class="art-minimal-img">
+                        <img src="imagenes/wikipedia/la_recoleta.webp" alt="El Manual del Viajero">
+                    </div>
+                    <div class="art-minimal-body">
+                        <span class="art-tag">El Manual</span>
+                        <h4 class="art-minimal-title">Todo lo que necesitas saber antes de llegar</h4>
+                        <p class="art-minimal-excerpt">Altitud, moneda, transporte y clima. La guía práctica definitiva sin rellenos.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="art-minimal">
+                    <div class="art-minimal-img">
+                        <img src="imagenes/wikipedia/cal_orcko.webp" alt="Pequeños Viajeros">
+                    </div>
+                    <div class="art-minimal-body">
+                        <span class="art-tag">Familias</span>
+                        <h4 class="art-minimal-title">Pequeños Viajeros: Sucre con niños</h4>
+                        <p class="art-minimal-excerpt">Dinosaurios, parques seguros y un ritmo que los niños pueden seguir.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="art-minimal">
+                    <div class="art-minimal-img">
+                        <img src="imagenes/wikipedia/tarabuco.webp" alt="Tradiciones">
+                    </div>
+                    <div class="art-minimal-body">
+                        <span class="art-tag">Cultura</span>
+                        <h4 class="art-minimal-title">Tradiciones de Domingo: El ritmo de la ciudad</h4>
+                        <p class="art-minimal-excerpt">Salteñas antes de las 10am, mercados indígenas y el aroma a tradición.</p>
+                    </div>
+                </a>
+
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
